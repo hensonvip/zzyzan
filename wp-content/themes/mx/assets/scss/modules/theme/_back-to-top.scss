@@ -1,0 +1,21 @@
+#back-to-top{
+	position: fixed;
+	background: #fff;
+	bottom: 0;
+	right: 0;
+	opacity: .7;
+	padding: 1rem;
+	box-shadow: 0 1px 5px rgba(0,0,0,.3);
+	z-index: 1;
+	color: #ccc;
+	border-radius: 2px;
+	&:hover,
+	&.hover{
+		opacity: 1;
+		color: #666;
+	}
+	&:active,
+	&.active{
+		color: #ccc;
+	}
+}

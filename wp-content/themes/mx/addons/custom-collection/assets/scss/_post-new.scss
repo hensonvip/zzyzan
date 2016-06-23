@@ -1,0 +1,161 @@
+/**
+ * .clt-list
+ */
+.clt-list{
+	position: relative;
+	margin-bottom: 1rem;
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 1rem;
+	overflow: hidden;
+	max-height: 999px;
+	@incldue transition-duration();
+	&.delete{
+		max-height: 0;
+		opacity: .0;
+	}
+	&.new{
+		max-height: 0;
+		opacity: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	&:after{
+		content:'1';
+		position: absolute;
+		bottom: 30%;
+		right: 1rem;
+		font-size: 50px;
+		color: #428bca;
+		opacity: .1;
+		z-index: 10;
+	}
+	&:hover:after{
+		color:#FF4081;
+	}
+	@for $i from 2 through 15{
+		&:nth-child(#{$i}):after{
+			content:'#{$i}';
+		}
+	}
+	textarea{
+		height: 100px;
+		min-height: 100px;
+		resize: vertical;
+		padding-right: 60px;
+	}
+	.collection-list .list-group-item-text{
+		font-size: 1.2em;
+		line-height: 2;
+	}
+}
+.clt-list-thumbnail-container{
+	position: relative;
+	overflow: hidden;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+.clt-list-thumbnail-preview-container{
+	position: relative;
+	padding-bottom: $thumbnail_aspect_atio;
+	overflow: hidden;
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+	}
+}
+.clt-list-area-tx{
+	position: relative;
+	overflow: auto;
+}
+.clt-list-del{
+	margin-top: 10px;
+	margin-bottom: 1rem;
+}
+
+#clt-preview-container{
+	margin-bottom: 1rem;
+}
+
+#clt-cover{
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-right: 1rem;
+	border: 1px solid #eee;
+}
+#clt-file-btn{
+	position: relative;
+	background: rgb(248,248,248);
+	overflow: hidden;
+	float: left;
+	height: 100px;
+	line-height: 100px;
+	border: 3px dashed #ccc;
+	text-align: center;
+	border-radius: 4px;
+	padding: 0 1rem;
+	color: #666;
+}
+	#clt-file-btn:hover{
+		background: #eee;
+		border-color: #333;
+		color: #333;
+	}
+#clt-file{
+	position: absolute;
+	font-size: 99em;
+	right: -10px;
+	top: -10px;
+	opacity: 0;
+	cursor: pointer;
+}
+#clt-file-progress,
+#clt-files{
+	display: none;
+	margin-top: 10px;
+}
+#clt-file-progress{
+	position: relative;
+	.tip-status{
+		font-size: 1em;
+		padding: 1em 0;
+		text-align: center;
+	}
+	#clt-file-progress-bar{
+		background: #428bca;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		-webkit-transition:all .5s;
+		-moz-transition:all .5s;
+		transition:all .5s;
+		&:after{
+			width: 1rem;
+			height: 1rem;
+			background: #428bca;
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: -4px;
+			border-radius: 50%;
+		}
+	}
+}
+#clt-files{
+	margin-top: 0;
+}
+
+/**
+ * .checkbox-select
+ */
+.clt-tag input:checked + .label{
+	background: #4cae4c;
+	color: #fff;
+}

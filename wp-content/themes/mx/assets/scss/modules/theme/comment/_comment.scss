@@ -1,0 +1,131 @@
+%no-bg{
+	background: none;
+	border: none;
+}
+.comment-list{
+	padding: 0;	
+	.comment{
+		&.is-me > .comment-body,
+		&.new > .comment-body{
+			border: 2px solid #FBEC88;
+		}
+		&.is-post-author > .comment-body .author a{
+			font-weight: bold;
+			color: $link-color-hover;
+		}
+	}
+	.media{
+		display: block;
+		margin: 0;
+	}
+	.media-left{
+		padding-right: 20px;
+		
+	}
+	.comment-body{
+		position: relative;
+		@extend %panel-content;
+		padding: 1rem 2rem;
+		margin-bottom: 1rem;
+		&:hover,
+		&.hover{
+			&:before{
+				background: $link-color-hover;
+				display: block;
+				position: absolute;
+				left: -1px;
+				top: 0;
+				height: 100%;
+				width: 5px;
+				content: '';
+			}
+		}
+	}
+	.comment-content{
+		font-size: 1.2rem;
+		margin-bottom: .5rem;
+		img{
+			width: auto;
+			max-height: 5rem;
+		}
+	}
+	p{
+		margin-bottom: 0;
+	}
+	.avatar{
+		width: 50px;
+		height: 50px;
+	}
+	.children .avatar{
+		width: 1rem;
+		height: 1rem;
+	}
+	.media-heading{
+		font-size: 1em;
+		margin: 0;
+	}
+	.comment-meta-data{
+		color: $excerpt-color;
+		
+		&:after{
+			padding-left: 5px;
+			padding-right: 5px;
+			content:'*';
+			font-weight: normal;
+			font-size: 5px;
+		}
+		&:last-child:after{
+			display: none;
+		}
+		a{
+			color: $excerpt-color;
+			&:hover,
+			&:active{
+				color: $link-color-hover;
+				text-decoration: underline;
+			}
+		}
+	}
+	.author a{
+		color: $link-color;
+	}
+	
+	.children{
+		position: relative;
+		margin: 0 0 1rem 2rem;
+		padding: 0;
+		&:before{
+			position: absolute;
+			left: 2rem;
+			top: -3px;
+			width: 10px;
+			height: 10px;
+			content: '';
+			background: #fff;
+			box-shadow: -1px -1px 0 darken($panel-border-color,1%);
+			@include rotate(45);
+			z-index: 1;
+		}
+		#respond{
+			margin:0;
+		}
+		.children{
+			margin: 0;
+		}
+
+		.comment-body{
+			//background: rgba(0,0,0,.03);
+			//border-top: 1px solid rgba(0,0,0,.05);		
+		}
+	}
+	.comment-reply-title{
+		display:block;
+	}
+	.page-tip{
+		margin: 1rem;
+	}
+}
+.comment-loading .tip-status,
+#respond-loading-ready .tip-status{
+	@extend %no-bg;
+}

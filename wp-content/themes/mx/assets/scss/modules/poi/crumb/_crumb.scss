@@ -1,0 +1,25 @@
+.crumb{
+	position: relative;
+	color: $excerpt-color;
+	margin-bottom: $grid-g-gutter;
+	@include view-phone{
+		margin-bottom: $grid-g-phone-gutter
+	}
+	.home{
+		.tx{
+			display: none;
+		}
+	}
+	a{
+		color: $excerpt-color;
+		&:hover,
+		&.hover,
+		&:active,
+		&.active{
+			color: $link-color-hover;
+		}
+	}
+	.split{
+		padding:0 1rem;
+	}
+}

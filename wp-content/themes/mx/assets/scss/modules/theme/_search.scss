@@ -1,0 +1,31 @@
+
+/**
+ * .fm-search
+ */
+#fm-search{
+	height: 0;
+	position: relative;
+	margin-top: 1rem;
+	visibility: collapse;
+	@include transform-origin(top);
+	@include transition-duration(.3);
+	@include scale3d(1,0,0);
+	clear: both;
+	&.on{
+		height: auto;
+		visibility: visible;
+		@include scale3d(1,1,1);
+	}
+	input{
+		border: 2px solid $link-color-hover;
+		text-align: center;
+		background: #fff;
+		padding: 1rem 0;
+		font-size: 2rem;
+		border-radius: 5rem;
+		box-shadow: $nav-main-shadow;
+		@include view-phone{
+			font-size: 1rem;
+		}
+	}
+}

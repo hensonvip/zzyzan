@@ -1,0 +1,13 @@
+.widget_comments{
+	@extend %panel-not-content;
+	.author{
+		font-weight: bold;
+	}
+	a{
+		color: $title-color;
+	}
+	small{
+		margin-left: 1rem;
+		color: $excerpt-color;
+	}
+}

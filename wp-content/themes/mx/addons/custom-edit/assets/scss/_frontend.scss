@@ -1,0 +1,30 @@
+.edit-head-thumbnail{
+	width: 100px;
+}
+.edit-post-thumbnail img{
+	max-width: 80px;
+}
+.edit-post-title h4{
+	font-size: 1em;
+	margin-top: 0;
+}
+.edit-post-action{
+	visibility: hidden;
+}
+.edit-table{
+	tr:nth-child(2n){
+		background: #f8f8f8;
+	}
+	tr:hover{
+		background: #eee;
+		.edit-post-action{
+			visibility: visible;
+		}
+	}
+	thead {
+		background: #eee;
+	}
+	tbody{
+		font-size: 12px;
+	}
+}

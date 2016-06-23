@@ -1,0 +1,42 @@
+.adjacent-posts{
+	position: relative;
+	a{
+		position: relative;
+		display: block;
+		height: 10rem;
+		border-radius: $global-border-radius;
+		margin-bottom: $grid-g-gutter;
+		overflow: hidden;
+		@include view-phone{
+			margin-bottom: $grid-g-phone-gutter;
+		}
+		&:hover img,
+		&.hover img{
+			@include translate3d(0,-50%,0);
+		}
+	}
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		@include transition-duration($global-transition-duration);
+	}
+
+	.title{
+		position: absolute;
+		@include linear-gradient(transparent,rgba(#000,.3));
+		bottom: 0;
+		left: 0;
+		color: #fff;
+		width: 100%;
+		margin: 0;
+		font-size: 1.1rem;
+		padding: 1rem .5rem .5rem;
+		font-weight: bold;
+		z-index: 1;
+		text-shadow: 0 1px 3px #000;
+		@extend %text-overflow;
+	}
+}

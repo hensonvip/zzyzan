@@ -1,0 +1,47 @@
+
+#full-width-mode{
+	display: none;
+}
+@include view-not-phone{
+	#full-width-mode{
+		display: block;
+		position: absolute;
+		background: #fff;
+		top: 0;
+		right: 0;
+		width: 2rem;
+		text-align: center;
+		padding: 1rem 2rem;
+		cursor: pointer;
+		&:hover,
+		&.hover{
+			background: $card-bg-color-hover;
+		}
+		&:active,
+		&.active{
+			background: $card-bg-color-active;
+		}
+	}
+	#main{
+		display: block;
+		&.expand{
+			width: 100%;
+			.content-reset{
+				& > p{
+					& > a{
+						display: block;
+					}
+					& > img,
+					& > a > img{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	#sidebar-container{
+		&.expand{
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+%normal-link{
+	color: $excerpt-color;
+	&:hover,
+	&.hover{
+		color: $accent-color;
+	}
+}
+@mixin normal-link{
+	@extend %normal-link;
+}

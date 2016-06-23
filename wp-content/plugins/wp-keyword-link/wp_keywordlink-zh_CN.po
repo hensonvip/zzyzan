@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-12 14:15+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# wp_weywordlink.php
+#: 为你的wordpress博客中添加关键词的链接，更多的内链和外链,更好的SEO!
+msgid "This plugin automatically links keywords in your posts to their definition pages. And displays a list of posts similar to the current post."
+msgstr "为你的wordpress博客中添加关键词的链接，更多的内链和外链,更好的SEO! 最新增加显示相关文章的功能。"
+
+# wp_weywordlink.php
+#: 帮助文档
+msgid "Help"
+msgstr "帮助文档"
+
+# wp_weywordlink.php
+#: 这是一个添加关键词链接的插件，根据你添加的关键词和链接，自动搜索匹配文章里的关键词，并加上链接。每一个关键词的链接，提供一些选项设置，详细解释如下：
+msgid "The Keyword link plugin searches the contents of each of your posts for the above listed keywords. Each keyword found is automatically linked to the link you have specified. For each link you can also specify the following options: "
+msgstr "这是一个添加关键词链接的插件，根据你添加的关键词和链接，自动搜索匹配文章里的关键词，并加上链接。每一个关键词的链接，提供一些选项设置，详细解释如下："
+
+# wp_weywordlink.php
+#: <b>No Follow</b> - 在链接加多一个属性：<em>rel= no follow </em>
+#: ，使用Nofollow属性让搜索引擎不要抓取并追踪此链接.
+msgid "<b>No Follow</b> - This adds a <em>rel= no follow</em> to the link."
+msgstr "<b>No Follow</b> - 在链接加多一个属性：<em>rel= no follow </em> ，使用Nofollow属性让搜索引擎不要抓取并追踪此链接."
+
+# wp_weywordlink.php
+#: <b>First Match Only</b> - 仅仅匹配第一个关键词. 否则将匹配2个或3个.
+msgid "<b>First Match Only</b> - Only replace the first match of the word, ignore further mentions. Otherwise will replace 2 or 3."
+msgstr "<b>First Match Only</b> - 仅仅匹配第一个关键词. 否则将匹配2个或3个."
+
+# wp_weywordlink.php
+#: <b>New Window</b> - 在链接加上 <em>target= _blank </em>的属性,
+#: 在新窗口打开.
+msgid "<b>New Window</b> - This adds a <em>target=_blank</em> to the link, forcing a new browser window on clicking."
+msgstr "<b>New Window</b> - 在链接加上 <em>target= _blank </em>的属性, 在新窗口打开."
+
+# wp_weywordlink.php
+#: <b>Ignore Case</b - 不匹分大小写，如 Google , google 或者 gooGLE
+#: 都会匹配到.英文关键词有效(<b>不推荐使用</b>)
+msgid "<b>Ignore Case</b> - Google, google and gooGLE are all fine.(<b>Not recommended, There may be problems</b>)"
+msgstr "<b>Ignore Case</b> - 不匹分大小写，如 Google , google 或者 gooGLE 都会匹配到.英文关键词有效(<b>不推荐使用</b>)"
+
+# wp_weywordlink.php
+#: <b>Is affiliate</b> -
+#: 勾上表示内链，同外链区分，这里要添加下面提到的CSS样式。
+msgid "<b>Is affiliate</b> - Allows you to tell your visitors that the link is an affiliate."
+msgstr "<b>Is affiliate</b> - 勾上表示内链，同外链区分，这里要添加下面提到的CSS样式。"
+
+# wp_weywordlink.php
+#: <b>Filter in comments</b> - 勾上匹配替换评论区里的关键词.
+msgid "<b>Filter in comments</b> - Also replace this keyword in post comments."
+msgstr "<b>Filter in comments</b> - 勾上匹配替换评论区里的关键词."
+
+# wp_weywordlink.php
+#: <b>*For zh_CN</b> - 勾上支持中文关键词.
+#: 或其它不是用空格隔开的语言。
+msgid "<b>*For zh_CN</b> - For chinese keyword, or others language do not split by \"space\""
+msgstr "<b>*For zh_CN</b> - 勾上支持中文关键词. 或其它不是用空格隔开的语言。"
+
+# wp_weywordlink.php
+#: 每一个链接都会加上CSS样式，如： &lt;span
+#: class='wp_keywordlink'&gt; .. &lt;/span&gt;
+#: 。你可以把下面的CSS加到博客原来的CSS样式表中.
+msgid "Each link created by the plugin is contained in an &lt;span class= wp_keywordlink &gt; .. &lt;/span&gt; wrapper. This allows you to modify the links by adding a style to your themes style.css file."
+msgstr "每一个链接都会加上CSS样式，如： &lt;span class='wp_keywordlink'&gt; .. &lt;/span&gt; 。你可以把下面的CSS加到博客主题的CSS样式表中."
+
+# wp_weywordlink.php
+#: 内链跟外链是有区别的, 内链的CSS用 &lt;span
+#: class='wp_keywordlink_affiliate'&gt; .. &lt;/span&gt;
+#: 你也可以根据你的需要更改。
+msgid "Affiliate links work a little different, they use &lt;span class= wp_keywordlink_affiliate &gt; .. &lt;/span&gt; allowing you to differentiate those paid for links from your internal links."
+msgstr "内链跟外链是有区别的, 内链的CSS用 &lt;span class='wp_keywordlink_affiliate'&gt; .. &lt;/span&gt; 你也可以根据你的需要更改。"
+
+# wp_keywordlink.php
+#: 自动把文章的标签当作关键词:
+msgid "Auto change Post tags to Keyword:"
+msgstr "自动把文章的标签当作关键词:"
+
+# wp_keywordlink.php
+#: 关闭
+msgid "Disable"
+msgstr "关闭"
+
+# wp_keywordlink.php
+#: 开启
+msgid "Enable"
+msgstr "开启"
+
+# wp_keywordlink.php:
+#: <b>* Escape &lt;pre&gt;&lt;/pre&gt; region, or use custom tag &lt;wp_nokeywordlink&gt;&lt;/wp_nokeywordlink&gt; to escape keywordlink.</b>
+msgid "<b>* Escape &lt;pre&gt;&lt;/pre&gt; region, or use custom tag &lt;wp_nokeywordlink&gt;&lt;/wp_nokeywordlink&gt; to escape keywordlink.</b>"
+msgstr "<b>* 自动跳过 &lt;pre&gt;&lt;/pre&gt; 区域， 或使用自定义的标签 &lt;wp_nokeywordlink&gt;&lt;/wp_nokeywordlink&gt;， 该标签包含的内容不会有链接。</b>"
+
+# wp_keywordlink.php:
+#: Global options for keyword link, include tags2keyword.
+msgid "Global options for keyword link, include tags2keyword."
+msgstr "keyword link 的全局选项，包括 tags 转为 keyword 的部分。"
+
+# wp_keywordlink.php:
+#: Number of Keyword matched:
+msgid "Number of Keyword matched:"
+msgstr "关键词匹配的数量："
+
+# wp_keywordlink.php:
+#: Keywords does not link itself:
+msgid "Keywords does not link itself:"
+msgstr "关键词本身不自链："
+
+# wp_keywordlink.php:
+#: Ignore pre label:
+msgid "Ignore pre label:"
+msgstr "跳过pre标签："
+
+# wp_keywordlink.php:
+#: Keywords does not link on Page:
+msgid "Keywords does not link on Page:"
+msgstr "在Page页里不链接："
+
+# wp_keywordlink.php:
+#: Support Author:
+msgid "Support Author:"
+msgstr "支持作者："
+
+# wp_keywordlink.php:
+#: Disable if choose - First Match Only
+msgid "Disable if choose - First Match Only"
+msgstr "当选择First Match Only选项时无效"
+
+# wp_keywordlink.php:
+#: Escape <pre>..</pre> label
+msgid "Escape <pre>..</pre> label"
+msgstr "跳过 <pre>..</pre> 标签"
+
+# wp_keywordlink.php:
+#: Add a Link on wp_footer to suport liucheng.name. Thanks~
+msgid "Add a Link on wp_footer to suport liucheng.name. Thanks~"
+msgstr "在wp_footer加入作者的链接。感谢！"
+
+# wp_similarity.php:
+msgid "Options saved"
+msgstr "更新设置"
+
+# wp_similarity.php:
+msgid "Factory Settings applied"
+msgstr "恢复默认参数"
+
+# wp_similarity.php:
+msgid "Number of posts to show"
+msgstr "显示的文章数"
+
+# wp_similarity.php:
+msgid "Minimum match strength"
+msgstr "匹配强度的最小值"
+
+# wp_similarity.php:
+msgid "Default display if no matches"
+msgstr "没有匹配时显示?"
+
+# wp_similarity.php:
+msgid "(Any number between .00 and 1 with 1 being a perfect match.)"
+msgstr "(在.00与1之间的任何值。1是最佳匹配。)"
+
+# wp_similarity.php:
+msgid "Text and codes before the list"
+msgstr "list前的文本或代码"
+
+# wp_similarity.php:
+msgid "Text and codes after the list"
+msgstr "list后的文本或代码"
+
+# wp_similarity.php:
+msgid "Output template"
+msgstr "输出的模板"
+
+# wp_similarity.php:
+msgid "Valid template tags"
+msgstr "可用的模板标签"
+
+# wp_similarity.php:
+msgid "Display format for similarity strength"
+msgstr "相似强度的显示格式"
+
+# wp_similarity.php:
+msgid "Custom text for strength"
+msgstr "自定义的文本"
+
+# wp_similarity.php:
+msgid "Relative mixing weights"
+msgstr "mixing时各自的相似权重"
+
+# wp_similarity.php:
+msgid "Show one more random related post"
+msgstr "显示多一个随机的相关文章"
+
+# wp_similarity.php:
+msgid "Auto-display list from function"
+msgstr "自动显示"
+
+# wp_similarity.php:
+msgid "Display Similarity on pages"
+msgstr "在Pages页面显示"
+
+# wp_similarity.php:
+msgid "Only useful with if your pages have tags and/or categories assigned."
+msgstr "只有当该pages下有tags时才可用"
+
+# wp_similarity.php:
+msgid "Display Similarity on Feed"
+msgstr "在Feed里显示"
+
+# wp_similarity.php:
+msgid "The plugin allows for three function calls anywhere in your page templates (all use the same options):"
+msgstr "允许使用下列自定义的函数调用相关文章："
+
+# wp_similarity.php:
+msgid "There are also three function calls that are better suited for use in sidebars (specifically when the sidebar is used on the main page)"
+msgstr "允许使用下列的代码在sidebars显示相关文章（特别是在singel页面）"
+
+#: To allow for easy of editing of your keywords in a spreadsheet you can save to and from a comma seperatated values (CVS/TEXT) file.
+msgid "To allow for easy of editing of your keywords in a spreadsheet you can save to and from a comma seperatated values (CVS/TEXT) file."
+msgstr "对关键词批量的导入和导出。格式请严格按照下面的Example file。"
+
+#: Congratulate, Updated success
+msgid "Congratulate, Updated success"
+msgstr "恭喜，更新成功"
+
+#: Import and Export File
+msgid "Import and Export File"
+msgstr "批量导入导出"
+
+#: Export to File
+msgid "Export to File"
+msgstr "输出保存到文件"
+
+#: Import from file
+msgid "Import from file"
+msgstr "从文件导入(请严格参照 例子 里的格式)"
+
+#: Example file:
+msgid "Example file:"
+msgstr "例子：导入文件的格式"
+
+#: Save As
+msgid "Save As"
+msgstr "另存为"
+

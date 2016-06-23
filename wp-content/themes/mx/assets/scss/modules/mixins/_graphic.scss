@@ -1,0 +1,13 @@
+@function get_riangle_deg($direct){
+	@if $direct == down{
+		@return 45;
+	}
+}
+@mixin riangle($color,$direct){
+	width: 0;
+	height: 0;
+	border-bottom: .5rem solid $color; 
+	border-left: .5rem solid transparent;
+	@include rotate(get_riangle_deg($direct));
+	content: '';
+}

@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-12 14:15+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# wp_weywordlink.php
+#: 为你的wordpress博客中添加关键词的链接，更多的内链和外链,更好的SEO!
+msgid "This plugin automatically links keywords in your posts to their definition pages."
+msgstr "Dieses Plugin wandelt automatisch alle gesuchten Schlüsselwörter in Links um."
+
+# wp_weywordlink.php
+#: 帮助文档
+msgid "Help"
+msgstr "Hilfe"
+
+# wp_weywordlink.php
+#: 这是一个添加关键词链接的插件，根据你添加的关键词和链接，自动搜索匹配文章里的关键词，并加上链接。每一个关键词的链接，提供一些选项设置，详细解释如下：
+msgid "The Keyword link plugin searches the contents of each of your posts for the above listed keywords. Each keyword found is automatically linked to the link you have specified. For each link you can also specify the following options: "
+msgstr "Das Keyword Link Plugin sucht in ihren Artikel, Seiten und auf Wunsch auch in den Kommentaren nach den oben angegebenen Schlüsselwörtern und ersetzt jedes einzelne automatisch mit einem Link welcher zu der jeweiligen gewünschten Seite führt. Für jeden Link stehen folgende Optionen zur Verfügung:"
+
+# wp_weywordlink.php
+#: <b>No Follow</b> - 在链接加多一个属性：<em>rel= no follow </em>
+#: ，使用Nofollow属性让搜索引擎不要抓取并追踪此链接.
+msgid "<b>No Follow</b> - This adds a <em>rel= no follow</em> to the link."
+msgstr "<b>No Follow</b> - Fügt ein <em>rel= no follow </em> Atrribute hinzu welcher Suchmaschinen anweist diese Links nicht zu werten."
+
+# wp_weywordlink.php
+#: <b>First Match Only</b> - 仅仅匹配第一个关键词.
+#: 否则将匹配2个或3个.
+msgid "<b>First Match Only</b> - Only replace the first match of the word, ignore further mentions. Otherwise will replace 2 or 3."
+msgstr "<b>First Match Only</b> - Erweitert nur das erste Schlüsselwort mit einem Link und ignoriert darauf folgende. Andererseits ersetzt es sonst 2 bis 3."
+
+# wp_weywordlink.php
+#: <b>New Window</b> - 在链接加上 <em>target= _blank </em>的属性,
+#: 在新窗口打开.
+msgid "<b>New Window</b> - This adds a <em>target=_blank</em> to the link, forcing a new browser window on clicking."
+msgstr "<b>New Window</b> - Fügt ein <em>target= _blank </em>Attribut hinzu und zwingt einen Browser die gewünschte Seite in einem Neuen Fenster zu öffnen."
+
+# wp_weywordlink.php
+#: <b>Ignore Case</b> - 不匹分大小写，如 Google , google 或者 gooGLE
+#: 都会匹配到.英文关键词有效(<b>不推荐使用</b>)
+msgid "<b>Ignore Case</b> - Google, google and gooGLE are all fine.(<b>Not recommended, There may be problems</b>)"
+msgstr "<b>Ignore Case</b> - Groß und Rechtschreibung ignorieren (<b>Wird nicht empfohlen da es sonst zu Fehlern kommen könnte</b>)"
+
+# wp_weywordlink.php
+#: <b>Is affiliate</b> -
+#: 勾上表示内链，同外链区分，这里要添加下面提到的CSS样式。
+msgid "<b>Is affiliate</b> - Allows you to tell your visitors that the link is an affiliate."
+msgstr "<b>Is affiliate</b> - Erlaubt es dem Besucher zu sagen das es sich um ein Affiliate-Link handelt."
+
+# wp_weywordlink.php
+#: <b>Filter in comments</b> - 勾上匹配替换评论区里的关键词.
+msgid "<b>Filter in comments</b> - Also replace this keyword in post comments."
+msgstr "<b>Filter in comments</b> - Ersetzt auch in den Kommentare die gesuchten Schlüsselwörter."
+
+# wp_weywordlink.php
+#: <b>*For zh_CN</b> - For chinese keyword, or others language do not split by \"space\"
+msgid "<b>*For zh_CN</b> - For chinese keyword, or others language do not split by \"space\""
+msgstr "<b>*For zh_CN</b> - Für chinesische Schlüsselwörter."
+
+# wp_weywordlink.php
+#: 每一个链接都会加上CSS样式，如： &lt;span
+#: class='wp_keywordlink'&gt; .. &lt;/span&gt;
+#: 。你可以把下面的CSS加到博客原来的CSS样式表中.
+msgid "Each link created by the plugin is contained in an &lt;span class= wp_keywordlink &gt; .. &lt;/span&gt; wrapper. This allows you to modify the links by adding a style to your themes style.css file."
+msgstr "Jeder vom Plugin ereugter Link beinhaltet folgenden Code: &lt;span class='wp_keywordlink'&gt; .. &lt;/span&gt;. Dies erlaubt die Darstellung der Links in der style.css eures Theme Verzeichnisses anzupassen."
+
+# wp_weywordlink.php
+#: 内链跟外链是有区别的, 内链的CSS用 &lt;span
+#: class='wp_keywordlink_affiliate'&gt; .. &lt;/span&gt;
+#: 你也可以根据你的需要更改。
+msgid "Affiliate links work a little different, they use &lt;span class= wp_keywordlink_affiliate &gt; .. &lt;/span&gt; allowing you to differentiate those paid for links from your internal links."
+msgstr "Affiliate dagegen generieren folgenden Code: &lt;span class='wp_keywordlink_affiliate'&gt; .. &lt;/span&gt;. Welcher es wiederum erlaubt auch Afflitate Links sichtbar als solche in euer syle.css zu kenzeichnen."
+
+# wp_keywordlink.php
+#: 自动把文章的标签当作关键词:
+msgid "Auto change Post tags to Keyword:"
+msgstr "Automatisch Sichtwörter in Schlüsselwörter umwandeln:"
+
+# wp_keywordlink.php
+#: 关闭
+msgid "Disable"
+msgstr "Aus"
+
+# wp_keywordlink.php
+#: 开启
+msgid "Enable"
+msgstr "Ein"
+

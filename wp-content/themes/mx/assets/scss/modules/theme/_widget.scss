@@ -1,0 +1,35 @@
+.widget {
+	margin-bottom: $grid-g-gutter;
+	@include view-phone{
+		margin-bottom: $grid-g-phone-gutter;
+	}
+	.widget-title{
+		padding: 0 0 0 1rem;
+		font-size: 1rem;
+		color: $title-color;
+		margin: 0 0 1rem;
+		a{
+			color: $title-color;
+		}
+		.more{
+			float: right;
+		}
+	}
+	& > *:last-child{
+		@extend %panel-content;
+	}
+	.menu{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		li{
+			float: left;
+			width: 50%;
+			margin-bottom: .5rem;
+		}
+		a{
+			display: block;
+		}
+	}
+}

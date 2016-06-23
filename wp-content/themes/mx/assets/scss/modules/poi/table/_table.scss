@@ -1,0 +1,12 @@
+table{
+	width: 100%;
+	text-align: left;
+	td,
+	th{
+		padding: 1rem;
+	}
+	thead,
+	tfoot{
+		background: $card-bg-color-active;
+	}
+}

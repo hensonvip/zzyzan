@@ -1,0 +1,54 @@
+%widget-user-list{
+	position: relative;
+	height: 0;
+	padding-bottom: 100%;
+	border-radius: 50%;
+	//overflow: hidden;
+	background: #eee;
+	img{
+		width: 100%;
+	}
+}
+.widget_point_rank{
+	@extend %panel-not-content;
+	.user-list{
+		position: relative;
+		margin-bottom: 2rem;
+		.avatar{
+			@include transition-duration(.2);
+		}
+		&:hover .avatar,
+		&.hover .avatar{
+			@include transform(scale3d(1.2,1.2,2));
+			z-index: 10;
+		}
+		&:hover .extra,
+		&.hover .extra{
+			opacity: 1;
+			background: $accent-color;
+		}
+	}
+	.avatar-container{
+		@extend %widget-user-list;
+	}
+	.author{
+		margin: .5rem 0 0;
+		color: $title-color;
+		font-weight: normal;
+		font-size: 1rem;
+		@extend %text-overflow;
+		text-align: center;
+	}
+	.extra{
+		/*display: none;*/
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: rgba($accent-color,.6);
+		color:#fff;
+		border-radius: .5rem;
+		padding: 0 .2rem;
+		font-weight: bold;
+		font-size: 1rem;
+	}
+}

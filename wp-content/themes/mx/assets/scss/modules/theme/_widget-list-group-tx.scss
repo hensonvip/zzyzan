@@ -1,0 +1,21 @@
+.widget{
+	& > .list-group-tx:last-child{
+		@extend %panel-content;
+		a{
+			display: block;
+			padding: ($grid-g-gutter / 2) $grid-g-gutter;
+			border-bottom: 1px solid $card-bg-color-hover;
+			&:hover,
+			&.hover{
+				background: $card-bg-color-hover;
+			}
+			&:active,
+			&.active{
+				background: $card-bg-color-active;
+			}
+			@include view-phone{
+				padding: ($grid-g-phone-gutter / 2) $grid-g-phone-gutter;
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+$card-bg-bottom-gutter: 2.5rem;
+$card-avatar-width: 3rem;
+$card-avatar-left: .5rem;
+$meta-left: $card-avatar-left * 2 + $card-avatar-width;
+.card{
+	//sm
+	&.sm{
+		.card-bg{
+			padding-bottom: $card-bg-bottom-gutter;
+			font-size: 1rem;
+			overflow: hidden;
+		}
+		.card-cat{
+			position: absolute;
+			top: 0;
+			left: 1rem;
+			color: #fff;
+			font-size: 1rem;
+			z-index: 1;
+			span{
+				float: left;
+				padding: .1rem .5rem;
+				margin-right: .2rem;
+				border-radius: 0 0 $global-border-radius $global-border-radius;
+			}
+		}
+		.card-title{
+			@extend %card-title-bg;
+			position: absolute;
+			margin: 0;
+			bottom: $card-bg-bottom-gutter;
+			left: 0;
+			width: 100%;
+			font-weight: bold;
+			padding: 2rem .5rem .5rem $meta-left;
+			text-shadow: 0 1px 3px #000;
+			color: #fff;
+			h2,
+			h3{
+				font-size: 1rem;
+				margin: 0;
+				line-height: 1.2;
+			}
+		}
+		.avatar{
+			position: absolute;
+			left: $card-avatar-left;
+			top: -$card-avatar-width / 2;
+			width: $card-avatar-width;
+			height: $card-avatar-width;
+			border: 2px solid #fff;
+			overflow: hidden;
+		}
+		.card-meta{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: .5rem;
+			height: $card-bg-bottom-gutter;
+			padding-left: $meta-left;
+			line-height: $card-bg-bottom-gutter;
+
+			.meta{
+				float: left;
+				&.author{
+					.tx{
+						display: inline-block;
+						max-width: 6rem;
+						@extend %text-overflow;
+						@include view-phone{
+							max-width: none;
+						}
+					}
+				}
+			}
+			.time{
+				float: right;
+			}
+		}
+	}
+}

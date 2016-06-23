@@ -1,0 +1,16 @@
+#comment-pagination-container{
+	margin-bottom: 2rem;
+}
+.comment-pagination{
+	display: table;
+	a{
+		display: table-cell;
+		width: 1%;
+		&:first-child{
+			border-radius: $global-border-radius 0 0 $global-border-radius;
+		}
+		&:last-child{
+			border-radius: 0 $global-border-radius $global-border-radius 0;
+		}
+	}
+}

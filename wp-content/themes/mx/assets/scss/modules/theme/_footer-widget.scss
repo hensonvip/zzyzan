@@ -1,0 +1,23 @@
+#footer{
+	font-size: 1rem;
+	.widget{
+		@extend %panel-not-content;
+		.heading{
+			padding: 0;
+			.widget-title{
+				padding: 0;
+				color: $excerpt-color;
+				a{
+					color: $excerpt-color;
+					border-bottom: 1px dotted $excerpt-color;
+				}
+			}
+			& + *{
+				border: none;
+				padding: 0;
+			}
+		}
+		
+	}
+	
+}

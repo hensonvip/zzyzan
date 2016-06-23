@@ -1,0 +1,255 @@
+/**
+ * common
+ */
+.theme_custom_slidebox-container{
+	.area-blur{
+		display: none;
+	}
+}
+/**
+ * candy
+ */
+.theme_custom_slidebox-candy{
+	position: relative;
+	margin: $grid-g-gutter*2 0;
+	.area-main:after{
+		display: block;
+		clear: both;
+		content: '';
+	}
+	.area-main{
+		position: relative;
+		margin-bottom: $grid-g-gutter;
+		z-index: 1;
+		.item{
+			display: none;
+			vertical-align: middle;
+			margin: 0 auto;
+			&:after{
+				display: block;
+				clear: both;
+				content: '';
+			}
+			&.active{
+				display: block;
+			}
+		}
+		a{
+			float: left;
+			width: 60%;
+		}
+		img{
+			display: block;
+			max-width: 90%;
+			width: auto;
+			height: 400px;
+			margin: 0 auto;
+			box-shadow: 0 2px 10px rgba(0,0,0,.5);
+		}
+		.des{
+			width: 40%;
+			color: #fff;
+			font-size: 2rem;
+			margin-top: $grid-g-gutter;
+			text-shadow: 0 1px 10px #000;
+			line-height: 1.2;
+			span{
+				display: block;
+			}
+			.more{
+				border: 1px solid #fff;
+				border-radius: 2px;
+				padding: .5rem 1rem;
+				margin-top: 1rem;
+				text-transition: uppercase;
+				display: inline-block;
+				&:hover{
+					background: $accent-color;
+					border-color: $accent-color;
+					text-shadow: none;
+				}
+			}
+		}
+		.sub-title{
+			font-size: 1.5rem;
+			margin: .5rem 0 1rem;
+			opacity: .9;
+		}
+		/** cats */
+		.cats{
+			overflow: hidden;
+			span{
+				float: left;
+				padding: .5rem 1rem;
+				margin-right: .5rem;
+				border-radius: $global-border-radius;
+				font-size: 1.1rem;
+				opacity: 1;
+			}
+		}
+	}
+	.area-thumbnail{
+		display: table;
+		a{
+			position: relative;
+			display: table-cell;
+			width: 1%;
+			padding: 0 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		img{
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			box-shadow: 0 2px 10px rgba(0,0,0,.5);
+		}
+		h2{
+			position: absolute;
+			background: linear-gradient(transparent,rgba(0,0,0,.3));
+			bottom: 0;
+			left: 10px;
+			right: 10px;
+			font-size: 13px;
+			margin: 0;
+			color: #fff;
+			padding: 10px 5px 5px;
+			text-shadow: 0 0 3px #000;
+			font-weight: bold;
+		}
+		.active h2:after{
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: #00FFFF;
+		}
+	}
+}
+
+/**
+ * scroller
+ */
+.theme_custom_slidebox-scroller{
+	position: relative;
+	margin-bottom: 20px;
+	.area-main{
+		white-space: nowrap;
+		/*overflow: hidden;	*/
+		overflow-y: hidden;
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		a{
+			display: block;
+			position: relative;
+			&:after{
+				background: #000;
+				opacity: .0;
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				@include transition-duration($global-transition-duration);
+			}
+			&:hover:after{
+				opacity: .5;
+			}
+		}
+		.item{
+			position: relative;
+			display: inline-block;
+			width: 640px;
+			height: 401px;
+			overflow: hidden;
+			border-top: 1px solid #000;
+			&.large{
+				width: 640px;
+				height: 401px;
+				a{
+					width: 100%;
+					height: 400px;
+				}
+			}
+			a{
+				-webkit-background-size: cover;
+				background-size: cover;
+				float: left;
+				color: #fff;
+				width: 320px;
+				height: 200px;
+				border: 1px solid #000;
+				border-top: none;
+				border-right: none;
+				overflow: hidden;
+			}
+		}
+		h2{
+			position: absolute;
+			background: linear-gradient(transparent,rgba(0,0,0,.5));
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: 0;
+			font-size: 1.2em;
+			font-weight: bold;
+			padding: 2rem 1rem 1rem;
+			text-shadow: 0 1px 1px #000;
+			z-index: 2;
+			color: #fff;
+			white-space: normal;
+			text-align: center;
+		}
+	}
+}
+.theme_custom_slidebox-ad-below{
+	margin-bottom: $grid-g-gutter;
+	z-index: 1;
+	position: relative;
+	@include view-phone{
+		margin-bottom: $grid-g-phone-gutter;
+	}
+}
+
+@include view-not-phone{
+	/**
+	 * ..area-blur
+	 */
+	.theme_custom_slidebox-container{
+		.area-blur{
+			display: block;
+			position: absolute;
+			top: -$grid-g-gutter * 2;
+			left: 0;
+			right: 0;
+			bottom: -$grid-g-gutter * 2;
+			-webkit-filter: blur($grid-g-gutter);
+			-ms-filter: blur($grid-g-gutter);
+			filter: blur($grid-g-gutter);
+			z-index: 0;
+			.item{
+				position: absolute;
+				-webkit-background-size: cover;
+				background-size: cover;
+				opacity: 0;
+				@include transition-duration($global-transition-duration);
+				width: 100%;
+				height: 100%;
+			}
+			.active{
+				opacity: 1;
+			}
+		}
+	}
+	.theme_custom_slidebox-scroller{
+		.area-main{
+			overflow: hidden;
+		}
+	}
+}

@@ -1,0 +1,290 @@
+# [Countryname] Language File for wp_keywordlink (wp_keywordlink-[localname].po)
+# Copyright (C) 2009 [name] : [URL]
+# This file is distributed under the same license as the WordPress package.
+# [name] <[mail-address]>, 2009.
+# $Id: Lc_archivers.pot 123431 2009-09-07 00:17:10Z LiuCheng.Name $
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: wp_keywordlink\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-12 14:15+0800\n"
+"PO-Revision-Date: 2009-08-12 14:15+0800\n"
+"Last-Translator: LiuCheng.Name\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# wp_keywordlink.php
+#: 为你的wordpress博客中添加关键词的链接，更多的内链和外链,更好的SEO!
+msgid "This plugin automatically links keywords in your posts to their definition pages. And displays a list of posts similar to the current post."
+msgstr ""
+
+# wp_keywordlink.php
+#: 帮助文档
+msgid "Help"
+msgstr ""
+
+# wp_keywordlink.php
+#: 这是一个添加关键词链接的插件，根据你添加的关键词和链接，自动搜索匹配文章里的关键词，并加上链接。每一个关键词的链接，提供一些选项设置，详细解释如下：
+msgid "The Keyword link plugin searches the contents of each of your posts for the above listed keywords. Each keyword found is automatically linked to the link you have specified. For each link you can also specify the following options: "
+msgstr ""
+
+# wp_keywordlink.php
+#: <b>No Follow</b> - 在链接加多一个属性：<em>rel= no follow </em> ，使用Nofollow属性让搜索引擎不要抓取并追踪此链接.
+msgid "<b>No Follow</b> - This adds a <em>rel= no follow</em> to the link."
+msgstr ""
+
+# wp_keywordlink.php
+#: <b>First Match Only</b> - 仅仅匹配第一个关键词. 否则将匹配2个或3个.
+msgid "<b>First Match Only</b> - Only replace the first match of the word, ignore further mentions. Otherwise will replace 2 or 3."
+msgstr ""
+
+# wp_keywordlink.php
+#: <b>New Window</b> - 在链接加上 <em>target= _blank </em>的属性, 在新窗口打开.
+msgid "<b>New Window</b> - This adds a <em>target=_blank</em> to the link, forcing a new browser window on clicking."
+msgstr ""
+
+# wp_keywordlink.php
+#: <b>Ignore Case</b> - 不匹分大小写，如 Google ,  google  或者  gooGLE  都会匹配到.英文关键词有效(<b>不推荐使用</b>)
+msgid "<b>Ignore Case</b> - Google, google and gooGLE are all fine.(<b>Not recommended, There may be problems</b>)"
+msgstr ""
+
+# wp_keywordlink.php
+#: <b>Is affiliate</b> - 勾上表示内链，同外链区分，这里要添加下面提到的CSS样式。
+msgid "<b>Is affiliate</b> - Allows you to tell your visitors that the link is an affiliate."
+msgstr ""
+
+# wp_keywordlink.php
+#: <b>Filter in comments</b> - 勾上匹配替换评论区里的关键词.
+msgid "<b>Filter in comments</b> - Also replace this keyword in post comments."
+msgstr ""
+
+# wp_keywordlink.php
+#: <b>*For zh_CN</b> - 勾上支持中文关键词. 或其它不是用空格隔开的语言。
+msgid "<b>*For zh_CN</b> - For chinese keyword, or others language do not split by \"space\""
+msgstr ""
+
+# wp_keywordlink.php
+#: 每一个链接都会加上CSS样式，如： &lt;span class='wp_keywordlink'&gt; .. &lt;/span&gt; 。你可以把下面的CSS加到博客原来的CSS样式表中.
+msgid "Each link created by the plugin is contained in an &lt;span class= wp_keywordlink &gt; .. &lt;/span&gt; wrapper. This allows you to modify the links by adding a style to your themes style.css file."
+msgstr ""
+
+# wp_keywordlink.php
+#: 内链跟外链是有区别的, 内链的CSS用 &lt;span class='wp_keywordlink_affiliate'&gt; .. &lt;/span&gt; 你也可以根据你的需要更改。
+msgid "Affiliate links work a little different, they use &lt;span class= wp_keywordlink_affiliate &gt; .. &lt;/span&gt; allowing you to differentiate those paid for links from your internal links."
+msgstr ""
+
+# wp_keywordlink.php
+#: 自动把文章的标签当作关键词:
+msgid "Auto change Post tags to Keyword:"
+msgstr ""
+
+# wp_keywordlink.php
+#: 关闭
+msgid "Disable"
+msgstr ""
+
+# wp_keywordlink.php
+#: 开启
+msgid "Enable"
+msgstr ""
+
+# wp_keywordlink.php
+#: Links
+msgid "Links"
+msgstr ""
+
+# wp_keywordlink.php:70
+#: Page:
+msgid "Page:"
+msgstr ""
+
+# wp_keywordlink.php:79
+#: Show:
+msgid "Show:"
+msgstr ""
+
+# wp_keywordlink.php:81
+#: Search:
+msgid "Search:"
+msgstr ""
+
+# wp_keywordlink.php:155
+#: <p>No links have been defined!</p>
+msgid "<p>No links have been defined!</p>"
+msgstr ""
+
+# wp_keywordlink.php:197
+#: Edit / Add a new link
+msgid "Edit / Add a new link"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Please enter both a keyword and URL
+msgid "Please enter both a keyword and URL"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Existing keyword has been updated
+msgid "Existing keyword has been updated"
+msgstr ""
+
+# wp_keywordlink.php:
+#: No such keyword, bizarre error!
+msgid "No such keyword, bizarre error!"
+msgstr ""
+
+#: Import and Export File
+msgid "Import and Export File"
+msgstr ""
+
+#: To allow for easy of editing of your keywords in a spreadsheet you can save to and from a comma seperatated values (CVS/TEXT) file.
+msgid "To allow for easy of editing of your keywords in a spreadsheet you can save to and from a comma seperatated values (CVS/TEXT) file."
+msgstr ""
+
+# wp_keywordlink.php:
+#: <b>* Escape &lt;pre&gt;&lt;/pre&gt; region, or use custom tag &lt;wp_nokeywordlink&gt;&lt;/wp_nokeywordlink&gt; to escape keywordlink.</b>
+msgid "<b>* Escape &lt;pre&gt;&lt;/pre&gt; region, or use custom tag &lt;wp_nokeywordlink&gt;&lt;/wp_nokeywordlink&gt; to escape keywordlink.</b>"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Global options for keyword link, include tags2keyword.
+msgid "Global options for keyword link, include tags2keyword."
+msgstr ""
+
+# wp_keywordlink.php:
+#: Number of Keyword matched:
+msgid "Number of Keyword matched:"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Keywords does not link itself: 
+msgid "Keywords does not link itself:"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Ignore pre label: 
+msgid "Ignore pre label:"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Keywords does not link on Page: 
+msgid "Keywords does not link on Page:"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Support Author: 
+msgid "Support Author:"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Disable if choose - First Match Only 
+msgid "Disable if choose - First Match Only"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Escape <pre>..</pre> label
+msgid "Escape <pre>..</pre> label"
+msgstr ""
+
+# wp_keywordlink.php:
+#: Add a Link on wp_footer to suport liucheng.name. Thanks~
+msgid "Add a Link on wp_footer to suport liucheng.name. Thanks~"
+msgstr ""
+
+# wp_keywordlink.php:
+#:My blog（<a href=http://liucheng.name target=_blank>http://liucheng.name</a>) in the running of SEO competition. And really need your help to add a link to liucheng.name. use 博百优 as nchor text. Thanks!
+msgid "My blog（<a href=http://liucheng.name target=_blank>http://liucheng.name</a>) in the running of SEO competition. And really need your help to add a link to liucheng.name. use 博百优 as nchor text. Thanks!"
+msgstr ""
+
+# wp_similarity.php:
+#:Options saved
+msgid "Options saved"
+msgstr ""
+
+# wp_similarity.php:
+#:Factory Settings applied
+msgid "Factory Settings applied"
+msgstr ""
+
+# wp_similarity.php:
+#:Number of posts to show
+msgid "Number of posts to show"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Minimum match strength"
+msgstr ""
+
+# wp_similarity.php:
+msgid "(Any number between .00 and 1 with 1 being a perfect match.)"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Default display if no matches"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Text and codes before the list"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Text and codes after the list"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Output template"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Valid template tags"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Display format for similarity strength"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Custom text for strength"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Relative mixing weights"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Show one more random related post"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Minimum match strength"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Auto-display list from function"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Display Similarity on pages"
+msgstr ""
+
+# wp_similarity.php:
+msgid "Only useful with if your pages have tags and/or categories assigned."
+msgstr ""
+
+# wp_similarity.php:
+msgid "Display Similarity on Feed"
+msgstr ""
+
+# wp_similarity.php:
+msgid "The plugin allows for three function calls anywhere in your page templates (all use the same options):"
+msgstr ""
+
+# wp_similarity.php:
+msgid "There are also three function calls that are better suited for use in sidebars (specifically when the sidebar is used on the main page)"
+msgstr ""

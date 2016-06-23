@@ -1,0 +1,26 @@
+.label{
+	display: inline-block;
+	color: $label-color;
+	border-radius: $global-border-radius;
+	padding: .2rem .5rem;
+	white-space: nowrap;
+	margin-bottom: .5rem;
+	&.label-default{
+		background: $label-default-bg-color;
+	}
+	&.label-success{
+		background: $label-success-bg-color;
+	}
+	&.label-primary{
+		background: $label-primary-bg-color;
+	}
+	&.label-info{
+		background: $label-info-bg-color;
+	}
+	&.label-danger{
+		background: $label-danger-bg-color;
+	}
+	&.label-warning{
+		background: $label-warning-bg-color;
+	}
+}

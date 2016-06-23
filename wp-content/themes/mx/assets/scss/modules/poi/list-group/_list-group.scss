@@ -1,0 +1,34 @@
+.list-group{
+	list-style-type: none;
+	margin: 0;
+	padding: 0 !important;
+	
+	.list-group-item{
+		background: $panel-bg-color;
+		padding: $list-group-gutter;
+		margin-bottom: -1px;
+		border: 1px solid $panel-border-color;
+		&:first-child{
+			border-radius: $global-border-radius $global-border-radius 0 0;
+		}
+		&:last-child{
+			border-radius: 0 0 $global-border-radius $global-border-radius;
+		}
+		& > badge{
+			float: right;
+		}
+		& > a{
+			display: block;
+			margin: -$list-group-gutter;
+			padding: $list-group-gutter;
+			&:hover,
+			&.hover{
+				background: $card-bg-color-hover;
+			}
+			&:active,
+			&.active{
+				background: $card-bg-color-active;
+			}
+		}
+	}
+}

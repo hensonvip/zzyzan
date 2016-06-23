@@ -1,0 +1,17 @@
+#footer .links-container{
+	border-top: 1px dashed $panel-border-color;
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+	margin-bottom: 0;
+	#links-footer{
+		li{
+			display: inline-block;
+			float: none;
+			margin: 0 .5rem .5rem 0;
+			width: auto;
+			a{
+				@include normal-link;
+			}
+		}
+	}
+}

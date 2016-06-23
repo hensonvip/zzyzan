@@ -1,0 +1,181 @@
+%nav-main-menu-active{
+	&:after{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: $accent-color;
+		content: '';
+	}
+}
+%nav-main-menu-hover{
+	background: $link-color-hover;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(#000,.3);
+}
+%nav-main-arrow{
+	display: inline-block;
+	margin-left: .5em;
+	font-family: "FontAwesome";
+}
+.nav-main-placeholder{
+	height: $nav-main-height;
+	margin-bottom: $grid-g-gutter;
+	@include view-phone{
+		margin-bottom: $grid-g-phone-gutter;
+	}
+}
+
+.nav-main{
+	background: $nav-main-bg-color;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $nav-main-height;
+	line-height: $nav-main-height;
+	color: $excerpt-color;
+	box-shadow: $nav-main-shadow;
+	z-index: 10;
+	text-shadow: 0 1px 0 rgba(#fff,.5);
+	@extend %text-nowrap;
+	
+	@include transition-duration($nav-main-duration);
+	@include translate3d(0,0,0);
+	&.fold{
+		@include translate3d(0,-100%,0);
+	}
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li{
+			position: relative;
+		}
+	}
+	.menu{
+		& > li{
+			float: left;
+			&:hover,
+			&.hover,
+			&:active,
+			&.active{
+				& > a{
+					@extend %nav-main-menu-hover;
+				}
+				& > .sub-menu{
+					visibility: visible;
+					@include scale3d(1,1,1);
+				}
+				
+			}
+		}
+		li{
+			&[class *= "current"]{
+				@extend %nav-main-menu-active;
+			}
+			&.menu-item-has-children{
+				& > a{
+					&:after{
+						@extend %nav-main-arrow;
+						opacity: .5;
+						content:"\f107";
+					}
+				}
+			}
+		}
+	}
+	a{
+		position: relative;
+		display: block;
+		line-height: $nav-main-height;
+		padding: 0 1rem;
+		color: $title-color;
+		&:hover,
+		&.hover,
+		&:active,
+		&.active,
+		&:focus{
+			@extend %nav-main-menu-hover;
+		}
+		
+	}
+	
+	&.top{
+		background: $nav-main-top-bg-color;
+	}
+	.g{
+		position: relative;
+	}
+
+
+	//sub menu
+	.sub-menu {
+		position: absolute;
+		background: $nav-main-bg-color;
+		visibility: hidden;
+		top: 100%;
+		left: 0;
+		box-shadow: $nav-main-sub-menu-shadow;
+		@include transform-origin(top);
+		@include scale3d(1,0,1);
+		@include transition-duration($nav-main-duration);
+		z-index: 10;
+		.sub-menu{
+			left: 100%;
+			top: 0;
+			@include transform-origin(left);
+			@include scale3d(0,1,1);
+		}
+		& > li{
+			&:hover > .sub-menu{
+				visibility: visible;
+				@include scale3d(1,1,1);
+			}
+		}
+		li {
+			float: none;
+			a{
+				line-height: 3rem;
+				min-width: 12rem;
+				border-bottom: 1px solid rgba(#000,.03);
+			}
+			&:hover > a,
+			&[class*=current] > a{
+				@extend %nav-main-menu-hover;
+			}
+		}
+		& > .menu-item-has-children > a:after{
+			@extend %nav-main-arrow;
+			content:"\f105";
+		}
+	}
+	//logo
+	.logo{
+		height: $nav-main-height;
+		padding: 0;
+		float: left;
+		margin-right: $grid-g-gutter;
+		img{
+			display: block;
+			margin-top: 5px;
+		}
+	}
+	//when logged and havs admin-bar
+	.admin-bar &{
+		top: 32px;
+	}
+	.navicon{
+		float: left;
+		color: $link-color-active;
+		font-size: 1.2em;
+		padding: 0 1.5rem;
+		width: auto;
+	}
+	@include view-not-desktop{
+		.g{
+			padding: 0;	
+		}
+	}
+}

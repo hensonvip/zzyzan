@@ -1,0 +1,25 @@
+#fm-search-page{
+	margin-bottom: 2rem;
+	label{
+		position: absolute;
+		padding: 1rem 2rem;
+		font-size: 2rem;
+		color: $excerpt-color;
+	}
+}
+#search-page-s{
+	border: 3px solid $form-control-border-color;
+	background: #fff;
+	padding: 1rem 0 1rem 6rem;
+	font-size: 2rem;
+	border-radius: 5rem;
+	&:hover,
+	&.hover{
+		border-color: $form-control-border-color-hover;
+	}
+	&:active,
+	&:focus,
+	&.focus{
+		border-color: $form-control-border-color-focus;
+	}
+}

@@ -1,0 +1,100 @@
+.mod{
+	margin-bottom: $grid-g-gutter;
+	@include view-phone{
+		margin-bottom: $grid-g-phone-gutter;
+	}
+	& > .heading{
+		position: relative;
+		padding-left: 1rem;
+		padding-bottom: .4rem;
+		line-height: 2;
+	
+		@extend .clearfix;
+		&:before{
+			position: absolute;
+			width: 100%;
+			top: 100%;
+			left: 0;
+			height: 1px;
+			background: lighten($accent-color,10%);
+			content: '';
+		}
+		a{
+			color: $title-color;
+			&:hover,
+			&.hover{
+				color: $link-color-hover;
+			}
+		}
+		.extra{
+			display: inline-block;
+			@include view-phone{
+				float: right;
+				font-size: .9rem;
+			}
+			a{
+				&:after{
+					display: inline-block;
+					padding: 0 .5rem;
+					content: '/';
+					color: $panel-border-color;
+					vertical-align: middle;
+				}
+				&:last-child:after{
+					display: none;
+				}
+			}
+			
+		}
+		.title{
+			background: $accent-color;
+			font-size: $mod-title-font-size;
+			font-weight: normal;
+			margin-right: $grid-g-gutter;
+			@include transform(skew(-20deg));
+			@include view-phone{
+				font-size: $mod-phone-title-font-size;
+				margin-right: $grid-g-phone-gutter;
+				float: left;
+			}
+			&:hover,
+			&.hover{
+				background: darken($accent-color,10%);
+			}
+			a{
+				color: #fff;
+			}
+			.bg{
+				display: inline-block;
+				position: relative;
+				padding: 0 1rem;
+				color: #fff;
+				@include transform(skew(20deg));
+				
+				&:before,
+				&:after{
+					position: absolute;
+					background: $accent-color;
+					right: -.5rem;
+					top: 0;
+					width: 1px;
+					height: 100%;
+					display: block;
+					content: '';
+					@include transform(skew(-20deg));
+				}
+				&:before{
+					right: auto;
+					left: -.5rem;
+				}
+			}
+		}
+	}
+	.below-more{
+		padding: .5rem 0;
+		margin-bottom: $grid-g-gutter;
+		@include view-phone{
+			margin-bottom: $grid-g-phone-gutter;
+		}
+	}
+}

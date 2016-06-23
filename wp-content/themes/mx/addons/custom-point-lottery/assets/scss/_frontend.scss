@@ -1,0 +1,60 @@
+.my-info{
+	font-size: 1.5rem;
+	.meta{
+		margin-right: 1rem;
+	}
+}
+#modify-count{
+	display: none;
+	&.plus{
+		color: #FF4081;
+	}
+	&.mins{
+		color: green;
+	}
+}
+.lottery-item{
+	position: absolute;
+	opacity: 0;
+	&:checked + .lottery-box{
+		border-color: $accent-color;
+		background: rgba($accent-color,.05);
+		z-index: 1;
+		.des{
+			color: $title-color;
+		}
+	}
+}
+.lottery-box{
+	position: relative;
+	display: block;
+	background: #fff;
+	padding: 1rem;
+	border: 2px solid $panel-border-color;
+	margin: -2px 0 0;
+	line-height: 30px;
+	border-radius: 2px;
+
+	&:hover{
+		background: rgba($accent-color,.05);
+	}
+	.icon,
+	.name,
+	.remaining{
+		float: left;
+	}
+	.icon{
+		width: 3rem;
+	}
+	.name{
+		margin-right: 1rem;
+		font-weight: bold;
+		font-size: 1.5rem;
+	}
+	.des{
+		display: block;
+		clear: both;
+		padding-left: 3rem;
+		color: $excerpt-color;
+	}
+}

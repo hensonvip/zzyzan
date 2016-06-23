@@ -1,0 +1,1 @@
+module.exports = /Mobi/.test(navigator.userAgent);

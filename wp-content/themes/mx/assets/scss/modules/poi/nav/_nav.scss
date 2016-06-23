@@ -1,0 +1,38 @@
+%nav-hover{
+	border-color: $link-color-hover;
+}
+.nav{
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding: 0;
+	& > * >a{
+		display: block;
+	}
+	a{
+		color: $title-color;
+		padding: .5rem 1rem;
+	}
+	& > *{
+		display: inline-block;
+		border-bottom: 2px solid $panel-border-color;
+		&:hover,
+		&.hover,
+		&:active,
+		&.active{
+			@extend %nav-hover;
+		}
+	}
+}
+@include view-desktop{
+	.nav{
+		display: table;
+		width: 100%;
+		text-align: center;
+		margin-bottom: $grid-gutter;
+		& > * {
+			display: table-cell;
+			width: 1%;
+		}
+	}
+}

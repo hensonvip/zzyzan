@@ -1,0 +1,56 @@
+%input-group-ele{
+	display: table-cell;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+label{
+	cursor: pointer;
+}
+.form-group{
+	margin-bottom: 1em;
+	@extend .clearfix;
+}
+input{
+	&[type="checkbox"], 
+	&[type="radio"]{
+		vertical-align: middle;
+	}
+}
+select{
+	cursor: pointer;
+}
+.form-control{
+	display: block;
+	width: 100%;
+	padding: ($btn-gutter / 2) $btn-gutter;
+	@extend %transition-duration-fast;
+	border: {
+		width: 0 0 2px 0;
+		color: $form-control-border-color;
+	}
+	&:hover,
+	&.hover{
+		border-color: $form-control-border-color-hover;
+	}
+	&:focus,
+	&.focus{
+		outline: 0;
+		border-color: $form-control-border-color-focus;
+	}
+}
+.input-group{
+	display: table;
+	
+	.form-control{
+		@extend %input-group-ele;
+	}
+	.addon{
+		@extend %input-group-ele;
+		margin-top: $form-control-gutter;
+		padding: 0 $form-control-gutter;
+		width: 1%;
+		color: $form-addon-color;
+	}
+	
+}
+@import "btn";

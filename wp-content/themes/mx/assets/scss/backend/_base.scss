@@ -1,0 +1,15 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+#ajax-loading{
+	visibility: visible;
+}
+#ajax-loading-container{
+	border: none;
+	margin: 0;
+}
+.tpl-item{
+	border-bottom: 1px dashed #ccc;
+}

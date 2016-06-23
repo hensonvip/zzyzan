@@ -1,0 +1,57 @@
+@mixin translate3d($args...){
+	-ms-transform: translate3d($args);
+	-webkit-transform: translate3d($args);
+	transform: translate3d($args);
+}
+@mixin scale3d($args...){
+	-ms-transform: scale3d($args);
+	-webkit-transform: scale3d($args);
+	transform: scale3d($args);
+}
+@mixin transition-duration($args: $global-transition-duration){
+	-ms-transition-duration: #{$args}s;
+	-webkit-transition-duration: #{$args}s;
+	transition-duration: #{$args}s;
+}
+%transition-duration-default{
+	@include transition-duration($global-transition-duration);
+}
+%transition-duration-fast{
+	@include transition-duration($transition-duration-fast);
+}
+@mixin transform-origin($args...) {
+	-ms-transform-origin: $args;
+	-webkit-transform-origin: $args;
+	transform-origin: $args;
+}
+@mixin transition($args...){
+	-webkit-transition: $args;
+	-ms-transition: $args;
+	transition: $args;
+}
+@mixin transform($args...){
+	-ms-transform: $args;
+	-webkit-transform: $args;
+	transform: $args;
+}
+@mixin rotate($deg){
+	-ms-transform: rotate(#{$deg}deg);
+	-webkit-transform: rotate(#{$deg}deg);
+	transform: rotate(#{$deg}deg);
+}
+@mixin translateX($args...){
+	-ms-transform: translateX($args);
+	-webkit-transform: translateX($args);
+	transform: translateX($args);
+}
+%translateX--50{
+	@include translateX(-50%);
+}
+@mixin translateY($args...){
+	-ms-transform: translateY($args);
+	-webkit-transform: translateY($args);
+	transform: translateY($args);
+}
+%translateY--50{
+	@include translateY(-50%);
+}

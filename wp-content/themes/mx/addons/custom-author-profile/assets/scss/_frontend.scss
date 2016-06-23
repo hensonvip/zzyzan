@@ -1,0 +1,15 @@
+.crumb-title{
+	text-align: center;
+	font-size: 1.5rem;
+	margin: 0 0 $grid-g-gutter;
+	font-weight: normal;
+	.avatar{
+		display: block;
+		margin: 0 auto 1rem;
+	}
+}
+@include view-phone{
+	.crumb-title{
+		margin-bottom: $grid-g-phone-gutter;
+	}
+}

@@ -1,0 +1,15 @@
+#footer{
+	background: $footer-bg-color;
+	margin-top: 2rem;
+	padding-top: 2rem;
+	border-top: 1px solid $panel-border-color;
+
+	.copyright{
+		border-top: 1px solid $panel-border-color;
+		background: $background;
+		padding: 2rem 0;
+		margin: 2rem 0 0;
+		text-align: center;
+	}
+}
+@import "footer-links";

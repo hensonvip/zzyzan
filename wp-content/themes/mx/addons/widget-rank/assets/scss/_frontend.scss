@@ -1,0 +1,29 @@
+.widget_rank{
+	@extend %panel-not-content;
+	.list-group-item{
+		&:before{
+			position: absolute;
+			bottom: .5rem;
+			right: 1rem;
+			font-size: 2rem;
+			color:$accent-color;
+			font-style: italic;
+			font-weight: bold;
+			content:'1';
+			opacity: .3;
+		}
+		&:hover:before,
+		&.hover:before{
+			opacity: 1;
+		}
+		.thumbnail{
+			width: 5rem;
+		}
+		a{
+			color: $excerpt-color;
+		}
+		@for $i from 2 through 20 {
+			&:nth-child(#{$i}):before{content:'#{$i}'}
+		}
+	}
+}

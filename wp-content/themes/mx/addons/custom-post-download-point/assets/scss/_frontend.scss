@@ -1,0 +1,17 @@
+.entry-source{
+	border-top: 1px solid $panel-border-color;
+	list-style-type: square;
+	margin: 1rem 0;
+	color: $excerpt-color;
+	padding: 1rem 0 0 2em;
+	font-size: 1rem;
+	a{
+		color: $title-color;
+		border-bottom: 1px dotted $panel-border-color;
+		&:hover,
+		&.hover{
+			color: $link-color-hover;
+			border-color: $link-color-hover;
+		}
+	}
+}

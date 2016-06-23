@@ -1,0 +1,9 @@
+fieldset{
+	border: 1px solid $panel-border-color;
+	border-radius: $global-border-radius;
+	padding: 0 $fieldset-gutter ($fieldset-gutter / 2) $fieldset-gutter;
+	margin-bottom: $fieldset-gutter / 2;
+	legend{
+		padding: ($fieldset-gutter / 2) $fieldset-gutter;
+	}
+}

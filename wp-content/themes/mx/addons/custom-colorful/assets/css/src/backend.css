@@ -1,0 +1,26 @@
+#theme_custom_colorful input{
+	display: none;
+}
+#theme_custom_colorful input:checked + label{
+	border-color: #5b9dd9;
+	box-shadow: 0 0 2px rgba(30, 140, 190, .8) ;
+	background: #fff;
+}
+#theme_custom_colorful label{
+	border: 1px solid transparent;
+	padding: 10px;
+	float: left;
+	width: 120px;
+	text-align: center;
+	font-size: 12px;
+}
+#theme_custom_colorful i{
+	float: left;
+	width: 40px;
+	height: 20px;
+	margin-bottom: 10px;
+}
+#theme_custom_colorful span{
+	display: block;
+	clear: both;
+}

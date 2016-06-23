@@ -1,0 +1,13 @@
+.ad-container{
+	margin-bottom: $grid-g-phone-gutter;
+	@include view-phone{
+		margin-bottom: $grid-g-phone-gutter;
+	}
+}
+.adbox{
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}

@@ -1,0 +1,21 @@
+.related-posts{
+	@extend %text-nowrap;
+	.row{
+		overflow-x: scroll;
+		-webkit-overflow-scrolling: touch;
+		overflow-scrolling: touch;
+	}
+	.card{
+		margin: 0;
+		display: inline-block;
+		width: 15rem;
+		padding: 0 ($grid-g-gutter / 2);
+		@include view-phone{
+			padding: 0 ($grid-g-phone-gutter / 2);
+		}
+		.title{
+			white-space: normal;
+		}
+	}
+	
+}

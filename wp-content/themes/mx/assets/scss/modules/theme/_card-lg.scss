@@ -1,0 +1,55 @@
+.card{
+	&.lg{
+		.card-cat{
+			position: absolute;
+			bottom: 0;
+			left: 1rem;
+			color: #fff;
+			font-size: 1rem;
+			span{
+				float: left;
+				padding: .1rem .5rem;
+				margin-right: .2rem;
+				border-radius: $global-border-radius $global-border-radius 0 0;
+			}
+		}
+		.card-title{
+			display: block;
+			padding: 1rem;
+			line-height: 1.5;
+			height: 5.5rem;
+			color: $title-color;
+			overflow: hidden;
+			h3{
+				font-size: 1.5rem;
+				margin: 0;
+				font-weight: normal;
+			}
+		}
+		.card-meta{
+			display: table;
+			table-layout: fixed;
+			text-align: center;
+			padding: 1rem 0;
+			line-height: 2rem;
+			white-space: nowrap;
+			.meta{
+				display: table-cell;
+				width: 1%;
+			}
+			.avatar{
+				width: 2rem;
+				height: 2rem;
+				vertical-align: middle;
+			}
+			.author{
+				.tx{
+					display: inline-block;
+					max-width: 6em;
+					vertical-align: middle;
+					@extend %text-overflow;
+				}
+			}
+		}
+	}
+}

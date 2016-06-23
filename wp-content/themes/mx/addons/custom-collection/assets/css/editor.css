@@ -1,0 +1,103 @@
+/**
+ * .collection-list
+ */
+.collection-list{
+	margin: 10px -10px;
+}
+.collection-list a{
+	position: relative;
+	display: block;
+	padding: 10px 10px 0;
+	text-decoration: none;
+}
+	.collection-list a:after{
+		clear: both;
+		content: '';
+		display: block;
+	}
+	.collection-list span{
+		display: block;
+	}
+	.collection-list .list-group-item{
+		position: relative;
+		padding: 0;
+		border-right: none;
+		border-left: none;
+		border-radius: 0;
+		margin: -1px 0 0;
+		border: 1px solid #ccc;
+	}
+	.collection-list .list-group-item:after{
+		content:'1';
+		position: absolute;
+		top: 0;
+		right: 10px;
+		font-size: 3em;
+		color:#1976d2;
+		opacity: .1;
+		font-weight: bold;
+	}
+	.collection-list .list-group-item:hover:after{
+		color:#FF4081;
+	}
+		.collection-list .list-group-item:nth-child(2):after{content:'2';}
+		.collection-list .list-group-item:nth-child(3):after{content:'3';}
+		.collection-list .list-group-item:nth-child(4):after{content:'4';}
+		.collection-list .list-group-item:nth-child(5):after{content:'5';}
+		.collection-list .list-group-item:nth-child(6):after{content:'6';}
+		.collection-list .list-group-item:nth-child(7):after{content:'7';}
+		.collection-list .list-group-item:nth-child(8):after{content:'8';}
+		.collection-list .list-group-item:nth-child(9):after{content:'9';}
+		.collection-list .list-group-item:nth-child(10):after{content:'10';}
+		.collection-list .list-group-item:nth-child(11):after{content:'11';}
+
+	
+	.collection-list .list-group-item a > .row{
+		display: block;
+	}
+	
+	.collection-list .list-group-item-text{
+		color:#666;
+		margin-bottom: 10px;
+		line-height: 1.5;
+	}
+	.collection-list-thumbnail-container{
+		display: block;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	.collection-list-thumbnail{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.collection-list .list-group-item-heading{
+		color: #FF4081;
+		font-size: 1.3em;
+		margin-bottom: 5px;
+	}
+	.collection-list .list-group-item:nth-child(2n+1){
+		background: #f8f8f8;
+	}
+	.collection-list .list-group-item:hover{
+		background-color: #eee;
+	}
+		.collection-list .list-group-item:hover span{
+		}
+@media( min-width: 768px){
+	.collection-list .list-group-item a > .row > span{
+		float: left;
+		padding: 10px 10px 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.collection-list .list-group-item a > .row > span:first-child{
+		width: 20%;
+	}
+	.collection-list .list-group-item a > .row > span:last-child{
+		width: 80%;
+	}
+}

@@ -1,0 +1,48 @@
+#homebox-nav{
+	position: absolute;
+	background: #fff;
+	margin-left: -1rem;
+	border-radius: 2px;
+	font-size: 1rem;
+	@include translateX(-100%);
+	a{
+		display: block;
+		position: relative;
+		padding: .5rem;
+		color: $excerpt-color;
+		border: 1px solid $panel-border-color;
+		margin-top: -1px;
+		&:hover,
+		&.active{
+			background: $link-color-hover;
+			border-color: $link-color-hover;
+			color: #fff;
+			@include translateY(0);
+		}
+		&:first-child{
+			border-radius: $global-border-radius $global-border-radius 0 0;
+		}
+		&:last-child{
+			border-radius: 0 0 $global-border-radius $global-border-radius;
+		}
+		&:hover:after{
+			display: block;
+		}
+		&:hover .title{
+			display: block;
+		}
+		&:after{
+			display: none;
+			position: absolute;
+			background: $link-color-hover;
+			top: -1px;
+			left: 100%;
+			content: attr(title);
+			white-space: nowrap;
+			padding: .5rem .5rem .5rem 0;
+			color: #fff;
+			border-radius: 0 $global-border-radius $global-border-radius 0;
+			border-bottom: 1px solid $link-color-hover;
+		}
+	}
+}

@@ -1,0 +1,234 @@
+%h-title-before{
+	&:before{
+		display: inline-block;
+		content: "\f0d7";
+		font-family: "FontAwesome";
+		margin-right: 1rem;
+	}
+}
+%h-title{
+	line-height: 2;
+	border-bottom: 1px solid $panel-border-color;
+}
+.entry-content{
+	font-size: $entry-content-font-size;
+	text-indent: 0;
+}
+.content-reset{
+	@for $i from 6 through 1{
+		h#{$i}{
+			@extend %h-title;
+			@extend %h-title-before;
+		}
+	}
+
+	fieldset{
+		padding:0 $grid-g-gutter ($grid-g-gutter / 2);
+		border:1px solid $panel-border-color;
+		border-radius: $global-border-radius;
+		margin-bottom: $grid-g-gutter;
+	}
+		fieldset legend{
+			font-size:1.5rem;
+			padding:0 $grid-g-gutter;
+			margin-bottom: $grid-g-gutter;
+		}
+	ol,
+	ul{
+		margin:0 0 $grid-g-gutter;
+		line-height: 2;
+		padding: 0 0 0 $grid-g-gutter;
+	}
+
+	ul{
+		list-style-image: none;
+		list-style-position: outside;
+		list-style-type: square;
+	}
+	ol{
+		list-style-image: none;
+		list-style-position: outside;
+		list-style-type: decimal;
+	}
+	ol ol,
+	ol ul,
+	ul ul,
+	ul ol{
+		margin-bottom:0;
+	}
+	dl {
+		margin:0;
+	}
+		dl dt{
+			font-weight:bold;
+		}
+		dl dd{
+			margin:0 0 $grid-g-gutter 0
+		}
+	table {
+		margin: 0 0 $grid-g-gutter 0;
+		width: 100%;
+		border: 1px solid #ddd;
+		border-collapse: separate;
+		border-left: 0;
+		border-radius: $global-border-radius;
+	}
+		table th,
+		table td {
+			padding: ($grid-g-gutter / 2);
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			vertical-align: top;
+			text-align: left;
+		}
+		table th{
+			font-weight:bold;
+		}
+		table thead:first-child tr:first-child th,
+		table tbody:first-child tr:first-child th,
+		table tbody:first-child tr:first-child td { border-top: 0 }
+		table thead:first-child tr:first-child th:first-child,
+		table tbody:first-child tr:first-child td:first-child {
+			border-radius: $global-border-radius 0 0 0;
+		}
+		table thead:first-child tr:first-child th:last-child,
+		table tbody:first-child tr:first-child td:last-child {
+			border-radius: 0 $global-border-radius 0 0;
+		}
+		table thead:last-child tr:last-child th:first-child,
+		table tbody:last-child tr:last-child td:first-child {
+			border-radius: 0 0 0 $global-border-radius;
+		}
+		table thead:last-child tr:last-child th:last-child,
+		table tbody:last-child tr:last-child td:last-child {
+			border-radius: 0 0 $global-border-radius 0;
+		}
+		@for $i from 9 through 1{
+			.gallery-columns-#{$i} .gallery-item{
+				width: percentage( 1 / $i );
+			}
+		}
+		.gallery{
+			margin: 0 -1rem 1rem -1rem;
+			text-align: center;
+			a{
+				display: block;
+			}
+			.gallery-item{
+				position: relative;
+				float: left;
+				padding: 1rem;
+				font-size: 1rem;
+				&:hover,
+				&.hover{
+					box-shadow: 0 0 0 2px $accent-color;
+					background: rgba($accent-color,.1);
+				}
+				dd{
+					margin: .5rem 0 0;
+				}
+				img{
+					display: block;
+					margin: 0 auto;
+				}
+				@include view-phone{
+					width: 100%;
+				}
+			}
+		}
+	.iframe{
+		max-width:100%;
+	}
+	abbr{
+		border-bottom: 1px dotted $panel-border-color;
+		cursor: help;
+	}
+	address{
+		font-style:italic;
+		margin-bottom: 1rem;
+	}
+	big{
+		font-size: 150%;
+	}
+
+	p {
+		margin: 1rem 0;
+	}
+	
+	hr{
+		border-top: 3px dashed $panel-border-color;
+		margin: 1rem 0;
+	}
+	embed,
+	.wp-video,
+	.wp-audio{
+		max-width: 100%;
+		margin-bottom: $grid-g-gutter;
+	}
+	embed{
+		margin-top: $grid-g-gutter;
+	}
+	
+	iframe{
+		max-width: 100%;
+	}
+	
+	cite{
+		font-style:italic;
+	}
+	blockquote,
+	pre{
+		background: $card-bg-color-hover;
+		padding: 1rem;
+		font-family: "Source Code Pro",Consolas,"Liberation Mono",Courier,monospace,serif;
+		margin:1rem 0;
+	}
+	blockquote{
+		border-left: 5px solid $panel-border-color;
+		background: $card-bg-color-hover;
+		padding: ($grid-g-gutter / 2) $grid-g-gutter;
+	}
+	pre {
+		border:1px solid $panel-border-color;
+		overflow:auto;
+	}
+	code,
+	kbd{
+		font-family: "Source Code Pro",Consolas,"Liberation Mono",Courier,monospace,serif;
+		padding: 0 .5rem;
+		color: #D14;
+		background: #F7F7F9;
+		border: 1px solid $panel-border-color;
+		border-radius: 3px;
+		white-space: nowrap;
+		font-size:.8em;
+	}
+	kbd{
+		border-color:#cccccc;
+		text-shadow: 0 1px 0 white;
+		color:#666;
+		box-shadow:0 1px 2px rgba(0, 0, 0, .2), 0 0 0 1px white inset
+	}
+	q{
+		font-style:italic;
+	}
+	ins{
+		background:rgba(254, 255, 0, 0.68);
+		text-decoration:none;
+	}
+	.alignleft{
+		float:left;
+		margin:0 1rem 1rem 0;
+	}
+	.alignright{
+		float:right;
+		margin:0 0 1rem 1rem;
+	}
+	.aligncenter{
+		text-align:center;
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+}

@@ -1,0 +1,46 @@
+.pager{
+	display: table;
+	margin-bottom: 2rem;
+	width: 100%;
+	font-size: 1.5rem;
+	clear: both;
+	& > *{
+		display: table-cell;
+		width: 1%;
+		@extend .btn;
+		&:first-child.middle{
+			border-left-width: 1px;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		&:last-child.middle{
+			border-right-width: 1px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+	.middle{
+		@extend .btn.btn-default;
+		border-left-width: 0;
+		border-right-width: 0;
+		padding: 0;
+	}
+	.prev{
+		@extend .btn.btn-default;
+		border-right-width: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.next{
+		//width: 2%;
+	}
+	.next{
+		@extend .btn.btn-success;
+	}
+	select{
+		background: transparent;
+		text-align: center;
+		cursor: pointer;
+		border: none;
+	}
+}

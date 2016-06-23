@@ -1,0 +1,12 @@
+.widget_hot_tags{
+	.hot-tag{
+		display: inline-block;
+		padding: 0 .5rem;
+		border-radius: $global-border-radius;
+		&:hover,
+		&.hover{
+			color: #fff !important;
+			background: $link-color-hover;
+		}
+	}
+}

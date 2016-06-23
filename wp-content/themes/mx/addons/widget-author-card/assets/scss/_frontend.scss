@@ -1,0 +1,58 @@
+#widget-author-card{
+	.author-link{
+		position: relative;
+		display: block;
+		margin-bottom: 1rem;
+		&:hover,
+		&.hover{
+			background: rgb(248,248,248);
+		}
+		small{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	.avatar{
+		display: block;
+		margin: 0 auto;
+		max-width: 80%;
+		height: auto;
+		margin-bottom: 1rem;
+	}
+	.author-card-name{
+		font-weight: normal;
+		text-align: center;
+		margin: 0 0 1rem;
+	}
+	.author-card-description{
+		color: $excerpt-color;
+	}
+	.tx{
+		display: block;
+	}
+	
+	.author-card-meta-links{
+		display: table;
+		margin: 0 (-$panel-content-gutter);
+	}
+	.author-card-meta-links{
+		a{
+			position: relative;
+			display: table-cell;
+			width: 1%;
+			text-align: center;
+			font-size: 1rem;
+			vertical-align: middle;
+			color: $excerpt-color;
+			border-right: 1px solid $panel-border-color;
+			&:hover,
+			&.hover{
+				color: $link-color-hover;
+			}
+			&:last-child{
+				border: none;
+			}
+		}
+	}
+}

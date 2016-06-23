@@ -1,0 +1,13 @@
+%thumbnail-container{
+	display: block;
+	position: relative;
+	height: 0;
+	padding-bottom: $thumbnail_aspect_atio;
+	border-radius: $global-border-radius;
+	overflow: hidden;
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}

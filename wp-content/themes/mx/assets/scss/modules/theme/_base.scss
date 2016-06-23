@@ -1,0 +1,21 @@
+//body{
+//	background-color: $background;
+//}
+*{
+	word-wrap:break-word;
+	word-break:break-all
+}
+a{
+	color: $link-color;
+	&:hover,
+	&.hover{
+		color: $link-color-hover;
+	}
+	&:active,
+	&.active{
+		color: $link-color-active;
+	}
+}
+img{
+	vertical-align: middle;
+}

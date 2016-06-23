@@ -1,0 +1,30 @@
+%media-dtc{
+	display: table-cell;
+	vertical-align: middle;
+}
+.media{
+	display: table;
+	width: 100%;
+	//margin-top: 1rem;
+}
+a.media{
+	width: auto;
+}
+.media-left{
+	@extend %media-dtc;
+	padding-right: 1rem;
+}
+.media-right{
+	@extend %media-dtc;
+	padding-left: 1rem;
+}
+.media-body{
+	@extend %media-dtc;
+	width: 100%;
+}
+.media-heading{
+	margin: 0 0 .5rem;
+	font-weight: normal;
+	font-size: 1.1rem;
+	color: $title-color;
+}

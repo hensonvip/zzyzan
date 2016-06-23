@@ -1,0 +1,82 @@
+#pm-container{
+	display: none;
+}
+.pm-tab{
+	background: #2196F3;
+	text-shadow: 0 1px 1px rgba(0,0,0,.5);
+	border-radius: 2px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	a{
+		position: relative;
+		color: #fff;
+		padding: 5px 10px;
+		float: left;
+		@include view-not-phone{
+			display: block;
+			float: none;
+			@include text-overflow;
+		}
+		&:hover,
+		&.active{
+			background: rgba(255,255,255,.2);
+		}
+		&.new-msg{
+			background: rgb(210,154,29);
+		}
+		&:hover .close{
+			display: block;
+		}
+	}
+	.close{
+		display: none;
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		width: 20px;
+		height: 20px;
+		font-size: 20px;
+		line-height: 17px;
+		text-align: center;
+		border-radius: 50%;
+		background: rgb(211,57,31);
+		color: #fff;
+		font-weight: bold;
+		opacity: 1;
+		&:hover{
+			color: #ccc;
+		}
+	}
+}
+.pm-dialog-list{
+	border-bottom: 2px dashed #eee;
+	margin-bottom: 10px;
+	overflow-y: auto;
+	max-height: 25em;
+	section{
+		margin-bottom: 10px;
+	}
+	h4{
+		font-size: 12px;
+		margin: 0;
+		span{
+			margin-right: .5em;
+		}
+	}
+	.name{
+		font-weight: bold;
+	}
+	.date{
+		color: #ccc;
+	}
+	.pm-dialog-bg{
+		display: inline-block;
+		background: rgba(0,0,0,.05);
+		border-radius: 2px;
+		padding: 10px;
+	}
+}
+.pm-dialog-me .pm-dialog-bg{
+	background: none;
+	border: 2px solid rgba(0,0,0,.05);
+}

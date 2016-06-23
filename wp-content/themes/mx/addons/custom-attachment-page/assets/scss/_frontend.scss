@@ -1,0 +1,56 @@
+.attachment-slide{
+	a{
+		display: block;
+	}
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}
+.attachment-slide-content{
+	margin-bottom: 10px;
+	img{
+		margin: 0 auto;
+	}
+}
+.attachment-slide-thumbnail{
+	text-align: center;
+	white-space: nowrap;
+	padding: 10px 0 0;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	a{
+		position: relative;
+		display: inline-block;
+		border: 2px solid #fff;
+		img{
+			width: auto;
+			height: 80px;
+		}
+		&.active,
+		&:hover,
+		&.hover{
+			border-color: $link-color-active;
+		}
+		&.active:after{
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			margin-left: -10px;
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 10px 10px 10px;
+			border-color: transparent transparent $link-color-active transparent;
+			content: '';
+		}
+	}
+}
+@include view-not-phone{
+	.attachment-slide-thumbnail a img{
+		width: auto;
+		height: 100px;
+	}
+}

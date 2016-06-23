@@ -1,0 +1,23 @@
+.bdshare_t{
+	.description{
+		float:left;
+	}
+}
+html{
+	.bdsharebuttonbox{
+		.bds_more,
+		a{
+			display:inline-block;
+			float:none !important;
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			margin: 2px 3px 0 0;
+		}
+	}
+	.bdshare_popup_box{
+		box-shadow:0 1px 5px rgba(0,0,0,.1);
+		border-radius:3px;
+		overflow:hidden;
+	}
+}

@@ -1,0 +1,228 @@
+.screen-reader-text {
+	display: none;
+}
+#ctb-file-btn {
+	position: relative;
+	background: $card-bg-color-hover;
+	overflow: hidden;
+	width: 100%;
+	padding: 1em 0;
+	border: 5px dashed $excerpt-color;
+	text-align: center;
+	border-radius: $global-border-radius;
+	font-size: 1.2em;
+	color: $title-color;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	&:hover {
+		border-color: $title-color;
+	}
+}
+#ctb-file {
+	position: absolute;
+	font-size: 99em;
+	right: -10px;
+	top: -10px;
+	opacity: 0;
+	cursor: pointer;
+}
+#fm-ctb {
+	.page-tip {
+		display: none;
+	}
+
+	.form-group:nth-child(2n) {
+		padding: 1rem 0;
+		background: $card-bg-color-hover;
+	}
+	.img-link img {
+		width: 100%;
+	}
+}
+#ctb-file-progress-container {
+	display: none;
+	margin-top: 1rem;
+	position: relative;
+	height: 70px;
+	overflow: hidden;
+	border-radius: $global-border-radius;
+	margin-bottom: 1rem;
+}
+#ctb-file-completion {
+	display: none;
+	margin-top: 1rem;
+}
+#ctb-files {
+	display: none;
+	margin-top: 1rem;
+	margin-top: 0;
+	.thumbnail-tpl {
+		position: relative;
+		margin-top: 1rem;
+		.img-link {
+			display: block;
+			position: relative;
+			padding-bottom: 62.5%;
+			overflow: hidden;
+			border: 1px solid #fff;
+			border-radius: $global-border-radius;
+			margin-bottom: 1rem;
+			&:hover {
+				border-color: $panel-border-color;
+			}
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+			}
+		}
+		input[type=radio] {
+			display: none;
+		}
+		.img-thumbnail-checkbox:checked + .ctb-set-cover-btn {
+			background: $btn-success-background;
+			color: #fff;
+			border-color: rgba(#000,.05);
+			i {
+				display: inline-block;
+			}
+		}
+	}
+	.img-del {
+		position: absolute;
+		right: 10px;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		font-size: 1rem;
+		font-weight: bold;
+		text-align: center;
+		line-height: 20px;
+		color: #fff;
+		border-radius: 50%;
+		background: $btn-danger-background;
+		opacity: .7;
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+#ctb-file-progress {
+	background: $accent-color;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	@include transition-duration(1);
+}
+.ctb-insert-btn {
+	padding: .5rem 0;
+	font-size: 1rem;
+	margin-bottom: .5rem;
+	+ .dropdown-toggle {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+}
+.ctb-set-cover-btn {
+	@extend .btn;
+	@extend .btn-default;
+	display: block;
+	border-radius: $global-border-radius;
+	padding: 2px 0;
+	text-align: center;
+	font-weight: normal;
+	font-size: 1rem;
+	&:hover {
+		//background: $card-bg-color-hover;
+		color: #fff;
+		@extend .btn-success;
+	}
+	i {
+		display: none;
+	}
+}
+.ctb-img-des {
+	width: 100%;
+	resize: none;
+}
+.ctb-cat {
+	display: inline-block;
+	width: auto;
+}
+.howto {
+	display: none;
+}
+.ctb-tag {
+	display: inline-block;
+	.label {
+		font-weight: normal;
+	}
+	input:checked + .label {
+		background: $btn-success-background;
+		color: #fff;
+	}
+}
+.custom-tag-list {
+	width: 100%;
+}
+#custom-tag-added-container,
+#custom-tag-add-container {
+	float: left;
+}
+#reprint-group {
+	padding-top: 1rem;
+	display: none;
+}
+.wp-editor-wrap {
+	margin-top: -30px;
+}
+.theme_custom_post_source-inputs {
+	display: none;
+}
+label[for="ctb-content"] {
+	display: block;
+	margin: 0 0 -2rem;
+}
+
+//storage
+#theme_custom_storage-container{
+	margin-bottom: 1rem;
+	.theme_custom_storage-item{
+		position: relative;
+		.del{
+			position: absolute;
+			right: -10px;
+			top: 0;
+			color: $btn-danger-background;
+			opacity: .5;
+			&:hover,
+			&.hover{
+				opacity: 1;
+			}
+		}
+	}
+}
+@media(min-width: 768px) {
+	.wp-editor-wrap {
+		margin-top: 0;
+	}
+}
+f.wp-editor-container {
+	border: 1px solid $panel-border-color;
+}
+.mce-statusbar .mce-container-body {
+	background: #f5f5f5 !important;
+}
+html .wp-editor-area {
+	border: 1px solid $panel-border-color;
+	border-bottom-width: 2px;
+}
+html div.mce-panel{
+	border-left: 1px solid $panel-border-color;
+	border-right: 1px solid $panel-border-color;
+}

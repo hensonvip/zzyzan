@@ -1,0 +1,50 @@
+fieldset{
+	margin-bottom: 1rem;
+	max-width: 100%;
+	border: 1px solid rgb(220,220,220);
+	padding: 1rem;
+	padding-top: 10px;
+	border-radius: 4px;
+	background: rgb(245,245,245);
+	box-shadow: 0 0 0 1px #fff inset;
+	@include linear-gradient(rgb(250,251,253),rgb(245,245,245));
+	@extend .clearfix;
+
+	&:hover > legend,
+	&.hover > legend,
+	&.active > legend{
+		color: #D54E21;
+		background: rgb(248,248,248);
+	}
+	.button-primary a{
+		color: #fff;
+	}
+	img{
+		max-width: 200px;
+		height: auto;
+	}
+	h3{
+		padding: 1rem;
+		background: rgb(250,251,253);
+		border: 1px solid #eee;
+		color: rgb(33, 117, 155);
+		text-shadow: 0 1px 0 #fff;
+		border-radius: $global-border-radius;
+	}
+	
+	legend{
+		margin: 5px 0 0;
+		padding: .5rem 1rem;
+		background:rgb(245,245,245);
+		border: 1px solid #DDD;
+		color: rgb(33, 117, 155);
+		text-shadow:0 1px 0 white;
+		border-radius: 10rem;
+		font-weight: bold;
+		font-size: 13px;
+		box-shadow: 0 1px 3px rgba(0,0,0,.1),0 0 0 1px white inset;
+		cursor: pointer;
+	}
+@media screen and (-webkit-min-device-pixel-ratio:0){fieldset legend{border-top-width:2px;}}
+
+}

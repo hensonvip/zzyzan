@@ -1,0 +1,31 @@
+/**
+ * .my-settings-history
+ */
+.total-point{
+	display: inline-block;
+	font-size: 5rem;
+	color: $btn-primary-background;
+	margin-bottom: $grid-g-gutter;
+}
+.history-group{
+	.point-icon,
+	.history-time{
+		color: $excerpt-color;
+	}
+	.point-value{
+		display: inline-block;
+		font-size: 2rem;
+		font-weight: bold;
+		padding-right: 1rem;
+		width: 4em;
+		text-align: right;
+		white-space: nowrap;
+		&.plus{
+			color: $btn-danger-background;
+		}
+		&.minus{
+			color: $btn-success-background;
+		}
+	}
+}
+@import "widget-author-rank";

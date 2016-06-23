@@ -1,0 +1,86 @@
+.tools{
+	float: right;
+	.menu-tools,
+	.tool{
+		position: relative;
+		float: left;
+		padding: 0 1rem;
+		white-space: nowrap;
+		width: auto;
+	}
+	.tool-login{
+		font-weight: bold;
+		@extend %nav-main-menu-hover;
+	}
+	.tool-me{
+		position: relative;
+		.box{
+			position: absolute;
+			right: 0;
+			top: 100%;
+			width: 20rem;
+			background: $nav-main-bg-color;
+			box-shadow: $nav-main-sub-menu-shadow;
+			visibility: collapse;
+			z-index: 10;
+			
+			@include transition-duration($nav-main-duration);
+			@include scale3d(1,0,1);
+			@include transform-origin(top);
+			
+			li{
+				float: left;
+				width: 50%;
+			}
+			a{
+				line-height: 2;
+				height: auto;
+				border-bottom: 1px solid rgba(#000,.1);
+				padding: .5rem 1rem;
+				@extend %text-overflow;
+			}
+			li.active a,
+			a:hover{
+				@extend %nav-main-menu-hover;
+			}
+			.box-points{
+				text-align: center;
+			}
+		}
+		&:hover .box,
+		&.hover .box{
+			visibility: visible;
+			@include scale3d(1,1,1);
+		}
+	}
+	.tool-points:hover:after,
+	.tool-pm:hover:after,
+	.tool-notification:hover:after{
+		position: absolute;
+		left: 50%;
+		top: 90%;
+		content: attr(title);
+		@extend %nav-main-menu-hover;
+		border-radius: 2px;
+		height: auto;
+		line-height: 1;
+		font-size: 1rem;
+		padding: 1rem;
+		font-weight: bold;
+		@include translateX(-50%);
+	}
+	.tool-points:hover:before,
+	.tool-pm:hover:before,
+	.tool-notification:hover:before{
+		position: absolute;
+		left: 50%;
+		bottom: 10%;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 5px 8.7px 5px;
+		border-color: transparent transparent $link-color-hover transparent;
+		content: '';
+		margin-left: -3px;
+	}
+}

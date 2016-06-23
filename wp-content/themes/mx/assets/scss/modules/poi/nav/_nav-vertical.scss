@@ -1,0 +1,56 @@
+@mixin nav-vertical-hover{
+	z-index: 1;
+	border-color: $panel-border-color;
+	&:before{
+		position: absolute;
+		background: $link-color-hover;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 5px;
+		content: '';
+	}
+}
+//@include view-not-desktop{
+.nav-vertical{
+	@extend .nav;
+}
+//}
+@include view-desktop{
+	.nav-vertical{
+		background: #fff;
+		list-style-type: none;
+		padding: 0;
+		margin: 0 0 $grid-gutter;
+		border: 1px solid $panel-border-color;
+		border-radius: $global-border-radius;
+		box-shadow: $panel-shadow;
+		text-align: left;
+		a{
+			display: block;
+			padding: 1rem 2rem;
+			color: $title-color;
+			&:hover,
+			&.hover,
+			&:active,
+			&.active{
+				@include nav-vertical-hover;
+			}
+		}
+		& > *{
+			display: block;
+			width: auto;
+			position: relative;
+			margin-top: -1px;
+			border: none;
+			border-top: 1px solid $panel-border-color;
+			&:hover,
+			&.hover{
+				@include nav-vertical-hover;
+			}
+		}
+		.active{
+			@include nav-vertical-hover;
+		}
+	}
+}
