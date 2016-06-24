@@ -557,13 +557,17 @@ class theme_custom_storage{
 					    url: '/wp-content/themes/mx/download-point.php',
 					    data: {'post_id' : data},
 					    dataType: 'json',
+					    beforeSend: function(){
+					    	var beforeSendHtml = '<div id="ajax-loading-container" class="loading show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-loading"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> 加载中，请稍后...</div></div></div>';
+					    	$('body').append(beforeSendHtml);
+					    },
 					    success: function(result){
 					    	$('body').append(result.msg);
 					    	if (result.status == 1) {
 					    		var download_url = '<?= self::get_download_page_url($post->ID);?>';
 					    		setTimeout(function(){
 					    			// window.open(download_url);
-					    			location.href = download_url;				    			
+					    			location.href = download_url;			    			
 					    		}, 3000);
 					    	}
 					    }
