@@ -576,7 +576,7 @@ class theme_custom_storage{
 				});
 			});
 			$('.btn-close').live('click', function(event) {
-				$('#ajax-loading-container').hide();
+				$('.show').hide();
 			});
 		</script>
 		<?php
