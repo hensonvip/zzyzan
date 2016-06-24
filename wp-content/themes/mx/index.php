@@ -28,6 +28,7 @@
 			 */
 			// theme_functions::the_homebox();
 			?>
+
 			<?php
 			if(have_posts()){
 				?>
@@ -36,7 +37,7 @@
 						<h2 class="title">
 							<span class="bg">
 								<a href="/rank?tab=latest"> <i class="fa fa-star-o"></i>
-									最新
+									最新发布
 								</a>
 							</span>
 						</h2>
@@ -45,8 +46,9 @@
 				</div>
 				<div class="row">
 					<?php
+					$latest_posts = query_posts('showposts=9');
 					$loop_i = 0;
-					foreach($wp_query->posts as $post){
+					foreach($latest_posts as $post){
 						setup_postdata($post);
 						theme_functions::archive_card_sm([
 							'classes' => 'g-desktop-1-3 g-tablet-1-2',
@@ -56,12 +58,61 @@
 					}
 					?>
 				</div>
-			<?php }else{ ?>
-				<?= status_tip('info',___('No content yet.'));?>
+				
+				<div class="home-recomm mod panel">
+					<div class="heading">
+						<h2 class="title">
+							<span class="bg">
+								<a href="/rank?tab=latest"> <i class="fa fa-star-o"></i>
+									PHP
+								</a>
+							</span>
+						</h2>
+						<a class="more" href="/php/">更多 »</a>
+					</div>
+				</div>
+				<div class="row">
+					<?php
+					$php = query_posts('cat=39&showposts=9');
+					$loop_i = 0;
+					foreach($php as $post){
+						setup_postdata($post);
+						theme_functions::archive_card_sm([
+							'classes' => 'g-desktop-1-3 g-tablet-1-2',
+							'lazyload' => $loop_i <= 8 ? false : true,
+						]);
+						++$loop_i;
+					}
+					?>
+				</div>
+
+				<div class="home-recomm mod panel">
+					<div class="heading">
+						<h2 class="title">
+							<span class="bg">
+								<a href="/rank?tab=latest"> <i class="fa fa-star-o"></i>
+									精品源码
+								</a>
+							</span>
+						</h2>
+						<a class="more" href="/code/">更多 »</a>
+					</div>
+				</div>
+				<div class="row">
+					<?php
+					$code_posts = query_posts('cat=40&showposts=9');
+					$loop_i = 0;
+					foreach($code_posts as $post){
+						setup_postdata($post);
+						theme_functions::archive_card_sm([
+							'classes' => 'g-desktop-1-3 g-tablet-1-2',
+							'lazyload' => $loop_i <= 8 ? false : true,
+						]);
+						++$loop_i;
+					}
+					?>
+				</div>
 			<?php } ?>
-			<div class="area-pagination archive-pagination">
-				<?php theme_functions::pagination();?>
-			</div>
 		</div><!-- /#main -->
 		<?php get_sidebar() ;?>
 	</div>
