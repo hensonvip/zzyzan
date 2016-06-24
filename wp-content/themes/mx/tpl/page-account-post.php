@@ -213,7 +213,7 @@ if(class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
 			?>
 			<div class="form-group">
 				<div class="g-tablet-1-6 control-label">
-					<i class="fa fa-money"></i> 
+					<i class="fa fa-diamond fa-fw"></i>
 					下载积分
 				</div>
 				<div class="g-tablet-5-6">

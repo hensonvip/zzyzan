@@ -140,7 +140,7 @@ $open_sign_html = function(){
 /**
  * open sign
  */
-$open_sign_html();
+// $open_sign_html();
 
 				break;
 			/**
@@ -285,7 +285,7 @@ $open_sign_html();
 /**
  * open sign
  */
-$open_sign_html();
+// $open_sign_html();
 
 		} /** end switch */ ?>
 		</div><!-- /.main.col-->
