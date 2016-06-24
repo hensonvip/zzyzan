@@ -203,7 +203,7 @@ if(class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
 		
 		<!-- theme_custom_download_point henson add -->
 		<?php 
-		if(class_exists('theme_custom_download_point') && theme_custom_download_point::is_enabled()){
+		if(class_exists('theme_custom_download_point') && theme_custom_download_point::is_enabled() && class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
 			if($edit){
 				$download_point_meta = theme_custom_download_point::get_post_meta($post->ID);
 			}else{
