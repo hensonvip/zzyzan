@@ -335,7 +335,7 @@ class theme_custom_point{
 	public static function options_default(array $opts = []){
 		$opts[__CLASS__] = [
 			'points' 		=> self::get_point_value_default(),
-			'point-name' 	=> ___('Cat-paw'), /** 名称 */
+			'point-name' 	=> '积分', /** 名称 */
 			'point-des' 	=> ___('Point can exchange many things.'),
 			'point-img-url' => 'http://ww1.sinaimg.cn/large/686ee05djw1epfzp00krfg201101e0qn.gif',
 		];
@@ -382,7 +382,7 @@ class theme_custom_point{
 	 * get point name
 	 */
 	public static function get_point_name(){
-		return self::get_options('point-name') ? self::get_options('point-name') : ___('Cat-paw');
+		return self::get_options('point-name') ? self::get_options('point-name') : '积分';
 	}
 	/**
 	 * get point description

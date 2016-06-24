@@ -24,14 +24,14 @@
 				if ($total_point - $download_point < 0) {
 					$result = array(
 						'status' => 0,
-						'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-success"><i class="fa fa-times-circle fa-fw"></i>抱歉，您的' . ___('Cat-paw') . '不足。</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
+						'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-success"><i class="fa fa-times-circle fa-fw"></i>抱歉，您的积分不足。</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
 					);
 				} else {
 					// 减少积分
 					theme_custom_point::decr_user_points($current_user_id, $download_point);
 					$result = array(
 						'status' => 1,
-						'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-success"><i class="fa fa-check-circle fa-fw"></i>成功扣除' . $download_point . '个' . ___('Cat-paw') . ',3秒后自动跳转到下载页面...</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
+						'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-success"><i class="fa fa-check-circle fa-fw"></i>成功扣除' . $download_point . '积分,3秒后自动跳转到下载页面...</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
 					);
 				}
 			} else {
