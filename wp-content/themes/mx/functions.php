@@ -39,8 +39,8 @@ class theme_functions{
 			'author_url' => ___('http://inn-studio.com'),
 			'author' => ___('INN STUDIO'),
 			'qq' => [
-				'number' => '272778765',
-				'link' => 'http://wpa.qq.com/msgrd?v=3&amp;uin=272778765&amp;site=qq&amp;menu=yes',
+				'number' => '249411513',
+				'link' => 'http://wpa.qq.com/msgrd?v=3&amp;uin=249411513&amp;site=qq&amp;menu=yes',
 			],
 			'qq_group' => [
 				'number' => '170306005',
@@ -292,16 +292,6 @@ class theme_functions{
 						</div>
 					</div>
 				</div><!-- .media -->
-				<a href="<?= theme_cache::get_permalink($post->ID);?>" class="thumbnails" target="<?= $args['target'];?>">
-					<?php
-					/** get children */
-					echo self::get_attachments_html([
-						'numberposts' => $args['children'],
-						'inlcude' => [get_post_thumbnail_id($post->ID)],
-						'post_parent' => $post->ID,
-					]);
-					?>
-				</a>
 			</div>
 		</article>
 		<?php
