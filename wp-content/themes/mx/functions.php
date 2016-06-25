@@ -222,7 +222,7 @@ class theme_functions{
 		global $post;
 		$args = array_merge([
 			'classes' => '',
-			'lazyload' => true,
+			'lazyload' => false,
 			'excerpt' => true,
 			'target' => theme_functions::$link_target,
 			'children' => 3,
