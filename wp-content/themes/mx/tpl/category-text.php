@@ -1,5 +1,11 @@
 <?php get_header();?>
+<style>
+	/*.g-desktop-1-4{width: 36%;}
+	body.in-text-mode #main{width:100%; float:left;}*/
+	body.in-text-mode #main{max-width:100%;}
+</style>
 <div class="g">
+	<?= theme_functions::get_crumb();?>
 	<div id="main">
 		<?php
 		if(have_posts()){

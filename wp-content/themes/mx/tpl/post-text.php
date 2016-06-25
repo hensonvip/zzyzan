@@ -1,11 +1,15 @@
 <?php get_header();?>
+<style>
+	body.in-text-mode #main{max-width:100%; width: 75%; float: left;}
+</style>
 <div class="g">
+	<div class="row">
 		<?php
 		if(have_posts()){
 			while(have_posts()){
 				the_post();
 				?>
-				<div id="main" class="main">
+				<div id="main" class="main g-desktop-3-4">
 					<?php theme_functions::singular_content();?>
 					
 					<?php theme_functions::adjacent_posts();?>
@@ -20,9 +24,10 @@
 						<?php
 					}
 					?>
-					<?php comments_template();?>
 					<?php theme_functions::the_related_posts();?>
+					<?php comments_template();?>
 				</div>
+				<?php include __DIR__ . '/../sidebar-post.php';?>
 			<?php 
 			}
 		}else{ 

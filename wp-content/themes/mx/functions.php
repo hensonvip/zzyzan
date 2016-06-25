@@ -223,12 +223,16 @@ class theme_functions{
 		$args = array_merge([
 			'classes' => '',
 			'lazyload' => true,
+			'excerpt' => true,
 			'target' => theme_functions::$link_target,
 			'children' => 3,
 		]);
 		$args['classes'] .= ' card text ';
 		$thumbnail_real_src = theme_functions::get_thumbnail_src($post->ID);
 		$post_title = theme_cache::get_the_title($post->ID);
+		$excerpt = get_the_excerpt();
+		if(!empty($excerpt))
+			$excerpt = esc_html($excerpt);
 		?>
 		<article class="<?= $args['classes'];?>">
 			<div class="card-bg">
@@ -239,13 +243,33 @@ class theme_functions{
 						class="meta author" 
 						title="<?= $author_display_name;?>" 
 						target="<?= $args['target'];?>" 
+						style="width:20%;"
 					>
-						<img src="<?= theme_functions::$avatar_placeholder;?>" data-src="<?= theme_cache::get_avatar_url($post->post_author);?>" alt="avatar" width="48" height="48" class="avatar"> 
+						<div class="thumbnail-container">
+							<?php
+							/**
+							 * lazyload img
+							 */
+							if($args['lazyload']){
+								?>
+								<img class="thumbnail" src="<?= theme_functions::$thumbnail_placeholder;?>" data-src="<?= $thumbnail_real_src;?>" alt="<?= $post_title;?>" width="<?= self::$thumbnail_size[1];?>" height="<?= self::$thumbnail_size[2];?>" >
+							<?php }else{ ?>
+								<img class="thumbnail" src="<?= $thumbnail_real_src;?>" alt="<?= $post_title;?>" width="<?= self::$thumbnail_size[1];?>" height="<?= self::$thumbnail_size[2];?>" >
+							<?php } ?>
+						</div>
 					</a>
 					<div class="media-body">
 						<a title="<?= $post_title;?>" class="media-heading" href="<?= theme_cache::get_permalink($post->ID);?>" target="<?= $args['target'];?>" >
 							<h3 class="title"><?= $post_title;?></h3>
 						</a>
+						<?php
+						/**
+						 * output excerpt
+						 */
+						if($args['excerpt'] === true){
+							?>
+							<div class="excerpt"><?= str_sub(strip_tags($excerpt),200);?></div>
+						<?php } ?>
 						<div class="media-excerpt">
 							<time class="time meta" datetime="<?= get_the_time('Y-m-d H:i:s',$post->ID);?>" title="<?= get_the_time(___('M j, Y'),$post->ID);?>">
 								<i class="fa fa-clock-o"></i> <?= friendly_date(get_the_time('U',$post->ID));?>
@@ -613,7 +637,7 @@ class theme_functions{
 						theme_custom_storage::display_frontend($post->ID);
 					}
 
-					/** theme_custom_download_point henson add*/
+					/** theme_custom_download_point henson add */
 					if(class_exists('theme_custom_download_point') && theme_custom_download_point::is_enabled() && class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
 						$storage_meta = theme_custom_storage::get_post_meta($post->ID);
 						if($storage_meta){
