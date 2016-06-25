@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 本地数据库
+Source Server         : 本地
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : zzyzan
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-06-25 15:47:59
+Date: 2016-06-26 00:08:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1409,6 +1409,24 @@ INSERT INTO `wp_comments` VALUES ('7', '7084', '精品推荐 - 源码路', '', '
 INSERT INTO `wp_comments` VALUES ('8', '7104', 'henson', '249411513@qq.com', '', '127.0.0.1', '2016-06-14 10:42:54', '2016-06-14 02:42:54', '<img src=\"http://ww2.sinaimg.cn/large/686ee05djw1eu8ijxc3p7g201c01c3yd.gif\" alt=\"表情\" class=\"emotion\">', '0', '1', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36', '', '0', '13', '0');
 
 -- ----------------------------
+-- Table structure for `wp_download_log`
+-- ----------------------------
+DROP TABLE IF EXISTS `wp_download_log`;
+CREATE TABLE `wp_download_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL COMMENT '用户ID',
+  `post_id` int(11) NOT NULL COMMENT '文章ID',
+  `download_time` int(11) NOT NULL COMMENT '下载时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='下载记录表';
+
+-- ----------------------------
+-- Records of wp_download_log
+-- ----------------------------
+INSERT INTO `wp_download_log` VALUES ('1', '13', '7119', '1466870744');
+INSERT INTO `wp_download_log` VALUES ('2', '1', '7119', '1466870781');
+
+-- ----------------------------
 -- Table structure for `wp_ice_aff`
 -- ----------------------------
 DROP TABLE IF EXISTS `wp_ice_aff`;
@@ -1589,7 +1607,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=1922 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1924 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wp_options
@@ -1710,7 +1728,7 @@ INSERT INTO `wp_options` VALUES ('1905', '_site_transient_theme_roots', 'a:1:{s:
 INSERT INTO `wp_options` VALUES ('141', 'theme_switched', '', 'yes');
 INSERT INTO `wp_options` VALUES ('154', 'nav_menu_options', 'a:2:{i:0;b:0;s:8:\"auto_add\";a:0:{}}', 'yes');
 INSERT INTO `wp_options` VALUES ('155', 'DUX', 'a:142:{s:8:\"logo_src\";s:52:\"http://localhost/wp-content/uploads/2015/11/logo.png\";s:6:\"layout\";s:1:\"2\";s:10:\"theme_skin\";s:6:\"16C0F8\";s:17:\"theme_skin_custom\";s:0:\"\";s:9:\"connector\";s:1:\"-\";s:10:\"site_width\";s:4:\"1200\";s:10:\"jquery_bom\";b:0;s:12:\"gravatar_url\";s:3:\"ssl\";s:10:\"js_outlink\";s:2:\"no\";s:9:\"site_gray\";b:0;s:11:\"no_categoty\";b:0;s:5:\"brand\";s:35:\"欢迎光临\r\n我们一直在努力\";s:8:\"keywords\";s:33:\"一个网站, 一个牛x的网站\";s:11:\"description\";s:45:\"本站是一个高端大气上档次的网站\";s:10:\"footer_seo\";s:57:\"<a href=\"http://localhost/sitemap.xml\">网站地图</a>\r\n\";s:12:\"search_baidu\";b:0;s:17:\"search_baidu_code\";s:0:\"\";s:12:\"target_blank\";b:0;s:9:\"notinhome\";a:13:{i:33;b:0;i:18;b:0;i:15;b:0;i:38;b:0;i:32;b:0;i:2;b:0;i:37;b:0;i:4;b:0;i:39;b:0;i:34;b:0;i:36;b:0;i:1;b:0;i:40;b:0;}s:14:\"notinhome_post\";s:12:\"11245\r\n12846\";s:9:\"ajaxpager\";s:1:\"5\";s:9:\"list_type\";s:5:\"thumb\";s:11:\"post_plugin\";a:4:{s:4:\"view\";s:1:\"1\";s:4:\"comm\";s:1:\"1\";s:4:\"date\";s:1:\"1\";s:6:\"author\";s:1:\"1\";}s:11:\"author_link\";b:0;s:14:\"post_related_s\";s:1:\"1\";s:13:\"related_title\";s:12:\"相关推荐\";s:14:\"post_related_n\";s:1:\"8\";s:11:\"post_from_s\";s:1:\"1\";s:12:\"post_from_h1\";s:9:\"来源：\";s:16:\"post_from_link_s\";s:1:\"1\";s:16:\"post_copyright_s\";s:1:\"1\";s:14:\"post_copyright\";s:27:\"未经允许不得转载：\";s:27:\"site_keywords_description_s\";s:1:\"1\";s:27:\"post_keywords_description_s\";b:0;s:12:\"navpage_desc\";s:51:\"这里显示的是网址导航的一句话描述...\";s:12:\"navpage_cats\";s:0:\"\";s:11:\"user_page_s\";s:1:\"1\";s:16:\"user_on_notice_s\";s:1:\"1\";s:9:\"user_page\";s:1:\"2\";s:7:\"user_rp\";s:1:\"2\";s:9:\"minicat_s\";s:1:\"1\";s:14:\"minicat_home_s\";s:1:\"1\";s:18:\"minicat_home_title\";s:12:\"今日观点\";s:7:\"minicat\";s:2:\"33\";s:14:\"footer_brand_s\";s:1:\"1\";s:18:\"footer_brand_title\";s:37:\"大前端WP主题 更专业 更方便\";s:23:\"footer_brand_btn_text_1\";s:12:\"联系我们\";s:23:\"footer_brand_btn_href_1\";s:18:\"http://imweile.com\";s:24:\"footer_brand_btn_blank_1\";s:1:\"1\";s:23:\"footer_brand_btn_text_2\";s:12:\"联系我们\";s:23:\"footer_brand_btn_href_2\";s:18:\"http://imweile.com\";s:24:\"footer_brand_btn_blank_2\";s:1:\"1\";s:13:\"site_notice_s\";s:1:\"1\";s:17:\"site_notice_title\";s:12:\"网站公告\";s:15:\"site_notice_cat\";s:2:\"33\";s:12:\"site_recom_s\";s:1:\"1\";s:16:\"site_recom_title\";s:12:\"站长推荐\";s:15:\"site_recom_text\";s:148:\"<h2>创客推荐：香港服务器<br><strong>¥55/月</strong></h2><a  class=\"btn btn-primary\" href=\"http://ckym.taobao.com\">点击查看优惠</a>\";s:14:\"site_contact_s\";s:1:\"1\";s:18:\"site_contact_title\";s:12:\"联系我们\";s:17:\"site_contact_text\";s:71:\"<h2>如无特殊，每天早晚2次邮件回复 <br>admin@22vd.com</h2>\";s:12:\"focusslide_s\";s:1:\"1\";s:15:\"focusslide_sort\";s:9:\"1 2 3 4 5\";s:18:\"focusslide_title_1\";s:21:\"xiu主题 - 大前端\";s:17:\"focusslide_href_1\";s:18:\"http://imweile.com\";s:18:\"focusslide_blank_1\";s:1:\"1\";s:16:\"focusslide_src_1\";s:53:\"http://www.22vd.com/wp-content/uploads/2015/01/01.jpg\";s:18:\"focusslide_title_2\";s:21:\"xiu主题 - 大前端\";s:17:\"focusslide_href_2\";s:18:\"http://imweile.com\";s:18:\"focusslide_blank_2\";s:1:\"1\";s:16:\"focusslide_src_2\";s:53:\"http://www.22vd.com/wp-content/uploads/2015/01/01.jpg\";s:18:\"focusslide_title_3\";s:21:\"xiu主题 - 大前端\";s:17:\"focusslide_href_3\";s:18:\"http://imweile.com\";s:18:\"focusslide_blank_3\";s:1:\"1\";s:16:\"focusslide_src_3\";s:53:\"http://www.22vd.com/wp-content/uploads/2015/01/01.jpg\";s:18:\"focusslide_title_4\";s:21:\"xiu主题 - 大前端\";s:17:\"focusslide_href_4\";s:18:\"http://imweile.com\";s:18:\"focusslide_blank_4\";s:1:\"1\";s:16:\"focusslide_src_4\";s:53:\"http://www.22vd.com/wp-content/uploads/2015/01/01.jpg\";s:18:\"focusslide_title_5\";s:21:\"xiu主题 - 大前端\";s:17:\"focusslide_href_5\";s:18:\"http://imweile.com\";s:18:\"focusslide_blank_5\";s:1:\"1\";s:16:\"focusslide_src_5\";s:53:\"http://www.22vd.com/wp-content/uploads/2015/01/01.jpg\";s:16:\"sideroll_index_s\";s:1:\"1\";s:14:\"sideroll_index\";s:3:\"1 2\";s:15:\"sideroll_list_s\";s:1:\"1\";s:13:\"sideroll_list\";s:3:\"1 2\";s:15:\"sideroll_post_s\";s:1:\"1\";s:13:\"sideroll_post\";s:3:\"1 2\";s:18:\"post_link_single_s\";b:0;s:17:\"post_link_blank_s\";s:1:\"1\";s:20:\"post_link_nofollow_s\";s:1:\"1\";s:12:\"post_link_h1\";s:12:\"直达链接\";s:19:\"readwall_limit_time\";s:3:\"200\";s:21:\"readwall_limit_number\";s:3:\"200\";s:9:\"page_menu\";a:5:{i:2;b:0;i:7;b:0;i:9;b:0;i:11;b:0;i:234;b:0;}s:14:\"page_links_cat\";s:0:\"\";s:16:\"index_list_title\";s:12:\"最新发布\";s:18:\"index_list_title_r\";s:156:\"<a href=\"链接地址\">显示文字</a><a href=\"链接地址\">显示文字</a><a href=\"链接地址\">显示文字</a><a href=\"链接地址\">显示文字</a>\";s:13:\"comment_title\";s:6:\"评论\";s:12:\"comment_text\";s:30:\"你的评论可以一针见血\";s:19:\"comment_submit_text\";s:12:\"提交评论\";s:5:\"weibo\";s:27:\"http://weibo.com/daqianduan\";s:3:\"tqq\";s:26:\"http://t.qq.com/daqianduan\";s:7:\"twitter\";s:0:\"\";s:8:\"facebook\";s:0:\"\";s:6:\"wechat\";s:12:\"阿里百秀\";s:9:\"wechat_qr\";s:70:\"http://www.daqianduan.com/wp-content/uploads/2015/01/weixin-qrcode.jpg\";s:4:\"feed\";s:22:\"http://localhost/feed/\";s:17:\"ads_post_footer_s\";b:0;s:24:\"ads_post_footer_pretitle\";s:12:\"阿里百秀\";s:21:\"ads_post_footer_title\";s:0:\"\";s:20:\"ads_post_footer_link\";s:0:\"\";s:26:\"ads_post_footer_link_blank\";s:1:\"1\";s:14:\"ads_index_01_s\";b:0;s:12:\"ads_index_01\";s:0:\"\";s:14:\"ads_index_01_m\";s:0:\"\";s:14:\"ads_index_02_s\";b:0;s:12:\"ads_index_02\";s:0:\"\";s:14:\"ads_index_02_m\";s:0:\"\";s:13:\"ads_post_01_s\";b:0;s:11:\"ads_post_01\";s:0:\"\";s:13:\"ads_post_01_m\";s:0:\"\";s:13:\"ads_post_02_s\";b:0;s:11:\"ads_post_02\";s:0:\"\";s:13:\"ads_post_02_m\";s:0:\"\";s:13:\"ads_post_03_s\";b:0;s:11:\"ads_post_03\";s:0:\"\";s:13:\"ads_post_03_m\";s:0:\"\";s:12:\"ads_cat_01_s\";b:0;s:10:\"ads_cat_01\";s:0:\"\";s:12:\"ads_cat_01_m\";s:0:\"\";s:12:\"ads_tag_01_s\";b:0;s:10:\"ads_tag_01\";s:0:\"\";s:12:\"ads_tag_01_m\";s:0:\"\";s:15:\"ads_search_01_s\";b:0;s:13:\"ads_search_01\";s:0:\"\";s:15:\"ads_search_01_m\";s:0:\"\";s:7:\"csscode\";s:0:\"\";s:8:\"headcode\";s:0:\"\";s:8:\"footcode\";s:0:\"\";s:9:\"trackcode\";s:0:\"\";}', 'yes');
-INSERT INTO `wp_options` VALUES ('108', '_transient_random_seed', '67303bac9d66c4cf16d46c0b6e2613e8', 'yes');
+INSERT INTO `wp_options` VALUES ('108', '_transient_random_seed', '86c7ce73cf2fc9f119d61446c65715b0', 'yes');
 INSERT INTO `wp_options` VALUES ('135', 'can_compress_scripts', '0', 'yes');
 INSERT INTO `wp_options` VALUES ('1117', '_site_transient_browser_522170fb17b3dafd4d8c57bfe7d2c613', 'a:9:{s:8:\"platform\";s:7:\"Windows\";s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:13:\"45.0.2454.101\";s:10:\"update_url\";s:28:\"http://www.google.com/chrome\";s:7:\"img_src\";s:49:\"http://s.wordpress.org/images/browsers/chrome.png\";s:11:\"img_src_ssl\";s:48:\"https://wordpress.org/images/browsers/chrome.png\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;}', 'yes');
 INSERT INTO `wp_options` VALUES ('147', 'auto_core_update_notified', 'a:4:{s:4:\"type\";s:6:\"manual\";s:5:\"email\";s:14:\"admin@h770.com\";s:7:\"version\";s:5:\"4.5.3\";s:9:\"timestamp\";i:1466736721;}', 'yes');
@@ -1916,7 +1934,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=MyISAM AUTO_INCREMENT=4087 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4092 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wp_postmeta
@@ -2914,7 +2932,7 @@ INSERT INTO `wp_postmeta` VALUES ('2060', '610', '_thumbnail_id', '611');
 INSERT INTO `wp_postmeta` VALUES ('3968', '7104', '_theme_custom_post_source', 'a:2:{s:6:\"source\";s:8:\"original\";s:7:\"reprint\";a:2:{s:3:\"url\";s:0:\"\";s:6:\"author\";s:0:\"\";}}');
 INSERT INTO `wp_postmeta` VALUES ('2063', '612', 'views', '1');
 INSERT INTO `wp_postmeta` VALUES ('2620', '6635', '_oembed_1b4e030df7b1147e43a8c6b05b95d25d', '{{unknown}}');
-INSERT INTO `wp_postmeta` VALUES ('3967', '7104', 'views', '54');
+INSERT INTO `wp_postmeta` VALUES ('3967', '7104', 'views', '59');
 INSERT INTO `wp_postmeta` VALUES ('2066', '613', 'views', '1');
 INSERT INTO `wp_postmeta` VALUES ('3833', '7062', 'views', '1');
 INSERT INTO `wp_postmeta` VALUES ('2148', '643', 'views', '0');
@@ -3033,7 +3051,7 @@ INSERT INTO `wp_postmeta` VALUES ('4038', '7113', '_edit_lock', '1465869649:1');
 INSERT INTO `wp_postmeta` VALUES ('2358', '713', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('4039', '7113', '_edit_last', '1');
 INSERT INTO `wp_postmeta` VALUES ('2361', '714', 'views', '0');
-INSERT INTO `wp_postmeta` VALUES ('3904', '7091', 'views', '32');
+INSERT INTO `wp_postmeta` VALUES ('3904', '7091', 'views', '34');
 INSERT INTO `wp_postmeta` VALUES ('2364', '715', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('2367', '716', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('3903', '7091', '_wp_page_template', 'page-sign.php');
@@ -3059,7 +3077,7 @@ INSERT INTO `wp_postmeta` VALUES ('3896', '7087', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('2406', '729', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('3892', '7085', 'views', '18');
 INSERT INTO `wp_postmeta` VALUES ('2409', '730', 'views', '0');
-INSERT INTO `wp_postmeta` VALUES ('2412', '731', 'views', '0');
+INSERT INTO `wp_postmeta` VALUES ('2412', '731', 'views', '2');
 INSERT INTO `wp_postmeta` VALUES ('2415', '732', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('2418', '733', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('3889', '7084', 'views', '5');
@@ -4337,9 +4355,9 @@ INSERT INTO `wp_postmeta` VALUES ('4036', '7113', 'views', '17');
 INSERT INTO `wp_postmeta` VALUES ('4037', '7113', '_thumbnail_id', '7112');
 INSERT INTO `wp_postmeta` VALUES ('4058', '7118', '_wp_attached_file', '2016/06/62c92ba585f74ecdbef4c4498a4389841.png');
 INSERT INTO `wp_postmeta` VALUES ('4059', '7118', '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:600;s:6:\"height\";i:430;s:4:\"file\";s:45:\"2016/06/62c92ba585f74ecdbef4c4498a4389841.png\";s:5:\"sizes\";a:2:{s:9:\"thumbnail\";a:4:{s:4:\"file\";s:45:\"62c92ba585f74ecdbef4c4498a4389841-320x200.png\";s:5:\"width\";i:320;s:6:\"height\";i:200;s:9:\"mime-type\";s:9:\"image/png\";}s:6:\"medium\";a:4:{s:4:\"file\";s:45:\"62c92ba585f74ecdbef4c4498a4389841-600x430.png\";s:5:\"width\";i:600;s:6:\"height\";i:430;s:9:\"mime-type\";s:9:\"image/png\";}}s:10:\"image_meta\";a:11:{s:8:\"aperture\";i:0;s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";i:0;s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";i:0;s:3:\"iso\";i:0;s:13:\"shutter_speed\";i:0;s:5:\"title\";s:0:\"\";s:11:\"orientation\";i:0;}}');
-INSERT INTO `wp_postmeta` VALUES ('4062', '7119', 'views', '19');
+INSERT INTO `wp_postmeta` VALUES ('4062', '7119', 'views', '42');
 INSERT INTO `wp_postmeta` VALUES ('4063', '7119', '_theme_custom_post_source', 'a:2:{s:6:\"source\";s:8:\"original\";s:7:\"reprint\";a:2:{s:3:\"url\";s:0:\"\";s:6:\"author\";s:0:\"\";}}');
-INSERT INTO `wp_postmeta` VALUES ('4064', '7119', '_theme_custom_storage', 'a:1:{i:0;a:4:{s:4:\"name\";s:12:\"百度网盘\";s:3:\"url\";s:64:\"http://pan.baidu.com/share/link?shareid=2583069311&uk=2452447530\";s:12:\"download-pwd\";s:0:\"\";s:11:\"extract-pwd\";s:0:\"\";}}');
+INSERT INTO `wp_postmeta` VALUES ('4064', '7119', '_theme_custom_storage', 'a:1:{i:0;a:4:{s:4:\"name\";s:12:\"百度网盘\";s:3:\"url\";s:64:\"http://pan.baidu.com/share/link?shareid=2583069311&uk=2452447530\";s:12:\"download-pwd\";s:4:\"1111\";s:11:\"extract-pwd\";s:4:\"2222\";}}');
 INSERT INTO `wp_postmeta` VALUES ('4065', '7119', '_thumbnail_id', '7118');
 INSERT INTO `wp_postmeta` VALUES ('4066', '7083', '_edit_lock', '1465896704:1');
 INSERT INTO `wp_postmeta` VALUES ('4067', '7083', '_edit_last', '1');
@@ -4354,6 +4372,7 @@ INSERT INTO `wp_postmeta` VALUES ('4082', '7073', '_edit_lock', '1465896848:1');
 INSERT INTO `wp_postmeta` VALUES ('4081', '7074', '_theme_custom_post_source', 'a:2:{s:6:\"source\";s:8:\"original\";s:7:\"reprint\";a:2:{s:3:\"url\";s:0:\"\";s:6:\"author\";s:0:\"\";}}');
 INSERT INTO `wp_postmeta` VALUES ('4083', '7073', '_edit_last', '1');
 INSERT INTO `wp_postmeta` VALUES ('4086', '7073', '_theme_custom_post_source', 'a:2:{s:6:\"source\";s:8:\"original\";s:7:\"reprint\";a:2:{s:3:\"url\";s:0:\"\";s:6:\"author\";s:0:\"\";}}');
+INSERT INTO `wp_postmeta` VALUES ('4089', '7119', '_theme_custom_download_point', 'a:1:{s:14:\"download_point\";s:1:\"5\";}');
 
 -- ----------------------------
 -- Table structure for `wp_posts`
@@ -4388,7 +4407,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=MyISAM AUTO_INCREMENT=7127 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7128 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wp_posts
@@ -5264,13 +5283,14 @@ INSERT INTO `wp_posts` VALUES ('7108', '1', '2016-06-13 13:00:00', '2016-06-13 0
 INSERT INTO `wp_posts` VALUES ('7109', '1', '2016-06-13 13:00:00', '2016-06-13 05:00:00', '', '<i class=\"fa fa-arrows-alt\"></i> 标签索引', '', 'publish', 'open', 'open', '', '7109', '', '', '2016-06-13 13:07:38', '2016-06-13 05:07:38', '', '0', 'http://www.ymroad.com/?p=7109', '6', 'nav_menu_item', '', '0');
 INSERT INTO `wp_posts` VALUES ('7112', '1', '2016-06-14 09:53:36', '2016-06-14 01:53:36', '', '1-20160614095336-158', '', 'inherit', 'open', 'open', '', '1-20160614095336-158', '', '', '2016-06-14 09:53:36', '2016-06-14 01:53:36', '', '0', 'http://www.ymroad.com/wp-content/uploads/2016/06/582b12fc248930659e86b800709008ce.png', '0', 'attachment', 'image/png', '0');
 INSERT INTO `wp_posts` VALUES ('7113', '1', '2016-06-14 09:55:19', '2016-06-14 01:55:19', '这是精心为你推荐的内容。\r\n<div class=\"collection-list list-group\">\r\n<p class=\"list-group-item\"><a title=\"92GAME仿《做菜网》菜谱网网站源码 带手机版 帝国CMS模板\" href=\"http://www.ymroad.com/code/7085.html\"><span class=\"row\"><span class=\"thumbnail-container\"><img class=\"collection-list-thumbnail\" src=\"http://www.dede168.com/uploads/allimg/160603/1464953151967569.jpg\" alt=\"92GAME仿《做菜网》菜谱网网站源码 带手机版 帝国CMS模板\" width=\"320\" height=\"200\" /></span><span class=\"list-group-body\"><span class=\"list-group-item-heading\">92GAME仿《做菜网》菜谱网网站源码 带手机版 帝国CMS模板</span><span class=\"list-group-item-text\">成立于2015年9月，主要以提供各类网站源码（ASP,PHP,NET）,建站素材,网站模板等各类站长资源为主的专业站长下载站!并为新手站长提供各类新手建站教程和建站经验,让站长快速构建和运营自己的网站。如果充值遇到问题请联系管理员,E-...</span></span></span></a></p>\r\n<p class=\"list-group-item\"><a title=\"92GAME仿《9点网》九点阅读网源码 带火车头采集 帝国CMS内核H5手机自适应\" href=\"http://www.ymroad.com/code/7084.html\"><span class=\"row\"><span class=\"thumbnail-container\"><img class=\"collection-list-thumbnail\" src=\"http://www.dede168.com/uploads/allimg/160604/1465017130839248.jpg\" alt=\"92GAME仿《9点网》九点阅读网源码 带火车头采集 帝国CMS内核H5手机自适应\" width=\"320\" height=\"200\" /></span><span class=\"list-group-body\"><span class=\"list-group-item-heading\">92GAME仿《9点网》九点阅读网源码 带火车头采集 帝国CMS内核H5手机自适应</span><span class=\"list-group-item-text\">成立于2015年9月，主要以提供各类网站源码（ASP,PHP,NET）,建站素材,网站模板等各类站长资源为主的专业站长下载站!并为新手站长提供各类新手建站教程和建站经验,让站长快速构建和运营自己的网站。如果充值遇到问题请联系管理员,E-...</span></span></span></a></p>\r\n<p class=\"list-group-item\"><a title=\"最新Wecenter伊人集清新社区整站源码分享，Wecenter伊人集社区完美修复BUG一键安装版\" href=\"http://www.ymroad.com/code/7082.html\"><span class=\"row\"><span class=\"thumbnail-container\"><img class=\"collection-list-thumbnail\" src=\"http://www.dede168.com/uploads/allimg/160604/1465048591700987.jpg\" alt=\"最新Wecenter伊人集清新社区整站源码分享，Wecenter伊人集社区完美修复BUG一键安装版\" width=\"320\" height=\"200\" /></span><span class=\"list-group-body\"><span class=\"list-group-item-heading\">最新Wecenter伊人集清新社区整站源码分享，Wecenter伊人集社区完美修复BUG一键安装版</span><span class=\"list-group-item-text\">成立于2015年9月，主要以提供各类网站源码（ASP,PHP,NET）,建站素材,网站模板等各类站长资源为主的专业站长下载站!并为新手站长提供各类新手建站教程和建站经验,让站长快速构建和运营自己的网站。如果充值遇到问题请联系管理员,E-...</span></span></span></a></p>\r\n<p class=\"list-group-item\"><a title=\"WordPress主题:知更鸟begin清新博客主题1.9.1版本 Html5手机电脑自适应\" href=\"http://www.ymroad.com/code/7081.html\"><span class=\"row\"><span class=\"thumbnail-container\"><img class=\"collection-list-thumbnail\" src=\"http://www.dede168.com/uploads/allimg/160604/1465048038711315.jpg\" alt=\"WordPress主题:知更鸟begin清新博客主题1.9.1版本 Html5手机电脑自适应\" width=\"320\" height=\"200\" /></span><span class=\"list-group-body\"><span class=\"list-group-item-heading\">WordPress主题:知更鸟begin清新博客主题1.9.1版本 Html5手机电脑自适应</span><span class=\"list-group-item-text\">92GAME仿《9点网》九点阅读网源码，采用帝国7.2utf8版二次开发带火车头采集，手机电脑html5自适应。程序具有极好的稳定，安全，高性能等优点！源码总共大小27G，建议采用服务器搭建。9点网--提供搞笑,社会，文化，内涵，视频，雷人...</span></span></span></a></p>\r\n<p class=\"list-group-item\"><a title=\"92GAME仿《爱剧情》剧情介绍站源码 带手机版带采集 帝国cms内核\" href=\"http://www.ymroad.com/code/7080.html\"><span class=\"row\"><span class=\"thumbnail-container\"><img class=\"collection-list-thumbnail\" src=\"http://www.dede168.com/uploads/allimg/160603/1464960436134495.jpg\" alt=\"92GAME仿《爱剧情》剧情介绍站源码 带手机版带采集 帝国cms内核\" width=\"320\" height=\"200\" /></span><span class=\"list-group-body\"><span class=\"list-group-item-heading\">92GAME仿《爱剧情》剧情介绍站源码 带手机版带采集 帝国cms内核</span><span class=\"list-group-item-text\">92GAME最新仿制的《做菜网》程序源码。帝国CMS内核，带原始数据39304条带手机版。采集没有搞到，需要的自己写采集吧。做菜网 C 中国最优质的美食，食谱，菜谱网。做你最喜爱的美食网，菜谱网。提供最人性化的菜谱大全,食谱家常菜，家常菜谱...</span></span></span></a></p>\r\n\r\n</div>', '精品推荐', '', 'publish', 'open', 'open', '', '%e7%b2%be%e5%93%81%e6%8e%a8%e8%8d%90', '', '\nhttp://www.ymroad.com/code/7085.html', '2016-06-14 10:02:08', '2016-06-14 02:02:08', '', '0', 'http://www.ymroad.com/uncategorized/7113.html', '0', 'post', '', '0');
-INSERT INTO `wp_posts` VALUES ('7118', '1', '2016-06-14 11:51:52', '2016-06-14 03:51:52', '', 'screenshot', '', 'inherit', 'open', 'open', '', 'screenshot-2', '', '', '2016-06-14 11:52:17', '2016-06-14 03:52:17', '', '7119', 'http://www.ymroad.com/wp-content/uploads/2016/06/62c92ba585f74ecdbef4c4498a4389841.png', '0', 'attachment', 'image/png', '0');
-INSERT INTO `wp_posts` VALUES ('7119', '1', '2016-06-14 11:52:17', '2016-06-14 03:52:17', '<p>测试下载测试下载测试下载</p>', '测试下载', '', 'publish', 'open', 'open', '', '%e6%b5%8b%e8%af%95%e4%b8%8b%e8%bd%bd', '', '', '2016-06-14 11:52:17', '2016-06-14 03:52:17', '', '0', 'http://www.ymroad.com/code/7119.html', '0', 'post', '', '0');
+INSERT INTO `wp_posts` VALUES ('7118', '1', '2016-06-14 11:51:52', '2016-06-14 03:51:52', '', 'screenshot', '', 'inherit', 'open', 'open', '', 'screenshot-2', '', '', '2016-06-25 22:45:04', '2016-06-25 14:45:04', '', '7119', 'http://www.ymroad.com/wp-content/uploads/2016/06/62c92ba585f74ecdbef4c4498a4389841.png', '0', 'attachment', 'image/png', '0');
+INSERT INTO `wp_posts` VALUES ('7119', '1', '2016-06-14 11:52:17', '2016-06-14 03:52:17', '<p>测试下载测试下载测试下载</p>', '测试下载', '', 'publish', 'open', 'open', '', '%e6%b5%8b%e8%af%95%e4%b8%8b%e8%bd%bd', '', '', '2016-06-25 22:45:04', '2016-06-25 14:45:04', '', '0', 'http://www.ymroad.com/code/7119.html', '0', 'post', '', '0');
 INSERT INTO `wp_posts` VALUES ('7126', '1', '2016-06-24 10:52:08', '0000-00-00 00:00:00', '', '自动草稿', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-06-24 10:52:08', '0000-00-00 00:00:00', '', '0', 'http://www.zzyzan.com/?p=7126', '0', 'post', '', '0');
 INSERT INTO `wp_posts` VALUES ('7122', '1', '2016-06-14 17:33:59', '2016-06-14 09:33:59', '端午节粽子大战源码，非常好玩儿的粽子大战微信小游戏！有积分排行，可分享到朋友圈！端午节营销活动吸粉必备！源码上传到服务器即可使用，没有asp、php环境限制，无需数据库支持！端午节快到了，在这里dede168提前给大家分享啦，最后祝dede168的粉丝们端午节快乐！！！\r\n<p style=\"text-align: center;\"><img src=\"http://www.dede168.com/uploads/allimg/160604/1465049716282116.png\" alt=\"微信小游戏：端午节粽子大战源码 端午节营销吸粉必备源码\" /></p>\r\n\r\n<blockquote>下载地址：\r\n\r\n百度网盘下载：<a href=\"http://pan.baidu.com/s/1ckJY5S\" target=\"_blank\" rel=\"nofollow\">微信小游戏：端午节粽子大战源码 端午节营销吸粉必备源码</a>\r\n\r\n360云盘下载：<a href=\"https://yunpan.cn/cSaUJ8n3TnpDk\" target=\"_blank\" rel=\"nofollow\">微信小游戏：端午节粽子大战源码 端午节营销吸粉必备源码</a>（提取码 63a9）\r\n\r\n解压密码：www.dede168.com</blockquote>\r\n<div><script>// <![CDATA[\r\narticle_01();\r\n// ]]></script></div>', '微信小游戏：端午节粽子大战源码 端午节营销吸粉必备源码', '', 'inherit', 'open', 'open', '', '7083-revision-v1', '', '', '2016-06-14 17:33:59', '2016-06-14 09:33:59', '', '7083', 'http://www.ymroad.com/uncategorized/7122.html', '0', 'revision', '', '0');
 INSERT INTO `wp_posts` VALUES ('7123', '1', '2016-06-14 17:34:33', '2016-06-14 09:34:33', '微信公众号电影网站源码模板 苹果cms8x手机视频电影黑色源码,微信引流源码，程序为苹果cms8x，播放为直链mp4，优酷、土豆、56网、KU6、乐视、搜狐、A站、微录客、奇艺、芒果、音悦台、乐mmsid(mmsid目前删的比较频繁，被删后需要重新上传就行了)、BILIBILI、风行、新浪、汤Tumblr、秒拍、磁力云播。\r\n<p style=\"text-align: center;\"><img src=\"http://www.dede168.com/uploads/allimg/160607/1465301070995023.png\" alt=\"微信公众号电影网站源码模板|苹果CMS8X手机视频电影黑色源码,微信引流源码\" /></p>\r\n\r\n<blockquote>下载地址：\r\n\r\n百度网盘下载：<a href=\"http://pan.baidu.com/s/1bpjwk0J\" target=\"_blank\" rel=\"nofollow\">微信公众号电影网站源码模板|苹果CMS8X手机视频电影黑色源码,微信引流源码</a>\r\n\r\n360云盘下载：<a href=\"https://yunpan.cn/cRycVS6JwfumC\" target=\"_blank\" rel=\"nofollow\">微信公众号电影网站源码模板|苹果CMS8X手机视频电影黑色源码,微信引流源码</a>（提取码 065a）\r\n\r\n解压密码：www.dede168.com</blockquote>\r\n<div><script>// <![CDATA[\r\narticle_01();\r\n// ]]></script></div>', '微信公众号电影网站源码模板|苹果CMS8X手机视频电影黑色源码,微信引流源码', '', 'inherit', 'open', 'open', '', '7075-revision-v1', '', '', '2016-06-14 17:34:33', '2016-06-14 09:34:33', '', '7075', 'http://www.ymroad.com/uncategorized/7123.html', '0', 'revision', '', '0');
 INSERT INTO `wp_posts` VALUES ('7124', '1', '2016-06-14 17:35:08', '2016-06-14 09:35:08', '前几天刚发的ocex影视视频分享网站视频媒体平台源码（第四版）的数据库文件，此次分享的加上上次分享的算是ocex整站的源码了，数据库的密码忘了，请使用dz密码修改工具改一下就行了，其他的自己慢慢研究吧。\r\n\r\nocex影视视频分享网站视频媒体平台源码（第四版）下载地址：\r\n\r\nhttp://www.dede168.com/yuanma/20160602/1479.html\r\n<p style=\"text-align: center;\"><img src=\"http://www.dede168.com/uploads/allimg/160602/1464880477319424.jpg\" alt=\"补发ocex影视视频分享网站视频媒体平台源码（第四版）数据库文件\" /></p>\r\n\r\n<blockquote>下载地址：\r\n\r\n百度网盘下载：<a href=\"http://pan.baidu.com/s/1skRsFmP\" target=\"_blank\" rel=\"nofollow\">补发ocex影视视频分享网站视频媒体平台源码（第四版）数据库文件</a>\r\n\r\n360云盘下载：<a href=\"https://yunpan.cn/cRyxdX5dwSz5B\" target=\"_blank\" rel=\"nofollow\">补发ocex影视视频分享网站视频媒体平台源码（第四版）数据库文件</a>（提取码 0b10）\r\n\r\n解压密码：www.dede168.com</blockquote>\r\n<div><script>// <![CDATA[\r\narticle_01();\r\n// ]]></script></div>', '补发ocex影视视频分享网站视频媒体平台源码（第四版）数据库文件', '', 'inherit', 'open', 'open', '', '7074-revision-v1', '', '', '2016-06-14 17:35:08', '2016-06-14 09:35:08', '', '7074', 'http://www.ymroad.com/uncategorized/7124.html', '0', 'revision', '', '0');
 INSERT INTO `wp_posts` VALUES ('7125', '1', '2016-06-14 17:35:55', '2016-06-14 09:35:55', '92GAME众筹定制《牛BB文章网》文章站，百度权重8，收录900W+，排名非常好，支持手机版，带采集。使用帝国7.2 GBK版二次开发，程序具有极好的稳定，安全，高性能等优点！网站内容含盖广界面整洁清爽，适合各类广告。\r\n\r\n牛bb文章网是一个专注于生活的文章阅读网站，牛bb文章网，发现更多的好文章，分享更精彩的生活。好文章，要分享！\r\n<p style=\"text-align: center;\"><img src=\"http://www.dede168.com/uploads/allimg/160608/1465397931494994.jpg\" alt=\"92GAME仿《牛BB文章网》文章阅读网站源码 帝国Cms内核 带火车头采集带手机版\" /></p>\r\n\r\n<blockquote>下载地址：\r\n\r\n百度网盘下载：<a href=\"http://pan.baidu.com/s/1hsJdSqg\" target=\"_blank\" rel=\"nofollow\">92GAME仿《牛BB文章网》文章阅读网站源码 帝国Cms内核 带火车头采集带手机版</a>\r\n\r\n360云盘下载：<a href=\"https://yunpan.cn/cRJCyI4v9fiFm\" target=\"_blank\" rel=\"nofollow\">92GAME仿《牛BB文章网》文章阅读网站源码 帝国Cms内核 带火车头采集带手机版</a>（提取码 502a）\r\n\r\n解压密码：www.dede168.com#niubb</blockquote>\r\n<div><script>// <![CDATA[\r\narticle_01();\r\n// ]]></script></div>', '92GAME仿《牛BB文章网》文章阅读网站源码 帝国Cms内核 带火车头采集带手机版', '', 'inherit', 'open', 'open', '', '7073-revision-v1', '', '', '2016-06-14 17:35:55', '2016-06-14 09:35:55', '', '7073', 'http://www.ymroad.com/uncategorized/7125.html', '0', 'revision', '', '0');
+INSERT INTO `wp_posts` VALUES ('7127', '1', '2016-06-25 22:44:23', '2016-06-25 14:44:23', '<p>测试下载测试下载测试下载</p>', '测试下载', '', 'inherit', 'open', 'open', '', '7119-revision-v1', '', '', '2016-06-25 22:44:23', '2016-06-25 14:44:23', '', '7119', 'http://www.zzyzan.com/uncategorized/7127.html', '0', 'revision', '', '0');
 
 -- ----------------------------
 -- Table structure for `wp_terms`
@@ -6281,7 +6301,7 @@ CREATE TABLE `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=MyISAM AUTO_INCREMENT=268 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=272 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wp_usermeta
@@ -6307,17 +6327,17 @@ INSERT INTO `wp_usermeta` VALUES ('163', '13', 'rich_editing', 'true');
 INSERT INTO `wp_usermeta` VALUES ('164', '13', 'comment_shortcuts', 'false');
 INSERT INTO `wp_usermeta` VALUES ('156', '1', 'closedpostboxes_post', 'a:0:{}');
 INSERT INTO `wp_usermeta` VALUES ('157', '1', 'metaboxhidden_post', 'a:7:{i:0;s:11:\"postexcerpt\";i:1;s:13:\"trackbacksdiv\";i:2;s:10:\"postcustom\";i:3;s:16:\"commentstatusdiv\";i:4;s:11:\"commentsdiv\";i:5;s:7:\"slugdiv\";i:6;s:9:\"authordiv\";}');
-INSERT INTO `wp_usermeta` VALUES ('158', '1', 'theme_last_signin', '1466868374');
+INSERT INTO `wp_usermeta` VALUES ('158', '1', 'theme_last_signin', '1466899560');
 INSERT INTO `wp_usermeta` VALUES ('165', '13', 'admin_color', 'fresh');
 INSERT INTO `wp_usermeta` VALUES ('166', '13', 'use_ssl', '0');
 INSERT INTO `wp_usermeta` VALUES ('167', '13', 'show_admin_bar_front', 'true');
 INSERT INTO `wp_usermeta` VALUES ('168', '13', 'wp_capabilities', 'a:1:{s:11:\"contributor\";b:1;}');
 INSERT INTO `wp_usermeta` VALUES ('169', '13', 'wp_user_level', '1');
 INSERT INTO `wp_usermeta` VALUES ('170', '13', 'theme_point_history', 'a:2:{s:4:\"type\";s:6:\"signup\";s:9:\"timestamp\";d:1465571644;}');
-INSERT INTO `wp_usermeta` VALUES ('171', '13', 'theme_point_count', '500729');
+INSERT INTO `wp_usermeta` VALUES ('171', '13', 'theme_point_count', '500716');
 INSERT INTO `wp_usermeta` VALUES ('172', '13', 'dismissed_wp_pointers', 'wp360_locks,wp390_widgets');
-INSERT INTO `wp_usermeta` VALUES ('176', '1', 'session_tokens', 'a:3:{s:64:\"6d9a482a57d49a94488daf4591344b5516c97383a7b99accb62054cebee92bf9\";a:4:{s:10:\"expiration\";i:1467077033;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0\";s:5:\"login\";i:1465867433;}s:64:\"cf080c6d0849f733daabc9214e7984ac8f747d0471d95ef5b91b57e9c56a791b\";a:4:{s:10:\"expiration\";i:1467113832;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0\";s:5:\"login\";i:1465904232;}s:64:\"52e9e68d4f53b2d4b85a704551252d747f5c1ecf41791e2409872c837996658a\";a:4:{s:10:\"expiration\";i:1468049137;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0\";s:5:\"login\";i:1466839537;}}');
-INSERT INTO `wp_usermeta` VALUES ('174', '13', 'theme_last_signin', '1465996204');
+INSERT INTO `wp_usermeta` VALUES ('176', '1', 'session_tokens', 'a:4:{s:64:\"6d9a482a57d49a94488daf4591344b5516c97383a7b99accb62054cebee92bf9\";a:4:{s:10:\"expiration\";i:1467077033;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0\";s:5:\"login\";i:1465867433;}s:64:\"cf080c6d0849f733daabc9214e7984ac8f747d0471d95ef5b91b57e9c56a791b\";a:4:{s:10:\"expiration\";i:1467113832;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0\";s:5:\"login\";i:1465904232;}s:64:\"52e9e68d4f53b2d4b85a704551252d747f5c1ecf41791e2409872c837996658a\";a:4:{s:10:\"expiration\";i:1468049137;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0\";s:5:\"login\";i:1466839537;}s:64:\"622d39399c2ac94cfa2cf17e35394d60e402e435d08759e8571a732dee6eb0a4\";a:4:{s:10:\"expiration\";i:1468075359;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:72:\"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0\";s:5:\"login\";i:1466865759;}}');
+INSERT INTO `wp_usermeta` VALUES ('174', '13', 'theme_last_signin', '1466899272');
 INSERT INTO `wp_usermeta` VALUES ('155', '1', 'n9m-font-awesome-4-notice-hide', '1');
 INSERT INTO `wp_usermeta` VALUES ('15', '1', 'wp_dashboard_quick_press_last_post_id', '7126');
 INSERT INTO `wp_usermeta` VALUES ('16', '1', 'managenav-menuscolumnshidden', 'a:4:{i:0;s:11:\"link-target\";i:1;s:11:\"css-classes\";i:2;s:3:\"xfn\";i:3;s:11:\"description\";}');
@@ -6414,7 +6434,7 @@ INSERT INTO `wp_usermeta` VALUES ('153', '12', 'managenav-menuscolumnshidden', '
 INSERT INTO `wp_usermeta` VALUES ('154', '12', 'metaboxhidden_nav-menus', 'a:2:{i:0;s:8:\"add-post\";i:1;s:12:\"add-post_tag\";}');
 INSERT INTO `wp_usermeta` VALUES ('177', '1', 'theme_custom_pm', 'a:1:{s:7:\"unreads\";a:0:{}}');
 INSERT INTO `wp_usermeta` VALUES ('178', '1', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465639871;}');
-INSERT INTO `wp_usermeta` VALUES ('179', '1', 'theme_point_count', '21');
+INSERT INTO `wp_usermeta` VALUES ('179', '1', 'theme_point_count', '9923');
 INSERT INTO `wp_usermeta` VALUES ('193', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:12:\"post-publish\";s:7:\"post-id\";i:7104;s:9:\"timestamp\";d:1465819767;}');
 INSERT INTO `wp_usermeta` VALUES ('194', '1', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465896236;}');
 INSERT INTO `wp_usermeta` VALUES ('181', '13', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465640027;}');
@@ -6432,12 +6452,12 @@ INSERT INTO `wp_usermeta` VALUES ('192', '13', 'theme_point_history', 'a:2:{s:4:
 INSERT INTO `wp_usermeta` VALUES ('195', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:12:\"post-publish\";s:7:\"post-id\";i:7113;s:9:\"timestamp\";d:1465898120;}');
 INSERT INTO `wp_usermeta` VALUES ('197', '13', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465900931;}');
 INSERT INTO `wp_usermeta` VALUES ('198', '1', 'theme_noti', 'a:4:{s:2:\"id\";s:13:\"1465900974979\";s:4:\"type\";s:10:\"post-reply\";s:10:\"comment-id\";s:1:\"8\";s:9:\"timestamp\";d:1465900974;}');
-INSERT INTO `wp_usermeta` VALUES ('199', '1', 'theme_noti_unread_count', '');
+INSERT INTO `wp_usermeta` VALUES ('199', '1', 'theme_noti_unread_count', 'a:2:{i:0;s:0:\"\";i:1466896857;a:5:{s:4:\"type\";s:13:\"special-event\";s:5:\"point\";i:10000;s:5:\"event\";s:6:\"测试\";s:9:\"timestamp\";d:1466896857;s:2:\"id\";s:13:\"1466896857173\";}}');
 INSERT INTO `wp_usermeta` VALUES ('200', '13', 'theme_point_history', 'a:3:{s:4:\"type\";s:15:\"comment-publish\";s:10:\"comment-id\";i:8;s:9:\"timestamp\";d:1465900974;}');
 INSERT INTO `wp_usermeta` VALUES ('201', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:10:\"post-reply\";s:10:\"comment-id\";i:8;s:9:\"timestamp\";d:1465900974;}');
 INSERT INTO `wp_usermeta` VALUES ('202', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:12:\"post-publish\";s:7:\"post-id\";i:7119;s:9:\"timestamp\";d:1465905137;}');
 INSERT INTO `wp_usermeta` VALUES ('205', '1', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465987929;}');
-INSERT INTO `wp_usermeta` VALUES ('206', '13', 'session_tokens', 'a:1:{s:64:\"075515ef3d6a9cc4fc41092970515db51d4a999c4ce16f69eec50e6b874ff9e9\";a:4:{s:10:\"expiration\";i:1466140202;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:109:\"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36\";s:5:\"login\";i:1465967402;}}');
+INSERT INTO `wp_usermeta` VALUES ('206', '13', 'session_tokens', 'a:1:{s:64:\"f0159913f570eb13c57725576fc5fec1fc415492faae38ea66703fb0cabb1afd\";a:4:{s:10:\"expiration\";i:1468080066;s:2:\"ip\";s:9:\"127.0.0.1\";s:2:\"ua\";s:109:\"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36\";s:5:\"login\";i:1466870466;}}');
 INSERT INTO `wp_usermeta` VALUES ('207', '13', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465996204;}');
 INSERT INTO `wp_usermeta` VALUES ('208', '13', 'theme_point_history', 'a:4:{s:4:\"type\";s:13:\"special-event\";s:5:\"point\";i:2000;s:5:\"event\";s:15:\"测试功能用\";s:9:\"timestamp\";d:1465996357;}');
 INSERT INTO `wp_usermeta` VALUES ('209', '13', 'theme_noti', 'a:5:{s:4:\"type\";s:13:\"special-event\";s:5:\"point\";i:2000;s:5:\"event\";s:15:\"测试功能用\";s:9:\"timestamp\";d:1465996357;s:2:\"id\";s:13:\"1465996357436\";}');
@@ -6499,6 +6519,10 @@ INSERT INTO `wp_usermeta` VALUES ('264', '1', 'theme_point_history', 'a:3:{s:4:\
 INSERT INTO `wp_usermeta` VALUES ('265', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"post-delete\";s:10:\"post-title\";s:12:\"自动草稿\";s:9:\"timestamp\";d:1466765525;}');
 INSERT INTO `wp_usermeta` VALUES ('266', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"post-delete\";s:10:\"post-title\";s:12:\"自动草稿\";s:9:\"timestamp\";d:1466765525;}');
 INSERT INTO `wp_usermeta` VALUES ('267', '1', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1466868374;}');
+INSERT INTO `wp_usermeta` VALUES ('268', '1', 'theme_point_history', 'a:4:{s:4:\"type\";s:13:\"special-event\";s:5:\"point\";i:10000;s:5:\"event\";s:6:\"测试\";s:9:\"timestamp\";d:1466896857;}');
+INSERT INTO `wp_usermeta` VALUES ('269', '1', 'theme_noti', 'a:5:{s:4:\"type\";s:13:\"special-event\";s:5:\"point\";i:10000;s:5:\"event\";s:6:\"测试\";s:9:\"timestamp\";d:1466896857;s:2:\"id\";s:13:\"1466896857173\";}');
+INSERT INTO `wp_usermeta` VALUES ('270', '13', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1466899272;}');
+INSERT INTO `wp_usermeta` VALUES ('271', '1', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1466899560;}');
 
 -- ----------------------------
 -- Table structure for `wp_users`

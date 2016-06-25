@@ -567,7 +567,7 @@ class theme_custom_storage{
 					    		var download_url = '<?= self::get_download_page_url($post->ID);?>';
 					    		setTimeout(function(){
 					    			// window.open(download_url);
-					    			location.href = download_url;			    			
+					    			location.href = download_url;	    			
 					    		}, 3000);
 					    	}
 					    }
