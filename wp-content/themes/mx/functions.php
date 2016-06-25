@@ -239,9 +239,8 @@ class theme_functions{
 				<div class="media">
 					<a 
 						class="media-left" 
-						href="<?= theme_cache::get_author_posts_url($post->post_author);?>" 
-						class="meta author" 
-						title="<?= $author_display_name;?>" 
+						href="<?= theme_cache::get_permalink($post->ID);?>" 
+						title="<?= $post_title;?>" 
 						target="<?= $args['target'];?>" 
 						style="width:20%;"
 					>
