@@ -30,6 +30,10 @@
 			?>
 
 			<?php
+			$args1 = [
+				'showposts' => 9,
+			];
+			$query1 = new WP_Query($args1);
 			if(have_posts()){
 				?>
 				<div class="home-recomm mod panel">
@@ -46,9 +50,8 @@
 				</div>
 				<div class="row">
 					<?php
-					$latest_posts = query_posts('showposts=9');
 					$loop_i = 0;
-					foreach($latest_posts as $post){
+					foreach($query1->posts as $post){
 						setup_postdata($post);
 						theme_functions::archive_card_sm([
 							'classes' => 'g-desktop-1-3 g-tablet-1-2',
@@ -58,39 +61,21 @@
 					}
 					?>
 				</div>
-				
-				<div class="home-recomm mod panel">
-					<div class="heading">
-						<h2 class="title">
-							<span class="bg">
-								<a href="/rank?tab=latest"> <i class="fa fa-star-o"></i>
-									PHP
-								</a>
-							</span>
-						</h2>
-						<a class="more" href="/php/">更多 »</a>
-					</div>
-				</div>
-				<div class="row">
-					<?php
-					$php = query_posts('cat=39&showposts=9');
-					$loop_i = 0;
-					foreach($php as $post){
-						setup_postdata($post);
-						theme_functions::archive_card_sm([
-							'classes' => 'g-desktop-1-3 g-tablet-1-2',
-							'lazyload' => $loop_i <= 8 ? false : true,
-						]);
-						++$loop_i;
-					}
-					?>
-				</div>
+			<?php } ?>
 
+			<?php
+			$args2 = [
+				'showposts' => 9,
+				'category__in' => [39],
+			];
+			$query2 = new WP_Query($args2);
+			if(have_posts()){
+				?>
 				<div class="home-recomm mod panel">
 					<div class="heading">
 						<h2 class="title">
 							<span class="bg">
-								<a href="/rank?tab=latest"> <i class="fa fa-star-o"></i>
+								<a href="/code/"> <i class="fa fa-star-o"></i>
 									精品源码
 								</a>
 							</span>
@@ -100,9 +85,43 @@
 				</div>
 				<div class="row">
 					<?php
-					$code_posts = query_posts('cat=40&showposts=9');
 					$loop_i = 0;
-					foreach($code_posts as $post){
+					foreach($query2->posts as $post){
+						setup_postdata($post);
+						theme_functions::archive_card_sm([
+							'classes' => 'g-desktop-1-3 g-tablet-1-2',
+							'lazyload' => $loop_i <= 8 ? false : true,
+						]);
+						++$loop_i;
+					}
+					?>
+				</div>
+			<?php } ?>
+
+			<?php
+			$args3 = [
+				'showposts' => 9,
+				'category__in' => [40],
+			];
+			$query3 = new WP_Query($args3);
+			if(have_posts()){
+				?>
+				<div class="home-recomm mod panel">
+					<div class="heading">
+						<h2 class="title">
+							<span class="bg">
+								<a href="/php/"> <i class="fa fa-star-o"></i>
+									PHP
+								</a>
+							</span>
+						</h2>
+						<a class="more" href="/php/">更多 »</a>
+					</div>
+				</div>
+				<div class="row">
+					<?php
+					$loop_i = 0;
+					foreach($query3->posts as $post){
 						setup_postdata($post);
 						theme_functions::archive_card_sm([
 							'classes' => 'g-desktop-1-3 g-tablet-1-2',
