@@ -20,7 +20,7 @@
 				$data = $wpdb->get_row("SELECT * FROM $wpdb->postmeta where meta_key='_theme_custom_download_point' and post_id={$post_id}");
 				$download_point_arr = unserialize($data->meta_value);
 				$download_point = (int)$download_point_arr['download_point'];	// 下载积分
-				$total_point = number_format(theme_custom_point::get_point($current_user_id));	// 总积分
+				$total_point = (int)theme_custom_point::get_point($current_user_id);	// 总积分
 				if ($total_point - $download_point < 0) {
 					$result = array(
 						'status' => 0,
