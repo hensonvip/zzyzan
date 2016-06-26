@@ -8,7 +8,11 @@
 					<span class="author"><?= theme_cache::get_the_author_meta('display_name',theme_cache::get_current_user_id());?></span>
 				</span>
 				<span class="meta">
-					<img src="<?= theme_custom_point::get_point_img_url();?>" alt="point-icon" width="16" height="16"> 
+					<?php if(theme_custom_point::get_point_img_url()){?>
+						<img src="<?= theme_custom_point::get_point_img_url();?>" alt="point-icon" width="16" height="16">
+					<?php } else {?>
+						<i class="fa fa-diamond fa-fw"></i>
+					<?php } ?>
 					<span id="point-count"><?= theme_custom_point::get_point(theme_cache::get_current_user_id());?></span><span id="modify-count"></span>
 				</span>
 			</div>
@@ -20,7 +24,7 @@
 				}else{
 					
 					foreach($boxes as $k => $box){
-						if($box['type'] === 'point'){
+						if($box['type'] === 'point' && theme_custom_point::get_point_img_url()){
 							$icon = '<img src="' . theme_custom_point::get_point_img_url() . '" alt="icon" width="16" height="16">';
 						}else{
 							$icon = '<i class="fa fa-yelp fa-fw"></i>';
