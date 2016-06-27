@@ -24,10 +24,13 @@ class theme_custom_collection{
 		
 		if(!self::is_enabled())
 			return;
-			
-		foreach(self::get_tabs() as $k => $v){
-			$nav_fn = 'filter_nav_' . $k; 
-			add_filter('account_navs',__CLASS__ . "::$nav_fn",$v['filter_priority']);
+
+		// henson add
+		if(current_user_can('manage_options') || current_user_can( 'publish_pages' )) {
+		    foreach(self::get_tabs() as $k => $v){
+		    	$nav_fn = 'filter_nav_' . $k; 
+		    	add_filter('account_navs',__CLASS__ . "::$nav_fn",$v['filter_priority']);
+		    }
 		}
 
 		add_filter('wp_title',				__CLASS__ . '::wp_title',10,2);

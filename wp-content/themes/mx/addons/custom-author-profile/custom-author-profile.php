@@ -64,23 +64,28 @@ class theme_custom_author_profile{
 	public static function get_roles($user_id_or_role){
 		$roles = [
 			'subscriber' => [
-				'name' => ___('Author'),
+				// 'name' => ___('Author'),
+				'name' => '订阅者',
 				'label' => 'default',
 			],
 			'contributor' => [
-				'name' => ___('Author'),
+				// 'name' => ___('Author'),
+				'name' => '投稿者',
 				'label' => 'warning',
 			],
 			'author' => [
-				'name' => ___('Certification Author'),
+				// 'name' => ___('Certification Author'),
+				'name' => '作者',
 				'label' => 'primary',
 			],
 			'editor' => [
-				'name' => ___('Editor'),
+				// 'name' => ___('Editor'),
+				'name' => '编辑',
 				'label' => 'success',
 			],
 			'administrator' => [
-				'name' => ___('Editor'),
+				// 'name' => ___('Editor'),
+				'name' => '管理员',
 				'label' => 'danger',
 			],
 		];

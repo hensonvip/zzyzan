@@ -13,6 +13,8 @@
 /** 
  * menu menu-mobile
  */
+global $current_user; 
+// get_currentuserinfo();
 if(wp_is_mobile()){
 	?>
 	<div class="nav-slide menu-mobile header-nav-slide">
@@ -135,7 +137,7 @@ if(wp_is_mobile() && theme_cache::is_user_logged_in()){
 				<?php }else{ ?>
 					<div class="tool tool-me">
 						<a href="<?= theme_cache::get_author_posts_url(theme_cache::get_current_user_id());?>">
-							<img class="avatar" width="32" height="32" src="<?= theme_cache::get_avatar_url(theme_cache::get_current_user_id());?>" alt="avatar">&nbsp; <i class="fa fa-caret-down"></i>
+							<img class="avatar" width="32" height="32" src="<?= theme_cache::get_avatar_url(theme_cache::get_current_user_id());?>" alt="avatar" title="<?php echo $current_user->nickname ?>">&nbsp; <i class="fa fa-caret-down"></i>
 						</a>
 						<div class="box">
 							<!-- points -->

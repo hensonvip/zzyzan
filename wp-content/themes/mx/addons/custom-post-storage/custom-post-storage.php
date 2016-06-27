@@ -552,10 +552,11 @@ class theme_custom_storage{
 			$(document).ready(function(){
 				$('.meta-post-storage').click(function(event) {
 					var data = "<?php echo $post->ID; ?>";
+					var author_id = "<?php echo the_author_ID(); ?>";	//作者ID
 					$.ajax({
 					    type: 'POST',
 					    url: '/wp-content/themes/mx/download-point.php',
-					    data: {'post_id' : data},
+					    data: {'post_id' : data, 'author_id' : author_id},
 					    dataType: 'json',
 					    beforeSend: function(){
 					    	var beforeSendHtml = '<div id="ajax-loading-container" class="loading show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-loading"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i> 加载中，请稍后...</div></div></div>';
