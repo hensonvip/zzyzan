@@ -1,0 +1,34 @@
+$p: ".tip-status";
+#{$p}{
+	position: relative;
+	a{
+		text-decoration: underline;
+	}
+}
+/** 
+ * type
+ */
+#{$p}-success,
+#{$p}-green{color:#52a954}
+
+#{$p}-error,
+#{$p}-ban{color:#c75050}
+
+#{$p}-warning{color:#96904d}
+
+#{$p}-help,
+#{$p}-blue,
+#{$p}-info{color:#4d8796}
+#{$p}-question{color:#363636}
+
+#{$p}-spinner,
+#{$p}-loading{color:#666}
+/** 
+ * size 
+ */
+#{$p}-middle{font-size:1.5rem}
+#{$p}-large{font-size:2rem}
+
+.fa-spin {
+    animation: 2s cubic-bezier(.68,-0.55,.27,1.55) 0s normal none infinite running fa-spin;
+}

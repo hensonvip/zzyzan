@@ -1,0 +1,20 @@
+
+.sinapicv2-backup-progress{
+	position: relative;
+}
+#sinapicv2-backup-area{
+}
+.sinapicv2-progress{
+	position:relative;
+}
+.sinapicv2-progress-bar{
+	position:absolute;
+	display:none;
+	width:0;
+	left:0;
+	bottom:0;
+	height:3px;
+	background:rgb(0, 116, 162);
+	border-radius:99px;
+	z-index:1;
+}
