@@ -249,7 +249,7 @@ class theme_custom_storage{
 			return;
 			
 		if(!isset($_POST[__CLASS__])){
-			delete_post_meta($post_id,self::$post_meta_key['key']);
+			// delete_post_meta($post_id,self::$post_meta_key['key']);
 			return;
 		}
 			
