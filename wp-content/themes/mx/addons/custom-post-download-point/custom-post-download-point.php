@@ -63,7 +63,7 @@ class theme_custom_download_point{
 		foreach ( $screens as $screen ) {
 			add_meta_box(
 				__CLASS__,
-				'下载积分',
+				'<?= ___("Download Point");?>',
 				__CLASS__ . '::meta_box_display',
 				$screen,
 				'side'
@@ -98,8 +98,8 @@ class theme_custom_download_point{
 				name="<?= __CLASS__;?>[download_point]"
 				id="<?= __CLASS__;?>-download_point" 
 				class="widefat code" 
-				title="下载积分"
-				placeholder="留空为免费下载"
+				title="<?= ___('Download Point');?>"
+				placeholder="<?= ___('Free download if blank');?>"
 				value="<?= isset($meta['download_point']) ? $meta['download_point'] : null;?>" 
 			>
 		</div>			
@@ -116,13 +116,13 @@ class theme_custom_download_point{
 		if(!isset($meta['download_point']))
 			return false;
 		?>
-		<a class="meta meta-post-download-point" style="background:#58c780;" href="javascript:void(0);" title="下载积分">
+		<a class="meta meta-post-download-point" style="background:#58c780;" href="javascript:void(0);" title="<?= ___('Download Point');?>">
 			<div id="download-point" class="number" data="<?php echo self::get_text($meta['download_point']); ?>">
 				<?php
 					echo self::get_text($meta['download_point']);
 				?>
 			</div>
-			<div class="tx">积分</div>
+			<div class="tx"><?= ___('Point');?></div>
 		</a>
 		<?php
 	}
