@@ -10,7 +10,7 @@
 	if (!$post_id || !is_numeric($post_id)) {
 		$result = array(
 			'status' => -1,
-			'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-success"><i class="fa fa-times-circle fa-fw"></i>不要做坏事哦。</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
+			'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-error"><i class="fa fa-times-circle fa-fw"></i>不要做坏事哦。</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
 		);
 		die(json_encode($result));
 	}
@@ -34,7 +34,7 @@
 				if ($total_point - $download_point < 0) {
 					$result = array(
 						'status' => 0,
-						'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-success"><i class="fa fa-times-circle fa-fw"></i>抱歉，您的积分不足。</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
+						'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-error"><i class="fa fa-times-circle fa-fw"></i>抱歉，您的积分不足。</div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
 					);
 					die(json_encode($result));
 				} else {
@@ -85,7 +85,7 @@
 	} else {
 		$result = array(
 			'status' => -2,
-			'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-success"><i class="fa fa-times-circle fa-fw"></i><a href="' . wp_login_url(theme_cache::get_permalink($post_id)) . '" title="' . ___('Go to log-in') . '">' . ___('Sorry, please log-in.') . '</a></div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
+			'msg' => '<div id="ajax-loading-container" class="success show"><div id="ajax-loading"><div class="tip-status tip-status-small tip-status-error"><i class="fa fa-times-circle fa-fw"></i><a href="' . wp_login_url(theme_cache::get_permalink($post_id)) . '" title="' . ___('Go to log-in') . '">' . ___('Sorry, please log-in.') . '</a></div></div> <i class="btn-close fa fa-times fa-fw"></i></div>'
 		);
 		die(json_encode($result));
 	}
