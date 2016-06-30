@@ -617,9 +617,9 @@ class theme_functions{
 				<div class="entry-circle">
 					<?php
 					/** post points */
-					if(class_exists('custom_post_point') && class_exists('theme_custom_point')){
+					/*if(class_exists('custom_post_point') && class_exists('theme_custom_point')){
 						custom_post_point::post_btn($post->ID);
-					}
+					}*/
 					
 					/** theme_custom_storage */
 					if(class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
