@@ -536,16 +536,16 @@ class theme_custom_storage{
 		if(!$meta)
 			return;
 		?>
-		<a class="meta meta-post-storage" href="javascript:void(0)" title="<?= ___('Download');?>">
-			<div id="post-storage-number-<?= $post->ID;?>" class="number">
+		<a class="meta meta-post-storage" style="background:#58c780;" href="javascript:void(0)" title="<?= ___('Download');?>">
+			<span class="tx"><?= ___('Download');?></span>
+			<span id="post-storage-number-<?= $post->ID;?>" class="number">
 				<?php
 				if(class_exists('theme_post_views') && theme_post_views::is_enabled()){
 					$number = (int)(theme_post_views::get_views($post->ID) * 0.5 - mt_rand(1,9));
-					echo $number <= 0 ? 0 : number_format($number);
+					echo $number <= 0 ? (0) : '(' . number_format($number) . ')';
 				}
 				?>
-			</div>
-			<div class="tx"><?= ___('Download');?></div>
+			</span>
 		</a>
 		<script src="//cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
 		<script>

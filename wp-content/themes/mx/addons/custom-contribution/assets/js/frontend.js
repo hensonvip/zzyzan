@@ -66,6 +66,7 @@ module.exports = function(){
 		cache.$file = 				I('ctb-file');
 		cache.$files = 				I('ctb-files');
 		cache.$download_point = 	I('theme_custom_download_point');
+		cache.$download_demourl = 	I('theme_custom_download_demourl');
 		
 		cache.$file_progress_container = I('ctb-file-progress-container');
 		cache.$file_progress = 		I('ctb-file-progress');
@@ -259,6 +260,11 @@ module.exports = function(){
 				data.download_point = cache.$download_point.value;
 				data.can_restore = true;
 			}
+			/*download demourl*/
+			if(cache.$download_demourl.value !== ''){
+				data.download_demourl = cache.$download_demourl.value;
+				data.can_restore = true;
+			}
 			// henson end
 
 			/** preset tags */
@@ -361,6 +367,10 @@ module.exports = function(){
 			/** download_point henson add */
 			if(data.download_point)
 				cache.$download_point.value = data.download_point;
+
+			/** download_demourl henson add */
+			if(data.download_demourl)
+				cache.$download_demourl.value = data.download_demourl;
 
 			/** preset tags */
 			if(data.preset_tags){

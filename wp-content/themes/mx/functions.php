@@ -626,6 +626,14 @@ class theme_functions{
 						theme_custom_storage::display_frontend($post->ID);
 					}
 
+					/** theme_custom_download_demourl henson add */
+					if(class_exists('theme_custom_download_demourl') && theme_custom_download_demourl::is_enabled() && class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
+						$storage_meta = theme_custom_storage::get_post_meta($post->ID);
+						if($storage_meta){
+							theme_custom_download_demourl::download_demourl_display($post->ID);
+						}
+					}
+
 					/** theme_custom_download_point henson add */
 					if(class_exists('theme_custom_download_point') && theme_custom_download_point::is_enabled() && class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
 						$storage_meta = theme_custom_storage::get_post_meta($post->ID);
@@ -635,11 +643,11 @@ class theme_functions{
 					}
 					
 					?>
-					<a class="meta meta-post-comments" href="<?= $post->comment_count == 0 ? '#respond' : '#comments' ;?>" id="post-comments-btn" title="<?= ___('Comments');?>">
-						<div id="post-comments-number-<?= $post_id;?>" class="number">
-							<?= (int)$post->comment_count;?>
-						</div>
-						<div class="tx"><?= __x('Comments','Tucao');?></div>
+					<a class="meta meta-post-comments" style="background:#f9bb43;" href="<?= $post->comment_count == 0 ? '#respond' : '#comments' ;?>" id="post-comments-btn" title="<?= ___('Comments');?>">
+						<span class="tx"><?= __x('Comments','Tucao');?></span>
+						<span id="post-comments-number-<?= $post_id;?>" class="number">
+							<?= '(' . (int)$post->comment_count . ')';?>
+						</span>
 					</a>
 				</div>
 				

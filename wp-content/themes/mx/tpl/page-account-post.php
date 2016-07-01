@@ -200,6 +200,41 @@ if(class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
  */
 }
 ?>
+		<!-- theme_custom_download_demourl henson add -->
+		<?php 
+		if(class_exists('theme_custom_download_demourl') && theme_custom_download_demourl::is_enabled() && class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
+			if($edit){
+				$download_point_meta = theme_custom_download_demourl::get_post_meta($post->ID);
+			}else{
+				$download_point_meta = null;
+			}
+			
+			?>
+			<div class="form-group">
+				<div class="g-tablet-1-6 control-label">
+					<i class="fa fa-eye"></i>
+					演示地址
+				</div>
+				<div class="g-tablet-5-6">
+					<div class="row theme_custom_download_demourl-inputs" id="theme_custom_download_demourl-input" >
+						<div class="g-tablet-1-2">
+							<div class="input-group" style="width:100%">
+								<input 
+									type="text" 
+									class="theme_custom_download_demourl"
+									style="width:100%;"
+									name="theme_custom_download_demourl[download_demourl]" 
+									id="theme_custom_download_demourl" 
+									placeholder="演示地址 (包括http://)" 
+									title="演示地址"
+									value="<?= isset($download_point_meta['download_demourl']) ? esc_attr($download_point_meta['download_demourl']) : null;?>"
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<?php } /** end theme_custom_download_demourl */ ?>
 		
 		<!-- theme_custom_download_point henson add -->
 		<?php 
@@ -236,9 +271,6 @@ if(class_exists('theme_custom_storage') && theme_custom_storage::is_enabled()){
 			</div>
 		<?php } /** end theme_custom_download_point */ ?>
 		
-
-
-
 		<!-- cats -->
 		<div class="form-group">
 			<div class="g-tablet-1-6 control-label">

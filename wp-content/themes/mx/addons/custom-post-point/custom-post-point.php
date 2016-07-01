@@ -867,8 +867,8 @@ class custom_post_point{
 				data-post-id="<?= $post_id;?>" 
 				data-points="<?= $default_point_value;?>" 
 			>
-				<div id="post-point-number-<?= $post_id;?>" class="number"><?= number_format((int)self::get_post_points_count($post_id));?></div>
-				<div class="tx"><?= ___('Rate it');?></div>
+				<span class="tx"><?= ___('Rate it');?></span>
+				<span id="post-point-number-<?= $post_id;?>" class="number"><?= '(' . number_format((int)self::get_post_points_count($post_id)) . ')';?></span>
 			</a>
 			<?php if(!wp_is_mobile() && $count_point_values > 1){ ?>
 				<div class="box">

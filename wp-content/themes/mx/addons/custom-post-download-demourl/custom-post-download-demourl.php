@@ -3,9 +3,9 @@
  * @version 1.0.2 
  * henson add
  */
-class theme_custom_download_point{
+class theme_custom_download_demourl{
 	public static $post_meta_key = array(
-		'key' => '_theme_custom_download_point'
+		'key' => '_theme_custom_download_demourl'
 	);
 	public static function init(){
 		add_filter('theme_options_save',__CLASS__ . '::options_save');
@@ -22,7 +22,7 @@ class theme_custom_download_point{
 	public static function options_default(array $opts = []){
 		$opts[__CLASS__] = [
 			'enabled' => 1,
-			'download_point' => 5
+			'download_demourl' => ''
 		];
 		return $opts;
 	}
@@ -63,14 +63,14 @@ class theme_custom_download_point{
 		foreach ( $screens as $screen ) {
 			add_meta_box(
 				__CLASS__,
-				___("Download Point"),
+				___("Download demourl"),
 				__CLASS__ . '::meta_box_display',
 				$screen,
 				'side'
 			);
 		}
 	}
-	// add download point to postmeta database. henson add.
+	// add download demourl to postmeta database. henson add.
 	public static function meta_box_save($post_id){
 		if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) 
 			return;
@@ -78,7 +78,7 @@ class theme_custom_download_point{
 			return;
 
 		$new_meta = $_POST[__CLASS__];	//获取表单数据（数组）
-		$download_point = isset($new_meta['download_point']) && is_numeric($new_meta['download_point']) ? $new_meta['download_point'] : null;
+		$download_demourl = isset($new_meta['download_demourl']) && is_numeric($new_meta['download_demourl']) ? $new_meta['download_demourl'] : null;
 
 		$old_meta = self::get_post_meta($post_id);
 
@@ -95,12 +95,12 @@ class theme_custom_download_point{
 		<div class="<?= __CLASS__;?>">
 			<input 
 				type="text" 
-				name="<?= __CLASS__;?>[download_point]"
-				id="<?= __CLASS__;?>-download_point" 
+				name="<?= __CLASS__;?>[download_demourl]"
+				id="<?= __CLASS__;?>-download_demourl" 
 				class="widefat code" 
-				title="<?= ___('Download Point');?>"
-				placeholder="<?= ___('Free download if blank');?>"
-				value="<?= isset($meta['download_point']) ? $meta['download_point'] : null;?>" 
+				title="演示地址"
+				placeholder="演示地址 (包括http://)"
+				value="<?= isset($meta['download_demourl']) ? $meta['download_demourl'] : null;?>" 
 			>
 		</div>			
 		<?php
@@ -109,25 +109,20 @@ class theme_custom_download_point{
 		return stripslashes($type);
 	}
 
-	public static function download_point_display(){
+	public static function download_demourl_display(){
 		global $post;
 		$meta = self::get_post_meta($post->ID);
 		
-		if(!isset($meta['download_point']))
+		if(!isset($meta['download_demourl']))
 			return false;
 		?>
-		<a class="meta meta-post-download-point" style="background:#58c780;background:#FF6FA2;" href="javascript:void(0);" title="<?= ___('Download Point');?>">
-			<span class="tx"><?= ___('Point');?></span>
-			<span id="download-point" class="number" data="<?php echo self::get_text($meta['download_point']); ?>">
-				<?php
-					echo '(' . self::get_text($meta['download_point']) . ')';
-				?>
-			</span>
+		<a class="meta meta-post-download-demourl" href="<?php echo self::get_text($meta['download_demourl']); ?>" target="_blank" title="<?= ___('Download demourl');?>">
+			<span class="tx">演示</span>
 		</a>
 		<?php
 	}
 }
 add_filter('theme_addons',function($fns){
-	$fns[] = 'theme_custom_download_point::init';
+	$fns[] = 'theme_custom_download_demourl::init';
 	return $fns;
 });
