@@ -66,7 +66,7 @@
 			<?php
 			$args2 = [
 				'showposts' => 9,
-				'category__in' => [39],
+				'category__in' => [40],
 			];
 			$query2 = new WP_Query($args2);
 			if(have_posts()){
@@ -101,7 +101,7 @@
 			<?php
 			$args3 = [
 				'showposts' => 9,
-				'category__in' => [40],
+				'category__in' => [83],
 			];
 			$query3 = new WP_Query($args3);
 			if(have_posts()){
@@ -111,11 +111,81 @@
 						<h2 class="title">
 							<span class="bg">
 								<a href="/php/"> <i class="fa fa-star-o"></i>
-									PHP
+									前端特效
 								</a>
 							</span>
 						</h2>
-						<a class="more" href="/php/">更多 »</a>
+						<a class="more" href="/web/">更多 »</a>
+					</div>
+				</div>
+				<div class="row">
+					<?php
+					$loop_i = 0;
+					foreach($query3->posts as $post){
+						setup_postdata($post);
+						theme_functions::archive_card_sm([
+							'classes' => 'g-desktop-1-3 g-tablet-1-2',
+							'lazyload' => $loop_i <= 8 ? false : true,
+						]);
+						++$loop_i;
+					}
+					?>
+				</div>
+			<?php } ?>
+
+			<?php
+			$args3 = [
+				'showposts' => 9,
+				'category__in' => [60],
+			];
+			$query3 = new WP_Query($args3);
+			if(have_posts()){
+				?>
+				<div class="home-recomm mod panel">
+					<div class="heading">
+						<h2 class="title">
+							<span class="bg">
+								<a href="/php/"> <i class="fa fa-star-o"></i>
+									最新电影
+								</a>
+							</span>
+						</h2>
+						<a class="more" href="/film/">更多 »</a>
+					</div>
+				</div>
+				<div class="row">
+					<?php
+					$loop_i = 0;
+					foreach($query3->posts as $post){
+						setup_postdata($post);
+						theme_functions::archive_card_sm([
+							'classes' => 'g-desktop-1-3 g-tablet-1-2',
+							'lazyload' => $loop_i <= 8 ? false : true,
+						]);
+						++$loop_i;
+					}
+					?>
+				</div>
+			<?php } ?>
+
+			<?php
+			$args3 = [
+				'showposts' => 9,
+				'category__in' => [15],
+			];
+			$query3 = new WP_Query($args3);
+			if(have_posts()){
+				?>
+				<div class="home-recomm mod panel">
+					<div class="heading">
+						<h2 class="title">
+							<span class="bg">
+								<a href="/php/"> <i class="fa fa-star-o"></i>
+									电子书
+								</a>
+							</span>
+						</h2>
+						<a class="more" href="/book/">更多 »</a>
 					</div>
 				</div>
 				<div class="row">

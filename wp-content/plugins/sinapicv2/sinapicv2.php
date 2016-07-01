@@ -1320,19 +1320,13 @@ class sinapicv2{
 		$des_array = [
 			__('The best image host plugin for WP, do you agree?'),
 			__('This is an artwork, no only plugin'),
-			__('Powered by INN STUDIO'),
-			__('Do you like me? Expression with real action: Alipay'),
 			__('Cabbage and salted fish is plugin author\'s lunch'),
 			__('Cabbage and salted fish is plugin author\'s dinner'),
 			__('Beskfast is not a part of plugin author'),
-			__('Join into QQ group 170306005 is one of feedback way'),
-			__('People eat a lot of meals, but also to express gratitude repeatedly: Alipay, you know me'),
 			__('Bad weather, but did not affect my mood.'),
 			__('This artwork is part of the world'),
 			__('If you are in trouble, please look at Bear Grylls, my trouble is not trouble'),
-			__('Do you know? SinaPicV2 has a sister: SinaPic-ext'),
-			__('Do you know? The SSL certificate of sina will make some error sometimes'),
-			__('Do you know? Sina weibo has rejected author 13 times to pass the verification')
+			__('Do you know? SinaPicV2 has a sister: SinaPic-ext')
 		];
 		$rand_des = $des_array[rand(0,count($des_array) - 1)];
 		foreach($screens as $screen){
