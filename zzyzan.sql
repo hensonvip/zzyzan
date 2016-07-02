@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-07-02 17:35:40
+Date: 2016-07-02 17:54:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -493,7 +493,7 @@ INSERT INTO `wp_options` VALUES ('76', 'default_comments_page', 'newest', 'yes')
 INSERT INTO `wp_options` VALUES ('77', 'comment_order', 'asc', 'yes');
 INSERT INTO `wp_options` VALUES ('78', 'sticky_posts', 'a:0:{}', 'yes');
 INSERT INTO `wp_options` VALUES ('79', 'widget_categories', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes');
-INSERT INTO `wp_options` VALUES ('80', 'widget_text', 'a:5:{i:1;a:0:{}i:2;a:3:{s:5:\"title\";s:12:\"关于我们\";s:4:\"text\";s:75:\"致力于分享各种资源，娱乐大家，我为人人，人人为我。\";s:6:\"filter\";b:0;}i:3;a:3:{s:5:\"title\";s:12:\"关于我们\";s:4:\"text\";s:361:\"本站是一个公益网站，致力于收集分享和原创各种精品资源。本站所有资源可通过积分免费下载。\r\n免费获取积分的方式：\r\n1.首次注册送20个积分；\r\n2.每天登陆+5个积分；\r\n3.发表评论+1个积分；\r\n4.通过玩本站的抽奖游戏赢取积分；\r\n5.如果积分不足，可联系本站管理员获取。\";s:6:\"filter\";b:1;}i:4;a:3:{s:5:\"title\";s:12:\"联系我们\";s:4:\"text\";s:177:\"欢迎！我白天是个程序猿，晚上就是个有抱负的站长。这是我的网站。我住在天朝的帝都。\r\n<i class=\"fa fa-qq\" aria-hidden=\"true\"></i> 3503518075 \";s:6:\"filter\";b:1;}s:12:\"_multiwidget\";i:1;}', 'yes');
+INSERT INTO `wp_options` VALUES ('80', 'widget_text', 'a:5:{i:1;a:0:{}i:2;a:3:{s:5:\"title\";s:12:\"关于我们\";s:4:\"text\";s:75:\"致力于分享各种资源，娱乐大家，我为人人，人人为我。\";s:6:\"filter\";b:0;}i:3;a:3:{s:5:\"title\";s:12:\"关于我们\";s:4:\"text\";s:355:\"本站是一个公益网站，致力于收集和分享各种优质资源。本站所有资源可通过积分免费下载。\r\n免费获取积分的方式：\r\n1.首次注册送20个积分；\r\n2.每天登陆+5个积分；\r\n3.发表评论+1个积分；\r\n4.通过玩本站的抽奖游戏赢取积分；\r\n5.如果积分不足，可联系本站管理员获取。\";s:6:\"filter\";b:1;}i:4;a:3:{s:5:\"title\";s:12:\"联系我们\";s:4:\"text\";s:177:\"欢迎！我白天是个程序猿，晚上就是个有抱负的站长。这是我的网站。我住在天朝的帝都。\r\n<i class=\"fa fa-qq\" aria-hidden=\"true\"></i> 3503518075 \";s:6:\"filter\";b:1;}s:12:\"_multiwidget\";i:1;}', 'yes');
 INSERT INTO `wp_options` VALUES ('81', 'widget_rss', 'a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}', 'yes');
 INSERT INTO `wp_options` VALUES ('82', 'uninstall_plugins', 'a:1:{s:77:\"D:/phpStudy/WWW/ymroad/wp-content/themes/Begin/inc/function/local-avatars.php\";s:30:\"simple_local_avatars_uninstall\";}', 'no');
 INSERT INTO `wp_options` VALUES ('83', 'timezone_string', 'Asia/Shanghai', 'yes');
@@ -1964,7 +1964,7 @@ INSERT INTO `wp_postmeta` VALUES ('6000', '7797', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('5998', '7796', 'views', '0');
 INSERT INTO `wp_postmeta` VALUES ('5999', '7797', '_wp_page_template', 'default');
 INSERT INTO `wp_postmeta` VALUES ('5995', '7795', '_wp_page_template', 'page-account.php');
-INSERT INTO `wp_postmeta` VALUES ('5996', '7795', 'views', '14');
+INSERT INTO `wp_postmeta` VALUES ('5996', '7795', 'views', '15');
 INSERT INTO `wp_postmeta` VALUES ('5997', '7796', '_wp_page_template', 'page-cats-index.php');
 INSERT INTO `wp_postmeta` VALUES ('4774', '7259', '_menu_item_type', 'taxonomy');
 INSERT INTO `wp_postmeta` VALUES ('4775', '7259', '_menu_item_menu_item_parent', '7217');
@@ -2568,7 +2568,7 @@ CREATE TABLE `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=MyISAM AUTO_INCREMENT=944 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=946 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of wp_usermeta
@@ -2602,7 +2602,7 @@ INSERT INTO `wp_usermeta` VALUES ('19', '1', 'wp_user-settings', 'libraryContent
 INSERT INTO `wp_usermeta` VALUES ('20', '1', 'wp_user-settings-time', '1467435940');
 INSERT INTO `wp_usermeta` VALUES ('177', '1', 'theme_custom_pm', 'a:2:{s:7:\"unreads\";a:0:{}s:5:\"lists\";a:1:{i:0;i:13;}}');
 INSERT INTO `wp_usermeta` VALUES ('178', '1', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465639871;}');
-INSERT INTO `wp_usermeta` VALUES ('179', '1', 'theme_point_count', '43977');
+INSERT INTO `wp_usermeta` VALUES ('179', '1', 'theme_point_count', '43967');
 INSERT INTO `wp_usermeta` VALUES ('193', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:12:\"post-publish\";s:7:\"post-id\";i:7104;s:9:\"timestamp\";d:1465819767;}');
 INSERT INTO `wp_usermeta` VALUES ('194', '1', 'theme_point_history', 'a:2:{s:4:\"type\";s:12:\"signin-daily\";s:9:\"timestamp\";d:1465896236;}');
 INSERT INTO `wp_usermeta` VALUES ('184', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:15:\"comment-publish\";s:10:\"comment-id\";i:5;s:9:\"timestamp\";d:1465650413;}');
@@ -2840,9 +2840,11 @@ INSERT INTO `wp_usermeta` VALUES ('772', '1', 'theme_point_history', 'a:3:{s:4:\
 INSERT INTO `wp_usermeta` VALUES ('783', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"post-delete\";s:10:\"post-title\";s:82:\"OCEX影视视频分享网站视频媒体平台第三版，Discuz! X3.2影视模板\";s:9:\"timestamp\";d:1467457521;}');
 INSERT INTO `wp_usermeta` VALUES ('788', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"post-delete\";s:10:\"post-title\";s:117:\"某宝数百元购买的2月最新仿易企秀二次开发版源码 一键安装版 新增自定义微场景平台等\";s:9:\"timestamp\";d:1467457521;}');
 INSERT INTO `wp_usermeta` VALUES ('796', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"post-delete\";s:10:\"post-title\";s:105:\"【收费】真正的BAOCMS 6.3 钻石版纯净一键安装版源码，带一元云购系统+贴吧功能\";s:9:\"timestamp\";d:1467457522;}');
+INSERT INTO `wp_usermeta` VALUES ('945', '1', 'avatar', '/avatar/1.jpg?v=1467453199');
 INSERT INTO `wp_usermeta` VALUES ('940', '19', 'theme_last_signin', '1467476410');
 INSERT INTO `wp_usermeta` VALUES ('941', '19', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"save-avatar\";s:6:\"points\";i:-10;s:9:\"timestamp\";d:1467476433;}');
 INSERT INTO `wp_usermeta` VALUES ('942', '19', 'avatar', '/avatar/19.jpg?v=1467447631');
+INSERT INTO `wp_usermeta` VALUES ('944', '1', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"save-avatar\";s:6:\"points\";i:-10;s:9:\"timestamp\";d:1467482001;}');
 INSERT INTO `wp_usermeta` VALUES ('928', '16', 'theme_point_history', 'a:3:{s:4:\"type\";s:11:\"save-avatar\";s:6:\"points\";i:-10;s:9:\"timestamp\";d:1467474975;}');
 INSERT INTO `wp_usermeta` VALUES ('929', '16', 'avatar', '/avatar/16.jpg?v=1467446174');
 INSERT INTO `wp_usermeta` VALUES ('931', '17', 'theme_last_signin', '1467476057');
