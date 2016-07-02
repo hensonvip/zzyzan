@@ -14,7 +14,7 @@ class theme_custom_edit{
 	public static function init(){
 		
 		// henson add
-		if(current_user_can('manage_options') || current_user_can( 'publish_pages' )) {
+		if(current_user_can('manage_options')) {
 		    foreach(self::get_tabs() as $k => $v){
 		    	$nav_fn = 'filter_nav_' . $k; 
 		    	add_filter('account_navs',__CLASS__ . "::$nav_fn",$v['filter_priority']);
