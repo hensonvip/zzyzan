@@ -31,7 +31,7 @@
 
 			<?php
 			$args1 = [
-				'showposts' => 9,
+				'showposts' => 12,
 			];
 			$query1 = new WP_Query($args1);
 			if(have_posts()){
@@ -101,7 +101,7 @@
 			<?php
 			$args3 = [
 				'showposts' => 9,
-				'category__in' => [83],
+				'category__in' => [83, 95, 90, 89, 94, 91, 92, 87, 88, 93, 86],
 			];
 			$query3 = new WP_Query($args3);
 			if(have_posts()){
@@ -171,7 +171,7 @@
 			<?php
 			$args3 = [
 				'showposts' => 9,
-				'category__in' => [15],
+				'category__in' => [15, 99, 98, 100, 97, 96],
 			];
 			$query3 = new WP_Query($args3);
 			if(have_posts()){
