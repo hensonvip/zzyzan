@@ -542,7 +542,7 @@ class theme_custom_storage{
 				<?php
 				if(class_exists('theme_post_views') && theme_post_views::is_enabled()){
 					$number = (int)(theme_post_views::get_views($post->ID) * 0.5 - mt_rand(1,9));
-					echo $number <= 0 ? (0) : '(' . number_format($number) . ')';
+					echo $number <= 0 ? '(' . 0 . ')' : '(' . number_format($number) . ')';
 				}
 				?>
 			</span>

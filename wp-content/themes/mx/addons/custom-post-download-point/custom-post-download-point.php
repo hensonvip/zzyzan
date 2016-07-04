@@ -120,7 +120,7 @@ class theme_custom_download_point{
 			<span class="tx"><?= ___('Point');?></span>
 			<span id="download-point" class="number" data="<?php echo self::get_text($meta['download_point']); ?>">
 				<?php
-					echo '(' . self::get_text($meta['download_point']) . ')';
+					echo '(-' . self::get_text($meta['download_point']) . ')';
 				?>
 			</span>
 		</a>
