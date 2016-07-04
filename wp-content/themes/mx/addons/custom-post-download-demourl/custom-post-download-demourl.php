@@ -117,7 +117,7 @@ class theme_custom_download_demourl{
 			return false;
 		?>
 		<a class="meta meta-post-download-demourl" href="<?php echo self::get_text($meta['download_demourl']); ?>" target="_blank" title="<?= ___('Download demourl');?>">
-			<span class="tx">演示</span>
+			<span class="tx">在线预览</span>
 		</a>
 		<?php
 	}
