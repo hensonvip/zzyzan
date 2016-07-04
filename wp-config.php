@@ -46,13 +46,13 @@ define('DB_USER', 'root');
 
 /** MySQL database password */
 
-define('DB_PASSWORD', '20090607zzy');
+define('DB_PASSWORD', 'root');
 
 
 
 /** MySQL hostname */
 
-define('DB_HOST', '120.25.238.152');
+define('DB_HOST', '127.0.0.1');
 
 
 
