@@ -109,7 +109,7 @@ class theme_custom_download_demourl{
 		return stripslashes($type);
 	}
 
-	public static function download_demourl_display(){
+	/*public static function download_demourl_display(){
 		global $post;
 		$meta = self::get_post_meta($post->ID);
 		
@@ -117,6 +117,19 @@ class theme_custom_download_demourl{
 			return false;
 		?>
 		<a class="meta meta-post-download-demourl" href="<?php echo self::get_text($meta['download_demourl']); ?>" target="_blank" title="<?= ___('Download demourl');?>">
+			<span class="tx">在线预览</span>
+		</a>
+		<?php
+	}*/
+
+	public static function download_demourl_display(){
+		global $post;
+		$meta = self::get_post_meta($post->ID);
+		
+		if(!isset($meta['download_demourl']))
+			return false;
+		?>
+		<a class="meta meta-post-download-demourl" href="/demo?id=<?php echo $post->ID;?>" target="_blank" title="<?= ___('Download demourl');?>">
 			<span class="tx">在线预览</span>
 		</a>
 		<?php
