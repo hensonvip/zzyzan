@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 Template Name: 演示页面
 */
@@ -17,50 +17,168 @@ Template Name: 演示页面
         Header('Location:/');
     }
 ?>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html style="padding-bottom: 54px;">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="小乖乖资源共享网在线演示" />
-<meta name="keywords" content="演示" />
-<link rel="shortcut icon" href="favicon.ico" />
-<title>网站演示：<?php echo get_the_title($post_id); ?> – 小乖乖</title>
-<style type="text/css">
-html body{color:#eee;font-family:Verdana,Helvetica,Arial,sans-serif;font-size:10px;height:100%;margin:0;overflow:hidden;padding:0;width:100%;}#header-bar{background:#333;font-size:10px;z-index:100;margin:0;padding:0;color:#eee;height:36px;line-height:36px;}#header-bar a.site-loopback{background-position:left top;background-repeat:no-repeat;display:block;float:right;margin-left:-10px;text-indent:-9999px;}#header-bar .preview-logo{height:36px;width:118px;margin-right:30px;}#header-bar p.meta-data{float:left;margin:0;padding:0;}#header-bar p.meta-data p{display:inline;margin:0;}#header-bar p.meta-data a{color:#e6f6f6;text-decoration:none;}#header-bar p.meta-data a.back{border-left:1px solid #545454;margin-left:10px;padding-left:15px;}#header-bar p.meta-data a:hover,#header-bar p.meta-data a.activated{color:#FFFFFF;}#header-bar div.close-header{float:left;height:29px;margin-left:15px;width:30px;}#header-bar div.close-header a#close-button{background-repeat:no-repeat;display:block;overflow:hidden;color:#fff;text-decoration:initial;}#header-bar div.close-header a#close-button:hover,#header-bar div.close-header a#close-button.activated{background-position:0 -12px;}#header-bar span.preview{color:#D2D1D0;display:none;font-family:MgOpen Modata,Tahoma,Geneva;font-size:13px;letter-spacing:1px;margin-left:10px;padding-left:20px;text-decoration:none;}
-#preview-frame{background-color:#FFFFFF;width:100%;}.preview-logo{background:url("images/demo-logo.png") no-repeat 0px 3px;text-indent:-9999px;display:block;float:right;}
-</style>
-<script src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript">
-    var calcHeight = function() {
-        var headerDimensions = $('#header-bar').height();
-        $('#preview-frame').height($(window).height() - headerDimensions);
-    }      
-    $(document).ready(function() {
-        calcHeight();
-        $('#header-bar a.close').mouseover(function() {
-            $('#header-bar a.close').addClass('activated');
-        }).mouseout(function() {
-            $('#header-bar a.close').removeClass('activated');
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+
+    <title>网站演示：<?php echo get_the_title($post_id); ?> – 小乖乖资源共享网</title>
+    <meta name="description" content="小乖乖资源共享网在线演示" /> 
+    <meta name="keywords" content="演示" />
+    <link rel="Shortcut icon" href="/favicon.ico" />
+    <link href="/wp-content/themes/mx/assets/demo/css/demo.css" rel="stylesheet" media="all" />
+    <!--[if IE]>
+		<style type="text/css">			
+			li.purchase a {
+				padding-top: 5px;
+				background-position: 0px -4px;
+			}
+			
+			li.remove_frame a {
+				padding-top: 5px;
+				background-position: 0px -3px;
+			}						
+		</style>
+	<![endif]-->
+	<script type="text/javascript">
+	    var txt = "<?php echo $demo; ?>";
+	    window.g1 = txt.substr(0, 3);
+	    window.g2 = txt.substr(0, 23);
+	</script>
+    <script src="/wp-content/themes/mx/assets/demo/js/pace.min.js" charset="gbk"></script>
+    <link href="/wp-content/themes/mx/assets/demo/css/pace-theme-barber-shop.css" rel="stylesheet" />
+    <script src="/wp-content/themes/mx/assets/demo/js/jquery.min.js"></script>
+    <script src="/wp-content/themes/mx/assets/demo/js/jquery.qrcode.min.js"></script>
+    <script type="text/javascript">
+        var theme_list_open = false;
+        $(document).ready(function () {
+            function fixHeight() {
+                var headerHeight = $("#switcher").height();
+                $("#iframe").attr("height", $(window).height()-54+ "px");
+            }
+            $(window).resize(function () {
+                fixHeight();
+            }).resize();
+
+            $('.icon-monitor').addClass('active');
+
+            $(".icon-mobile-3").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-3');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-mobile-2").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width-2');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-mobile-1").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('mobile-width');
+                $('.icon-tablet,.icon-mobile,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-tablet").click(function () {
+                $("#by").css("overflow-y", "auto");
+                $('#iframe-wrap').removeClass().addClass('tablet-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            $(".icon-monitor").click(function () {
+                $("#by").css("overflow-y", "hidden");
+                $('#iframe-wrap').removeClass().addClass('full-width');
+                $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
         });
-    });      
-    $(window).resize(function() {
-        calcHeight();
-    }).load(function() {
-        calcHeight();
-    });
-</script>
+    </script>
+    <script type="text/javascript">
+        function Responsive($a) {
+            if ($a == true) $("#Device").css("opacity", "100");
+            if ($a == false) $("#Device").css("opacity", "0");
+            $('#iframe-wrap').removeClass().addClass('full-width');
+            $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        };
+    </script>
 </head>
-<body>
-<div id="header-bar">
-<div class="close-header">
-<script type="text/javascript">document.write("<a id=\"close-button\" title=\"关闭工具条\" class=\"close\" href=\"<?php echo $demo; ?>\">X</a>");</script>
-</div>
-<p class="meta-data">
-<script type="text/javascript">document.write("<a target=\"_blank\" class=\"close\" href=\"<?php echo $demo; ?>\">移除顶部</a>");</script> <a class="back" href="<?php echo get_permalink($post_id); ?>">返回原文：<?php echo get_the_title($post_id); ?></a> <a class="back" href="/">返回首页</a>
-</p>
-<a class="preview-logo" href="/" title="小乖乖资源共享网">龙笑天下</a>
-</div>
-<script type="text/javascript">
-document.write("<iframe id=\"preview-frame\" src=\"<?php echo $demo; ?>\" name=\"preview-frame\" frameborder=\"0\" noresize=\"noresize\"></iframe>");
-</script>
+<body id="by" style="overflow-y: hidden" >
+    <div id="switcher">
+        <div class="center">
+            <ul>
+                <div id="Device">
+                    <li class="device-monitor"><a href="javascript:">
+                        <div class="icon-monitor">
+                        </div>
+                    </a></li>
+                    <li class="device-mobile"><a href="javascript:">
+                        <div class="icon-tablet">
+                        </div>
+                    </a></li>
+                    <li class="device-mobile"><a href="javascript:">
+                        <div class="icon-mobile-1">
+                        </div>
+                    </a></li>
+                    <li class="device-mobile-2"><a href="javascript:">
+                        <div class="icon-mobile-2">
+                        </div>
+                    </a></li>
+                    <li class="device-mobile-3"><a href="javascript:">
+                        <div class="icon-mobile-3">
+                        </div>
+                    </a></li>
+                </div>
+                <li class="top2" id="sj"><a href="#">手机二维码预览</a><div class="vm" ><div id="output"></div><p style="color:#808080">扫一扫，直接在手机上打开</p></div></li>
+                <li class="logoTop" id="sj2"><a href="<?php echo get_permalink($post_id); ?>"><?php echo get_the_title($post_id); ?></a></li>
+       
+                <script>
+                jQuery('#output').qrcode({width:150,height: 150,text: window.location.href});
+                </script>
+                <li class="remove_frame"><a href="<?php echo $demo; ?>"  title="移除框架">
+                </a></li>
+               
+            </ul>
+        </div>
+    </div>
+    <div id="iframe-wrap">
+        <iframe id="iframe" src="<?php echo $demo; ?>" frameborder="0"  width="100%">
+        </iframe>
+    </div>
+ 
+
+
+    
+    <div class="fdad">
+            <div class="fdl">Advertisement</div>
+            <div class="fdr">x</div>
+            <div class="fdadnr">
+                <a href="http://zzyzan.baidu.com/book/computer/7818.html"><img src="https://ww1.sinaimg.cn/bmiddle/7130b1fcjw1f5fwo0f29aj209e09uab9.jpg" alt=""></a>
+            </div>
+    </div>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".fdr").click(function () {
+                $(".fdad").hide();
+            });
+        });
+    </script>
+
 </body>
 </html>
