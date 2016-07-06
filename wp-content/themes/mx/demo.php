@@ -160,17 +160,13 @@ Template Name: 演示页面
         </iframe>
     </div>
  
-
-
-    
     <div class="fdad">
-            <div class="fdl">Advertisement</div>
-            <div class="fdr">x</div>
-            <div class="fdadnr">
-                <a href="http://zzyzan.baidu.com/book/computer/7818.html"><img src="https://ww1.sinaimg.cn/bmiddle/7130b1fcjw1f5fwo0f29aj209e09uab9.jpg" alt=""></a>
-            </div>
+        <div class="fdl">Advertisement</div>
+        <div class="fdr">x</div>
+        <div class="fdadnr">
+            <a href="http://zzyzan.baidu.com/book/computer/7818.html"><img src="https://ww1.sinaimg.cn/bmiddle/7130b1fcjw1f5fwo0f29aj209e09uab9.jpg" alt=""></a>
+        </div>
     </div>
-    
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -179,6 +175,5 @@ Template Name: 演示页面
             });
         });
     </script>
-
 </body>
 </html>
