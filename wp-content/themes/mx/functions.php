@@ -2102,5 +2102,21 @@ class theme_functions{
 		</div>
 		<?php
 	}
+
+	// url translate henson add
+	/*function translate_chinese_post_title_to_en_for_slug( $title ) {
+	    $translation_render = 'http://fanyi.baidu.com/v2transapi?from=zh&to=en&transtype=realtime&simple_means_flag=3&query='.$title;
+	    $wp_http_get = wp_safe_remote_get( $translation_render );
+	    if ( empty( $wp_http_get->errors ) ) { 
+	        if ( ! empty( $wp_http_get['body'] ) ) {
+	            $trans_result = json_decode( $wp_http_get['body'], true );
+	            $trans_title = $trans_result['trans_result']['data'][0]['dst'];
+	            return $trans_title;
+	        }
+	    }
+	    return $title;
+	}*/
+
 }
+// add_filter( 'sanitize_title', 'theme_functions::translate_chinese_post_title_to_en_for_slug', 1 );
 add_action('after_setup_theme','theme_functions::init');
