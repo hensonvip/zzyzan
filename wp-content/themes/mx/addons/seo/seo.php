@@ -20,7 +20,7 @@ class theme_seo_plus{
 	}
 	public static function wp_head(){
 		self::get_site_keywords();
-		self::get_site_description();
+		// self::get_site_description();
 	}
 	public static function get_options($key = null){
 		static $cache = null;
