@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  	
+	<title>浮动的jQuery加入购物车效果，可以删除、撤消等操作 | 小乖乖资源共享网</title>
+</head>
+<body>
+<main>
+	<h1>jQuery加入购物车效果</h1>
+	<a href="#0" class="cd-add-to-cart" data-price="25.99">加入购物车</a>
+</main>
+
+<div class="cd-cart-container empty">
+	<a href="#0" class="cd-cart-trigger">
+		购物车
+		<ul class="count"> <!-- cart items count -->
+			<li>0</li>
+			<li>0</li>
+		</ul> <!-- .count -->
+	</a>
+
+	<div class="cd-cart">
+		<div class="wrapper">
+			<header>
+				<h2>购物车</h2>
+				<span class="undo">删除商品 <a href="#0">撤消</a></span>
+			</header>
+			
+			<div class="body">
+				<ul>
+					<!-- products added to the cart will be inserted here using JavaScript -->
+				</ul>
+			</div>
+
+			<footer>
+				<a href="#0" class="checkout btn"><em>结算 - $<span>0</span></em></a>
+			</footer>
+		</div>
+	</div> <!-- .cd-cart -->
+</div> <!-- cd-cart-container -->
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

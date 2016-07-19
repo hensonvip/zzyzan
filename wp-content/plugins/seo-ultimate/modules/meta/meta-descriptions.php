@@ -122,7 +122,7 @@ class SU_MetaDescriptions extends SU_Module {
 				
 				$desc = str_replace(
 					  array('{description}')
-					, array($term_obj->description)
+					, array($term_obj->name)
 					, $format);
 			}
 		}

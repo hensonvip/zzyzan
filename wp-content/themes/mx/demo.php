@@ -27,7 +27,7 @@ Template Name: 演示页面
 
     <title>网站演示：<?php echo get_the_title($post_id); ?> – 小乖乖资源共享网</title>
     <meta name="description" content="小乖乖资源共享网在线演示" /> 
-    <meta name="keywords" content="演示" />
+    <meta name="keywords" content="<?php echo get_the_title($post_id); ?>" />
     <link rel="Shortcut icon" href="/favicon.ico" />
     <link href="/wp-content/themes/mx/assets/demo/css/demo.css" rel="stylesheet" media="all" />
     <!--[if IE]>
@@ -46,7 +46,7 @@ Template Name: 演示页面
 	<script type="text/javascript">
 	    var txt = "<?php echo $demo; ?>";
 	    window.g1 = txt.substr(0, 3);
-	    window.g2 = txt.substr(0, 23);
+	    window.g2 = txt.substr(0, 21);
 	</script>
     <script src="/wp-content/themes/mx/assets/demo/js/pace.min.js" charset="gbk"></script>
     <link href="/wp-content/themes/mx/assets/demo/css/pace-theme-barber-shop.css" rel="stylesheet" />
@@ -159,14 +159,15 @@ Template Name: 演示页面
         <iframe id="iframe" src="<?php echo $demo; ?>" frameborder="0"  width="100%">
         </iframe>
     </div>
- 
-    <div class="fdad">
+    
+    <!-- 广告 -->
+    <!-- <div class="fdad">
         <div class="fdl">Advertisement</div>
         <div class="fdr">x</div>
         <div class="fdadnr">
             <a href="http://www.zzyzan.com/book/computer/7818.html"><img src="https://ww1.sinaimg.cn/bmiddle/7130b1fcjw1f5fwo0f29aj209e09uab9.jpg" alt=""></a>
         </div>
-    </div>
+    </div> -->
 
     <script type="text/javascript">
         $(document).ready(function () {

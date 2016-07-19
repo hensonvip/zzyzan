@@ -297,7 +297,7 @@ class theme_open_sign{
 		die(___('Redirecting, please wait...'));
 	}
 	public static function get_tmp_email($open_id){
-		return $open_id . '@opensign.inn-studio.com';
+		return $open_id . '@zzyzan.com';
 	}
 	public static function process(){
 		$output = [];
