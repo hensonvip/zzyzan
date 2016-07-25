@@ -1,0 +1,398 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>响应式全屏图像切换焦点图效果 | 小乖乖</title>
+<link href="css/normalize.css" rel="stylesheet" type="text/css">
+<style>
+.slice-slider {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0a0a0a;
+  opacity: 0.2;
+}
+
+.slider-slice {
+  position: relative;
+  width: 25%;
+  height: 33.33vh;
+  float: left;
+  overflow: hidden;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.slider-slice img { position: relative; }
+
+.slider-slice-imageContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.slider-slice:nth-of-type(1) img {
+  top: 0;
+  left: 0;
+}
+
+.slider-slice:nth-of-type(2) img {
+  top: 0;
+  left: -25vw;
+}
+
+.slider-slice:nth-of-type(3) img {
+  top: 0;
+  left: -50vw;
+}
+
+.slider-slice:nth-of-type(4) img {
+  top: 0;
+  left: -75vw;
+}
+
+.slider-slice:nth-of-type(5) img {
+  top: -33.33vh;
+  left: 0;
+}
+
+.slider-slice:nth-of-type(6) img {
+  top: -33.33vh;
+  left: -25vw;
+}
+
+.slider-slice:nth-of-type(7) img {
+  top: -33.33vh;
+  left: -50vw;
+}
+
+.slider-slice:nth-of-type(8) img {
+  top: -33.33vh;
+  left: -75vw;
+}
+
+.slider-slice:nth-of-type(9) img {
+  top: -66.66vh;
+  left: 0;
+}
+
+.slider-slice:nth-of-type(10) img {
+  top: -66.66vh;
+  left: -25vw;
+}
+
+.slider-slice:nth-of-type(11) img {
+  top: -66.66vh;
+  left: -50vw;
+}
+
+.slider-slice:nth-of-type(12) img {
+  top: -66.66vh;
+  left: -75vw;
+}
+
+.navigation {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 100;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border: solid 2px white;
+  opacity: 0.5;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background: rgba(120, 160, 170, 0.4);
+  cursor: pointer;
+}
+
+.navigation svg {
+  z-index: 101;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: .3;
+}
+
+.navigation:hover { opacity: 1; }
+
+.navigation:hover svg { opacity: 1; }
+
+.navigation--next {
+  right: 20px;
+  top: 50%;
+}
+
+.navigation--next:hover svg {
+  -webkit-transform: translateX(4%);
+  transform: translateX(4%);
+}
+
+.navigation--prev {
+  left: 20px;
+  top: 50%;
+}
+
+.navigation--prev:hover svg {
+  -webkit-transform: translateX(-4%);
+  transform: translateX(-4%);
+}
+</style>
+</head>
+
+<body>
+<div class="slice-slider">
+  <div class="navigation navigation--prev"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <path fill="#ffffff" d="M30.55 39.69c.567-.475.645-1.314.17-1.882L20.044 25 30.72 12.19c.474-.566.396-1.408-.17-1.88-.564-.474-1.407-.397-1.88.17L17.28 24.145c-.208.248-.312.552-.312.855s.104.608.31.855L28.67 39.52c.474.566 1.316.642 1.882.17z"/>
+    </svg> </div>
+  <div class="navigation navigation--next"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <path fill="#ffffff" d="M19.45 10.31c-.567.475-.644 1.314-.17 1.88L29.956 25 19.28 37.81c-.473.566-.396 1.408.17 1.88s1.408.397 1.88-.17l11.39-13.664c.208-.248.312-.552.312-.855s-.104-.607-.31-.854L21.33 10.48c-.474-.566-1.316-.643-1.882-.17z"/>
+    </svg> </div>
+  <div class="slider-container">
+    <div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+      <div class="slider-slice">
+        <div class="slider-slice-imageContainer image--0 image--active"> <img src="images/31858f3e432f4bc2a83aa8b7e47b5de9.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--1"> <img src="images/3644826181b64d8ea9757290f2c58e21.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--2"> <img src="images/a6df28e466574cf7b50fa1352d7390d6.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--3"> <img src="images/dba2bd2021b24b289e469bfccfcd9a61.gif" alt=""> </div>
+        <div class="slider-slice-imageContainer image--4"> <img src="images/6c8ca79bac2d4662828729f64eb850de.gif" alt=""> </div>
+      </div>
+    </div>
+    <div class="slider-overlay"></div>
+  </div>
+</div>
+<script src="js/jquery-3.0.0.min.js"></script> 
+<script src="js/tweenmax.min.js"></script> 
+<script>
+(function($){
+  var image         = $(".slider-slice img"),
+    imageContainer    = $(".slider-slice-imageContainer"),
+    sliderSlice     = $(".slider-slice"),
+    imageActive     = $(".image--active"),
+    sliderOverlay   = $(".slider-overlay"),
+    CTA         = $(".navigation"),
+    vw,
+    vh,
+    delay         = 0.06,
+    delays        = [];
+
+  TweenMax.set(imageContainer, {xPercent: "100"});
+  TweenMax.set(imageActive, {xPercent: "0"});
+
+  $("body").addClass("u-blockScroll");
+
+  for (var i = 0; i < 4; i++) {
+    delays.push(i*delay);
+  };
+
+  /********************************
+    FIT THE WINDOWS WITH THE IMAGES
+  ********************************/
+  function positionImages(){
+    vw    = $(window).width();
+    vh    = $(window).height();
+    var imageW  = image.width();
+    var imageH  = image.height();
+    ratioImg  = imageW / imageH;
+    ratioW    = vw / vh;
+    if(ratioImg > ratioW){
+      image.css({"width": "auto", "height" : vh});
+    }else{
+      image.css({"width": vw, "height" : "auto"});
+    }
+  }
+  positionImages();
+  $(window).on("resize", positionImages);
+
+
+  /********************************
+    OPENING
+  ********************************/
+  var tlOpening = new TimelineMax({delay: 2});
+  var delayOpening = 0.05;
+  tlOpening
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(0)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 1 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(1)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 2 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(2)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 3 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(3)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 4 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(4)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 2 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(5)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 3 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(6)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 5 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(7)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 5 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(8)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 3 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(9)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 4 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(10)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 5 * delayOpening)
+    .fromTo(($(".slider-slice-imageContainer.image--active").eq(11)), 1, {xPercent: -100}, {xPercent:0, ease: Power2.easeInOut}, 6 * delayOpening)
+    .fromTo(CTA, 0.6, {autoAlpha:0}, {autoAlpha:1});
+
+
+  /********************************
+    SLIDE BACKGROUND
+  ********************************/
+  var durationSlide   = 0.8;
+  var durationText  = 0.8;
+  var isMoving    = false;
+  function slideBackground(fromRight){
+    isMoving = true;
+    var tlSlideBackground   = new TimelineMax({onComplete: function(){ isMoving = false}});
+    imageActive       = $(".image--active");
+
+    if(fromRight === true){
+      var from = 105;
+      var to = -100;
+    }else{
+      var from = -105;
+      var to = 100;
+    }
+    var k = 0;
+
+    imageActive.each(function(i,el){
+      var parent = $(el).closest(".slider-slice");
+      if(fromRight === true){
+        var nextSlice = $(el).next();       
+      }else{
+        var nextSlice = $(el).prev(); 
+      }
+      if (nextSlice.is(':last-child') || nextSlice.is(':first-child')) {
+        parent.find(".slider-slice-imageContainer").eq(0).appendTo(parent);
+      }
+      if(nextSlice.index() == -1){
+        parent.find(".slider-slice-imageContainer").eq(0).appendTo(parent);
+        var nextSlice = $(el).prev();
+      }
+      tlSlideBackground
+        .to(el, (durationSlide * 1.1), {xPercent: to, ease: Power2.easeInOut}, delays[k])
+        .fromTo(nextSlice, durationSlide, {xPercent: from}, {xPercent:0, ease: Power2.easeInOut}, delays[k])
+      $(el).removeClass("image--active");
+      nextSlice.addClass("image--active");
+      k++;
+      if(k==4){
+        k=0;
+      }
+    });
+
+  }
+
+  /********************************
+    CTA ACTIONS
+  ********************************/
+  $(".navigation--next").click(function(){
+    var fromRight = true;
+    if(!(isMoving)){
+      slideBackground(fromRight);     
+    }
+  });
+  $(".navigation--prev").click(function(){
+    var fromRight = false;
+    if(!(isMoving)){
+      slideBackground(fromRight);     
+    }
+  });
+  
+})(jQuery);
+</script>
+</body>
+</html>

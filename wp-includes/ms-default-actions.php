@@ -33,8 +33,8 @@ add_action( 'wpmu_new_blog', 'newblog_notify_siteadmin', 10, 2 );
 // Register Nonce
 add_action( 'signup_hidden_fields', 'signup_nonce_fields' );
 
-// Template1469193515>
-add_action( 'Template1469193515>_redirect', 'maybe_redirect_404' );
+// Template1470574044>
+add_action( 'Template1470574044>_redirect', 'maybe_redirect_404' );
 add_filter( 'allowed_redirect_hosts', 'redirect_this_site' );
 
 // Administration

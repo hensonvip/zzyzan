@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery右下角悬浮弹出广告展示效果 - 小乖乖资源共享网</title>
+<link rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/ads.js"></script>
+<style>
+html,body,h2{margin:0;}
+img{border:none}
+#pop{background:#fff;width:300px; height:282px;font-size:12px;position:fixed;right:0;bottom:0;}
+#popHead{line-height:32px;background:#f6f0f3;border-bottom:1px solid #e0e0e0;font-size:12px;padding:0 0 0 10px;}
+#popHead h2{font-size:14px;color:#666;line-height:32px;height:32px;}
+#popHead #popClose{position:absolute;right:10px;top:1px;}
+#popHead a#popClose:hover{color:#f00;cursor:pointer;}
+</style>
+</head>
+
+<body>
+
+<div id="main">
+  <div id="pop" style="display:none;">
+  	<div id="popHead">
+		<a id="popClose" title="关闭">关闭</a>
+		<h2>赞助广告</h2>
+	</div>
+	<div id="popContent">
+	<a href="http://www.zzyzan.com/web/" target="_blank"><img src="images/imgad.jpg"></a>
+	</div>
+  </div>
+<script>
+var popad=new Pop();
+</script>
+</div>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://www.zzyzan.com/" target="_blank">小乖乖资源共享网</a></p>
+</div>
+</body>
+</html>
