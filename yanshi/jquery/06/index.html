@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>响应式jQuery图像聚焦效果 - bigslider | 小乖乖资源共享</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    h1 { margin:150px auto 0 auto; text-align:center}
+    h2 { margin:30px auto; text-align:center;}
+    #wrapper1 {
+        height: 300px;
+        width: 100%;
+        margin:0 auto;
+    }
+
+    #wrapper2 {
+        height: 300px;
+        width: 500px;
+        display: inline-block;
+        margin:0 auto;
+    }
+    </style>
+</head>
+<body>
+<h1>响应式jQuery图像聚焦效果 - bigslider</h1>
+<h2>Highlight Effect</h2>
+<div id='wrapper1'>
+    <img src='images/1.jpg'/>
+    <img src='images/2.jpg'/>
+    <img src='images/3.jpg'/>
+    <img src='images/4.jpg'/>
+    <img src='images/5.jpg'/>
+    <img src='images/6.jpg'/>
+    <img src='images/7.jpg'/>
+</div>
+<h2>Enlarge Effect</h2>
+<div id='wrapper2'>
+    <img src='images2/1.png'/>
+    <img src='images2/2.png'/>
+    <img src='images2/3.png'/>
+    <img src='images2/4.png'/>
+    <img src='images2/5.png'/>
+    <img src='images2/6.png'/>
+</div>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="jquery-bigSlider.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#wrapper1').bigSlider();
+    jQuery('#wrapper2').bigSlider({
+        focusType: 'enlarge',
+        animationDuration: 400
+    });
+});
+</script>
+</body>
+</html>

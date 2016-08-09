@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>JavaScript和CSS3制作的径向弹出菜单—circleMenu</title>
+  <meta name="description" content="circleMenu是一个简单的，轻量级的，不依赖任何JavaScript库的径向弹出菜单插件，可以帮助你在Web应用程序创建一个全屏覆盖径向弹出菜单。它使用了CSS3的变换和菜单动画过渡平滑效果。">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/common.min.css">
+  <link rel="stylesheet" href="css/circle-menu.min.css">
+</head>
+<body>
+<nav class="c-circle-menu js-menu">
+  <button class="c-circle-menu__toggle js-menu-toggle">
+    <span>Toggle</span>
+  </button>
+  <ul class="c-circle-menu__items">
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="img/house.svg" alt="">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="img/photo.svg" alt="">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="img/pin.svg" alt="">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="img/search.svg" alt="">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="img/tools.svg" alt="">
+      </a>
+    </li>
+  </ul>
+  <div class="c-circle-menu__mask js-menu-mask"></div>
+</nav>
+
+<script src="js/dist/circleMenu.min.js"></script>
+<script>
+  var el = '.js-menu';
+  var myMenu = cssCircleMenu(el);
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascript+CSS制作的Tab标签组件 | 小乖乖资源共享网</title>
+<style>
+@import url(./css/css.css);
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url(./images/mb-bg-fb-03.jpg) no-repeat center center/cover;
+  font-family: "RobotoDraft", "Roboto", 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  padding: 0;
+ margin: .1rem 0;
+  border-left: 4px solid #4F2CCA;
+  padding-left: 8px;
+}
+
+.material-tabs {
+  display: block;
+  float: left;
+  padding: 16px;
+  padding-top: 0;
+  width: 100%;
+  max-width: 480px;
+  left: calc(50% - 480px/2);
+  position: relative;
+  margin: 250px auto 50px auto;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23) !important;
+  border-radius: 2px;
+}
+@media all and (max-width: 480px) {
+
+.material-tabs {
+  max-width: 100%;
+  left: 0;
+}
+}
+
+.visible {
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  float: left;
+  -webkit-transition: opacity .35s ease;
+  transition: opacity .35s ease;
+  z-index: 3;
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  -webkit-transition: opacity 0s ease;
+  transition: opacity 0s ease;
+}
+
+.hidden img { display: none; }
+ [class*="tabbed-section-"] {
+ float: left;
+ color: #000;
+}
+
+[class*="tabbed-section-"] img {
+  display: block;
+  width: 80%;
+  margin: auto 10%;
+}
+
+.tabbed-section__selector {
+  position: relative;
+  height: 32px;
+  top: -31.2px;
+  left: -16px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  float: left;
+}
+
+.tabbed-section__selector [class*="-tab-"] {
+  float: left;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  width: 100px;
+  text-align: center;
+  background: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.tabbed-section__selector [class*="-tab-"].active { color: #4F2CCA; }
+
+.tabbed-section__selector a:first-child { border-top-left-radius: 2px; }
+
+.tabbed-section__selector a:last-of-type { border-top-right-radius: 2px; }
+
+.tabbed-section__highlighter {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  height: 2px;
+  background: #4F2CCA;
+  max-width: 100px;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  display: block;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.23s ease;
+  transition: transform 0.23s ease;
+}
+
+.tabbed-section__selector-tab-3.active ~ .tabbed-section__highlighter {
+  -webkit-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  transform: translateX(200px);
+}
+
+.tabbed-section__selector-tab-2.active ~ .tabbed-section__highlighter {
+  -webkit-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  transform: translateX(100px);
+}
+
+.tabbed-section__selector-tab-1.active ~ .tabbed-section__highlighter {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.divider {
+  background: rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 1px;
+  margin: 8px 0;
+  padding: 0;
+  overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+<div class="material-tabs">
+  <div class="tabbed-section__selector"> <a class="tabbed-section__selector-tab-1 active" href="#">Tab 1</a> <a class="tabbed-section__selector-tab-2" href="#">Tab 2</a> <a class="tabbed-section__selector-tab-3" href="#">Tab 3</a> <span class="tabbed-section__highlighter"></span> </div>
+  <div class="tabbed-section-1 visible">
+    <h2>Section One</h2>
+    <span class="divider"></span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec auctor turpis. Suspendisse nisi augue, condimentum eget sem sit amet, interdum pellentesque mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent consequat ultricies metus id ultricies. Nullam tempor hendrerit quam. Maecenas leo augue, dictum porta justo id, pellentesque tincidunt est. Cras porta est ac lorem venenatis condimentum. Quisque at sem pretium, ornare velit sit amet, finibus leo. Mauris placerat sem dui, non auctor erat consequat a.</p>
+  </div>
+  <div class="tabbed-section-2 hidden">
+    <h3>Section Two</h3>
+    <span class="divider"></span>
+    <p>Duis eget pellentesque est, sed sodales lacus. Fusce id arcu quis justo pellentesque vehicula. Etiam fringilla imperdiet varius. Vivamus elementum mi sit amet nunc congue feugiat. Aliquam ultrices bibendum nibh sed tempor. Ut pulvinar condimentum velit nec consequat. Pellentesque sed magna et metus accumsan ullamcorper non sed justo. Maecenas viverra metus sit amet pulvinar pretium. Duis in tortor ac eros rhoncus molestie ac eu nulla. Nam sit amet nibh at odio consequat aliquam non id sapien. Suspendisse potenti. Duis tincidunt nulla felis, ut pharetra arcu rhoncus ac. Curabitur fermentum sit amet nibh sit amet sollicitudin. Sed iaculis augue ligula, ac ullamcorper ex pharetra id. Proin dictum iaculis dui at laoreet.</p>
+  </div>
+  <div class="tabbed-section-3 hidden"> <h3>Section Three</h3>
+    <span class="divider"></span>
+    <p>Ut dignissim pulvinar purus sit amet accumsan. Maecenas a mauris luctus turpis rhoncus interdum laoreet ac nibh. Nullam volutpat arcu sit amet nisl rhoncus pulvinar. Integer sit amet sodales nibh. Etiam tincidunt gravida ante at laoreet. Duis tincidunt ut metus vel tempus. Maecenas accumsan metus sed tortor ullamcorper accumsan at vel est. Curabitur pulvinar nisi rhoncus dictum facilisis. Sed vitae diam id ex sodales elementum. Curabitur accumsan est ac ornare iaculis. Phasellus lectus augue, tempor sit amet risus quis, iaculis lobortis urna. Mauris dolor arcu, rhoncus in tristique nec, ultricies nec orci. Sed erat lorem, dictum vitae fermentum non, suscipit non tellus.</p>
+  </div>
+</div>
+<script>
+var $ = function (selector) {
+  return document.querySelectorAll(selector);
+};
+
+
+var tabs = [
+  '.tabbed-section__selector-tab-1',
+  '.tabbed-section__selector-tab-2',
+  '.tabbed-section__selector-tab-3'
+];
+
+var toggleTab = function(element) {
+  var parent = element.parentNode;
+  
+  $(element)[0].addEventListener('click', function(){
+    this.parentNode.childNodes[1].classList.remove('active');
+    this.parentNode.childNodes[3].classList.remove('active');
+    this.parentNode.childNodes[5].classList.remove('active');
+
+    this.classList.add('active');
+    
+    if(this.classList.contains('tabbed-section__selector-tab-1')) {
+      // and change the classes, show the first content panel
+      $('.tabbed-section-1')[0].classList.remove('hidden');
+      $('.tabbed-section-1')[0].classList.add('visible');
+      
+      $('.tabbed-section-2')[0].classList.remove('visible');
+      $('.tabbed-section-2')[0].classList.add('hidden');
+       $('.tabbed-section-3')[0].classList.remove('visible');
+      $('.tabbed-section-3')[0].classList.add('hidden');
+    }
+
+    if(this.classList.contains('tabbed-section__selector-tab-2')) {
+      $('.tabbed-section-2')[0].classList.remove('hidden');
+      $('.tabbed-section-2')[0].classList.add('visible');
+      $('.tabbed-section-1')[0].classList.remove('visible');
+      $('.tabbed-section-1')[0].classList.add('hidden');
+      $('.tabbed-section-3')[0].classList.remove('visible');
+      $('.tabbed-section-3')[0].classList.add('hidden');
+    }
+    
+    if(this.classList.contains('tabbed-section__selector-tab-3')) {
+      $('.tabbed-section-3')[0].classList.remove('hidden');
+      $('.tabbed-section-3')[0].classList.add('visible');
+      $('.tabbed-section-1')[0].classList.remove('visible');
+      $('.tabbed-section-1')[0].classList.add('hidden');
+      $('.tabbed-section-2')[0].classList.remove('visible');
+      $('.tabbed-section-2')[0].classList.add('hidden');
+    }
+  });
+};
+
+for (var i = tabs.length - 1; i >= 0; i--) {
+  toggleTab(tabs[i])
+};
+</script>
+</body>
+</html>

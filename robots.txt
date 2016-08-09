@@ -13,3 +13,4 @@ Disallow: /comments/feed
 Disallow: /?s=*
 Disallow: /*/?s=*\
 Disallow: /attachment/
+Sitemap:  http://www.zzyzan.com/sitemap.xml

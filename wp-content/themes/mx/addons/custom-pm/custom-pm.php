@@ -33,10 +33,11 @@ class theme_custom_pm{
 		add_filter('dynamic_request', __CLASS__ . '::dynamic_request');
 		add_filter('dynamic_request_process', __CLASS__ . '::dynamic_request_process');
 		
-		foreach(self::get_tabs() as $k => $v){
+		// henson add
+		/*foreach(self::get_tabs() as $k => $v){
 			$nav_fn = 'filter_nav_' . $k; 
 			add_filter('account_navs', __CLASS__ . "::$nav_fn",$v['filter_priority']);
-		}
+		}*/
 
 		add_action('base_settings', __CLASS__ . '::display_backend');
 		add_action('theme_options_save', __CLASS__ . '::options_save');

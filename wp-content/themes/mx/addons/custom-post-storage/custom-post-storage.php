@@ -547,7 +547,7 @@ class theme_custom_storage{
 				?>
 			</span>
 		</a>
-		<script src="//cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('.meta-post-storage').click(function(event) {

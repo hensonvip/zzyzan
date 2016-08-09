@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>纯JavaScript制作的过滤选择器</title>
+<link href="css/sticky.css" rel="stylesheet" type="text/css">
+<link href="css/select.min.css" rel="stylesheet" type="text/css">
+<style>
+body { background-color:#fafafa;}
+.container { margin:150px auto; max-width:400px;}
+</style>
+</head>
+
+<body>
+<div class="container">
+<select id="demo">
+<option value="1">HTML5</option>
+<option value="2">CSS3</option>
+<option value="3">JavaScript</option>
+<option value="4">jQuery</option>
+<option value="5">AngularJS</option>
+<option value="6">ReactJS</option>
+<option value="7">React Native</option>
+<option value="8">Bootstrap</option>
+<option value="9">Vue.js</option>
+<option value="10">Python</option>
+</select>
+</div>
+<script src="js/select.min.js"></script>
+<script>
+var select2 = new Select('#demo');
+</script>
+</body>
+</html>
