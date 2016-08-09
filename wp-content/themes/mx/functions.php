@@ -766,7 +766,7 @@ class theme_functions{
 		/* category */
 		if(theme_cache::is_category()){
 			$cat_curr = theme_features::get_current_cat_id();
-			if($cat_curr > 1){
+			if($cat_curr >= 1){
 				$links_cat = get_category_parents($cat_curr,true,'%split%');
 				$links_cats = explode('%split%',$links_cat);
 				array_pop($links_cats);
